@@ -31,7 +31,7 @@ class Accion_edit{
                 <form role="form" action="ACCION_Controller.php?id=EDITACCION&ctr=ACCION" method="POST">
                     <input type="hidden" id="nombreAModificar" name="nombreAModificar" value="<?php echo $row['nombre']?>">
                     <div class="form-group">
-                        <label for="nombreM">Nombre</label>
+                        <label for="nombreM"><?php$literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreM" name="nombreM"
                                 value="<?php  echo $row['nombre']?>">
                     </div>

@@ -26,7 +26,7 @@ class Accion_delete{
 
                 <form role="form" action="ACCION_Controller.php?id=DELETEACCION&ctr=ACCION" method="POST">
                     <div class="form-group">
-                        <label for="nombreB">Nombre</label>
+                        <label for="nombreB"><?php$literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreB" name="nombreB" readonly="readonly"
                                 value="<?php  echo $row['nombre']?>">
                     </div>

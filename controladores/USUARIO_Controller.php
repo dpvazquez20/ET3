@@ -7,7 +7,7 @@ require_once('../vistas/USUARIO_ADD.php');
 require_once ('../vistas/USUARIO_SHOWALL.php');
 require_once ('../modelos/USUARIO_Model.php');
 require_once ('../vistas/USUARIO_DELETE.php');
-require_once ('../vistas/USUARIO_SHOW.php');
+require_once('../vistas/USUARIO_SHOWCURRENT.php');
 require_once('../vistas/USUARIO_EDIT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
@@ -25,6 +25,7 @@ switch ($_GET['id']) {
         if (!isset($_POST['nombre'])) {
             new Usuario_add();
         } else {
+            $_POST['password']= md5($_POST['password']);
             $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['DNI'], $_POST['password'], $_POST['perfil']);
             $modelo = new Usuario_modelo();
             $_SESSION['mensaje'] = $modelo->altaUsuario($usuario);

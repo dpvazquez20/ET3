@@ -16,6 +16,8 @@ if(isset($_SESSION['lang'])){
         include("../idioma/gallego.php");
     else if(strcmp($_SESSION['lang'],'esp')==0)
         include("../idioma/castellano.php");
+    else if(strcmp($_SESSION['lang'],'ing')==0)
+        include("../idioma/ingles.php");
 }else{
     include("../idioma/castellano.php");
 }
@@ -29,6 +31,13 @@ if(isset($_SESSION['lang'])){
         </div>
         <ul class="nav navbar-nav">
             <li><a><span class="glyphicon glyphicon-user"></span> WELCOME BACK <?php echo $_SESSION['usuario']?></a></li>
+
+            <li><a href="../modelos/cambiarIdioma.php?lang=esp">Español</a></li>
+            <li><a href="../modelos/cambiarIdioma.php?lang=gal">Gallego</a></li>
+            <li><a href="../modelos/cambiarIdioma.php?lang=ing">Ingles</a></li>
+
+
+
             <li><a href="../vistas/logout.php"><span class="glyphicon glyphicon-off"></span></a></li>
         </ul>
     </div>

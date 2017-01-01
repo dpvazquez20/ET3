@@ -3,7 +3,7 @@
 require_once ('../modelos/PERFIL_Model.php');
 require_once ('../vistas/PERFIL_ADD.php');
 require_once ('../vistas/PERFIL_DELETE.php');
-require_once ('../vistas/PERFIL_SHOW.php');
+require_once('../vistas/PERFIL_SHOWCURRENT.php');
 require_once ('../vistas/PERFIL_SHOWALL.php');
 require_once('../vistas/PERFIL_EDIT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');

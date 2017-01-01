@@ -4,7 +4,7 @@ require_once ('../vistas/ACCION_SHOWALL.php');
 require_once ('../modelos/ACCION_Model.php');
 require_once ('../vistas/ACCION_ADD.php');
 require_once ('../vistas/ACCION_DELETE.php');
-require_once ('../vistas/ACCION_SHOW.php');
+require_once('../vistas/ACCION_SHOWCURRENT.php');
 require_once('../vistas/ACCION_EDIT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');

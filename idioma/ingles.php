@@ -1,11 +1,11 @@
 <?php
 
 $literales = array(
-    'SHOW'=>'VER DETALLE',
-    'DELETE'=>'BORRAR',
-    'EDIT'=>'EDITAR',
-    'ADD'=>'NOVO',
-    'permisoSHOW'=>'Estes son os datos do perfil ',
+    'SHOW'=>'SHOW CURRENT',
+    'DELETE'=>'DELETE',
+    'EDIT'=>'EDIT',
+    'ADD'=>'NEW',
+    'permisoSHOW'=>'Estos son los datos del perfil ',
     'permisoMODIFY'=>'Estos son los datos del perfil: ',
     'permisoDELETE'=>'¿ Esta seguro que desea eliminar este Permiso ?',
     'seleccion accion'=>'Seleccion la acción',
@@ -34,19 +34,19 @@ $literales = array(
     'seleccion perfil'=> 'Seleccion del perfil:',
     'bienvenida' => 'Nos alegramos de verte de nuevo',
     'editar usuario'=>'Editar usuario',
-    'nombre'=>'Nome',
-    'apellido'=>'Apelidos',
+    'nombre'=>'Nombre',
+    'apellido'=>'apellido',
     'dni'=>'DNI',
     'password'=>'Password',
     'perfil'=>'Perfil',
     'accion'=>'Acción',
-    'usuarios'=>'USUARIOS',
+    'usuarios'=>'USERS',
     'gestion' => 'GESTIÓN',
     'alta usuario'  =>'Alta usuario',
     'idioma'=> 'Seleccione el idioma',
     'nuevo usuario'=>'NUEVO USUARIO',
     'enviar'=>'Enviar',
-    'reset'=>'Resetear'
+    'reset'=>'Resetear',
 
 )
 ?>

@@ -35,7 +35,7 @@ class Usuario_showAll{
                         while($row=mysqli_fetch_assoc($listaControladores)){
                             if($row['controlador']==$_GET['ctr']){
                                 if($row['accion']=='ADD'){
-                                    echo "<a href='../controladores/".$row['controlador']."_Controller.php?id=".$row['accion'].$row['controlador']."'><button class='btn  btn-primary'>".$row['accion']." ".$row['controlador']."</button></a></br></br>";
+                                    echo "<a href='../controladores/".$row['controlador']."_Controller.php?id=".$row['accion'].$row['controlador']."'><button class='btn  btn-primary'>".$literales['ADD']." ".$row['controlador']."</button></a></br></br>";
                                 }
                             }
                         }
@@ -72,9 +72,8 @@ class Usuario_showAll{
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>DNI</th>
-                        <th>Password</th>
                         <th>Perfil</th>
-                        <th colspan="3"  >Acción</th>
+                        <th colspan="3">Acción</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -85,25 +84,29 @@ class Usuario_showAll{
                           $resul= Usuario_modelo::listar();
                     }
                     while($row = mysqli_fetch_assoc($resul)) {
-                        echo "<tr><td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['DNI'] . "</td> <td>" . $row['password'] . "</td> <td>" . $row['perfil'] . "</td> <td>";
+                        echo "<tr><td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['DNI'] . "</td> <td>" . $row['perfil'] . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));
 
                         while($accion = mysqli_fetch_assoc($listaControladores)){
                             if($accion['controlador']==$_GET['ctr']) {
                                 if ($accion['accion'] != "ADD") {
                                     $estilo = 'btn btn-default';
+                                    $nombreBoton =$accion['accion'];
                                     if ($accion['accion'] == "EDIT") {
                                         $estilo = 'btn btn-warning';
+                                        $nombreBoton= $literales['EDIT'];
                                     }
 
                                     if ($accion['accion'] == "SHOW") {
                                         $estilo = 'btn btn-success';
+                                        $nombreBoton= $literales['SHOW'];
                                     }
 
                                     if ($accion['accion'] == "DELETE") {
                                         $estilo = 'btn btn-danger';
+                                        $nombreBoton= $literales['DELETE'];
                                     }
-                                    echo "<a href='../controladores/" . $accion['controlador'] . "_Controller.php?id=" . $accion['accion'] . $accion['controlador'] . "&idUser=" . $row['id_usuario'] . "'><button class='" . $estilo . "'>" . $accion['accion'] . "</button></a>";
+                                    echo "<a href='../controladores/" . $accion['controlador'] . "_Controller.php?id=" . $accion['accion'] . $accion['controlador'] . "&idUser=" . $row['id_usuario'] . "'><button class='" . $estilo . "'>" . $nombreBoton . "</button></a>";
                                 }
                             }
                             }

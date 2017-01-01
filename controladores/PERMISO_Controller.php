@@ -6,7 +6,7 @@ require_once ('../modelos/PERMISO_Model.php');
 require_once ('../vistas/PERMISO_ADD.php');
 require_once ('../vistas/PERMISO_DELETE.php');
 require_once('../vistas/PERMISO_EDIT.php');
-require_once ('../vistas/PERMISO_SHOW.php');
+require_once('../vistas/PERMISO_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
 

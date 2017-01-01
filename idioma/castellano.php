@@ -1,6 +1,10 @@
 <?php
 
 $literales = array(
+    'SHOW'=>'VER DETALLE',
+    'DELETE'=>'BORRAR',
+    'EDIT'=>'EDITAR',
+    'ADD'=>'NUEVO',
     'permisoSHOW'=>'Estos son los datos del perfil ',
     'permisoMODIFY'=>'Estos son los datos del perfil: ',
     'permisoDELETE'=>'¿ Esta seguro que desea eliminar este Permiso ?',

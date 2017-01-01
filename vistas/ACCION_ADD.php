@@ -26,7 +26,7 @@ class Accion_add
 
                 <form role="form" action="ACCION_Controller.php?id=ADDACCION&ctr=ACCION" method="POST">
                     <div class="form-group">
-                        <label for="Nombre">Nombre</label>
+                        <label for="Nombre"><?php$literales['nombre'] ?></label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required
                                placeholder="Introduce nombre del controlador">
                     </div>

@@ -47,6 +47,83 @@ $literales = array(
         'nuevo usuario'=>'NUEVO USUARIO',
         'enviar'=>'Enviar',
         'reset'=>'Resetear',
+    
+    
+//    -------------------------------------------------------------------
+//    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------
+//    -------------------------------------------------------------------
+    
+    
+    'seleccion material'=>'Seleccione el material',
+    
+    'materialSHOW'=>'Estes son los detalles del material',
+    'materialMODIFY'=>'¿Está seguro de que desea modificar el material?',
+    'materialADD'=>'Introduzca el nuevo material',
+    'materialDELETE'=>'¿Está seguro de que desea eliminar este material?',
+    
+    'sumarMaterial'=>'Añadir',
+    'eliminarMaterial' => 'Eliminar',
+    'cancelarMaterial' => 'Cancelar',
+    'volverMaterial' => 'Volver',
+    'modificarMaterial' => 'Modificar',
+    
+    'detalleMaterial'=>'Detalle material',
+    'listaMaterial' => 'Lista material',
+    'borrarMaterial' => 'Borrar material',
+    'addMaterial' => 'Añadir material',
+    'editarMaterial' => 'Editar material',
+    
+    'matADD'=>'AÑADIR',
+    
+    'materialID'=>'ID',
+    'materialNombre'=>'Nombre',
+    'materialDescripcion'=>'Descripción',
+    'materialAccion'=>'Acción',
+    
+    'material'=>'Material',
+    
+    'introNombreMat' => 'Introduzca el nombre del material',
+    'introDescripcionMat' => 'Introduzca la descripción del material',
+    
+    'addExito' => 'Material añadido correctamente',
+    'addError' => 'El material no se ha podido añadir',
+    
+    //------------------------------
+    
+    'stockId' => 'ID',
+    'stockId_material' => 'Material',
+    'stockId_albaran' => 'Albarán',
+    'stockId_producto' => 'Producto',
+    'stockAccion'=>'Acción',
+    
+    'stADD'=>'AÑADIR',
+    
+    'listaStock' => 'Lista stock material',
+    'detalleStock'=>'Detalle stock material',
+    'borrarStock' => 'Borrar stock material',
+    'addStock' => 'Añadir stock material',
+    'editarStock' => 'Editar stock material',
+    
+    'seleccion stock'=>'Seleccione el stock',
+    
+    'stockSHOW'=>'Estes son los detalles del stock',
+    'stockMODIFY'=>'¿Está seguro de que desea modificar el stock?',
+    'stockADD'=>'Introduzca el nuevo stock',
+    'stockDELETE'=>'¿Está seguro de que desea eliminar este stock?',
+    
+    'introStockId_material' => 'Introduzca el material',
+    'introStockId_albaran' => 'Seleccione el albarán al que pertenece',
+    'introStockId_producto' => 'Introduzca el producto',
+    
+    'sumarStock'=>'Añadir',
+    'eliminarStock' => 'Eliminar',
+    'cancelarStock' => 'Cancelar',
+    'volverStock' => 'Volver',
+    'modificarStock' => 'Modificar',
+
+//    -------------------------------------------------------------------
+//    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------
+//    -------------------------------------------------------------------
 
 )
 ?>

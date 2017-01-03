@@ -47,6 +47,77 @@ $literales = array(
     'nuevo usuario'=>'NUEVO USUARIO',
     'enviar'=>'Enviar',
     'reset'=>'Resetear'
+    
+//    -------------------------------------------------------------------
+//    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------
+//    -------------------------------------------------------------------
+      
+    'seleccion material'=>'Seleccione o material',
+    
+    'materialSHOW'=>'Estes son os detalles do material',
+    'materialMODIFY'=>'¿Está seguro de que desexa modificar o material?',
+    'materialADD'=>'Introduzca o novo material',
+    'materialDELETE'=>'¿Está seguro de que desexa eliminar este material?',
+    
+    'sumarMaterial'=>'Engadir',
+    'eliminarMaterial' => 'Eliminar',
+    'cancelarMaterial' => 'Cancelar',
+    'volverMaterial' => 'Volver',
+    'modificarMaterial' => 'Modificar',
+    
+    'detalleMaterial'=>'Detalle material',
+    'listaMaterial' => 'Lista material',
+    'borrarMaterial' => 'Borrar material',
+    'addMaterial' => 'Engadir material',
+    'editarMaterial' => 'Editar material',
+    
+    'matADD'=>'ENGADIR',
+    
+    'materialID'=>'ID',
+    'materialNombre'=>'Nome',
+    'materialDescripcion'=>'Descripción',
+    'materialAccion'=>'Acción',
+    
+    'material'=>'Material',
+    
+    'introNombreMat' => 'Introduce o nome do material',
+    'introDescripcionMat' => 'Introduce a descripción do material',
+    
+    //------------------------------
+    
+    'stockId' => 'ID',
+    'stockId_material' => 'Material',
+    'stockId_albaran' => 'Albarán',
+    'stockId_producto' => 'Producto',
+    'stockAccion'=>'Acción',
+    
+    'stADD'=>'ENGADIR',
+    
+    'listaStock' => 'Lista stock material',
+    'detalleStock'=>'Detalle stock material',
+    'borrarStock' => 'Borrar stock material',
+    'addStock' => 'Engadir stock material',
+    'editarStock' => 'Editar stock material',
+    
+    'seleccion stock'=>'Seleccione o stock',
+    
+    'stockSHOW'=>'Estes so os detalles do stock',
+    'stockMODIFY'=>'¿Está seguro de que desexa modificar o stock?',
+    'stockADD'=>'Introduzca o novo stock',
+    'stockDELETE'=>'¿Está seguro de que desexa eliminar este stock?',
+    
+    'introStockId_material' => 'Introduzca o material',
+    'introStockId_albaran' => 'Seleccione o albarán ao que pertence',
+    'introStockId_producto' => 'Seleccione o producto',
+    
+    'sumarStock'=>'Engadir',
+    'eliminarStock' => 'Eliminar',
+    'cancelarStock' => 'Cancelar',
+    'volverStock' => 'Volver',
+    'modificarStock' => 'Modificar',
 
+//    -------------------------------------------------------------------
+//    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------
+//    -------------------------------------------------------------------
 )
 ?>

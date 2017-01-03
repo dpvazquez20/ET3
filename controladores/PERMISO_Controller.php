@@ -9,6 +9,8 @@ require_once('../vistas/PERMISO_EDIT.php');
 require_once('../vistas/PERMISO_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
+require_once ('../vistas/PERMISO_DENEGADO.php');
+
 
 
 $controlador="permiso";
@@ -24,17 +26,11 @@ switch ($_GET['id']) {
                 $nuevoPermiso = new Permiso($_POST['controlador'], $_POST['accion'], $_POST['perfil']);
                 $modelo = new Permiso_modelo();
                 $_SESSION['mensaje']=$mensaje = $modelo->altAPermiso($nuevoPermiso);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='PERMISO_Controller.php?id=SHOWALLPERMISO&ctr=PERMISO'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
+
         }
         break;
 
@@ -47,17 +43,11 @@ switch ($_GET['id']) {
             } else {
                 $modelo = new Permiso_modelo();
                 $_SESSION['mensaje']=$mensaje = $modelo->deletePermiso($_POST['id_permiso']);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='PERMISO_Controller.php?id=SHOWALLPERMISO&ctr=PERMISO'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
+
         }
         break;
 
@@ -70,17 +60,11 @@ switch ($_GET['id']) {
                 $permisoAModificar = new Permiso($_POST['controladorM'], $_POST['accionM'], $_POST['perfilM']);
                 $modelo = new Permiso_modelo();
                 $_SESSION['mensaje']=$modelo->modifyPermiso($permisoAModificar, $_POST['id_permiso']);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='PERMISO_Controller.php?id=SHOWALLPERMISO&ctr=PERMISO'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
+
         }
         break;
 
@@ -90,11 +74,8 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Permiso_show();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
+
         }
         break;
 
@@ -105,12 +86,9 @@ switch ($_GET['id']) {
                 (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
              new Permiso_showAll();
         }else{
-                echo "Permiso denegado";?>
-                <script language="javascript">
-                    setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-                </script>
-                <?php
-        }
+                new Permiso_denegado();
+
+            }
 
 }
 

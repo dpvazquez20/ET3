@@ -6,7 +6,7 @@ if(!isset($_SESSION)){
 }
 
 
-class Mensaje_usuario
+class Permiso_denegado
 {
 
     function __construct()
@@ -22,10 +22,10 @@ class Mensaje_usuario
             <?php include('menu.php'); ?>
             <!-- Título de la página -->
             <div class="col-sm-9">
-                <div class="alert alert-success"><h1><?php echo $_SESSION['mensaje']?></h1> </div>
-               <?php echo "<a href='../controladores/".$_GET['ctr']."_Controller.php?id=SHOWALL".$_GET['ctr']."&ctr=".$_GET['ctr']."'><button  class='btn  btn-default'>".$literales['volver']."</butto></a>";
-               ?>
-
+                <img align="right" src="../imagenes/accesoDenegado.jpg" height="50%" width="80%" class=""/>
+                <script language="javascript">
+                    setTimeout("location.href='../vistas/paginaPorDefecto.php'", 2000)
+                </script>
             </div>
         </div>
 

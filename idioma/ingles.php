@@ -48,5 +48,79 @@ $literales = array(
     'enviar'=>'Enviar',
     'reset'=>'Resetear',
 
+//    -------------------------------------------------------------------
+//    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------
+//    -------------------------------------------------------------------
+    
+    
+    'seleccion material'=>'Choose a material',
+    
+    'materialSHOW'=>"Thoose are the material's details",
+    'materialMODIFY'=>'Do you want to modify this material?',
+    'materialADD'=>'Enter the new material',
+    'materialDELETE'=>'Do you want to delete this material?',
+    
+    'sumarMaterial'=>'Add',
+    'eliminarMaterial' => 'Delete',
+    'cancelarMaterial' => 'Cancel',
+    'volverMaterial' => 'Back',
+    'modificarMaterial' => 'Edit',
+    
+    'detalleMaterial'=>"Material's detail",
+    'listaMaterial' => "List of materials",
+    'borrarMaterial' => "Delete material",
+    'addMaterial' => "Add material",
+    'editarMaterial' => "Edit material",
+    
+    'matADD'=>'ADD',
+    
+    'materialID'=>'ID',
+    'materialNombre'=>'Name',
+    'materialDescripcion'=>'Description',
+    'materialAccion'=>'Action',
+    
+    'material'=>'Material',
+    
+    'introNombreMat' => 'Enter material name',
+    'introDescripcionMat' => 'Enter material description',
+    
+    //------------------------------
+    
+    'stockId' => 'ID',
+    'stockId_material' => 'Material',
+    'stockId_albaran' => 'Delivery note',
+    'stockId_producto' => 'Product',
+    'stockAccion'=>'Action',
+    
+    'stADD'=>'ADD',
+    
+    'listaStock' => 'List of stocks',
+    'detalleStock'=>"Stock's details",
+    'borrarStock' => 'Delete stock',
+    'addStock' => 'Add stock',
+    'editarStock' => 'Edit stock',
+    
+    'seleccion stock'=>'Choose a stock',
+    
+    'stockSHOW'=>"Thoose are the stock's details",
+    'stockMODIFY'=>'Do you want to modify this stock?',
+    'stockADD'=>'Enter the new stock',
+    'stockDELETE'=>'Do you want to delete this stock?',
+    
+    'introStockId_material' => 'Enter material',
+    'introStockId_albaran' => 'Choose delivery note',
+    'introStockId_producto' => 'Choose product',
+    
+    'sumarStock'=>'Add',
+    'eliminarStock' => 'Delete',
+    'cancelarStock' => 'Cancel',
+    'volverStock' => 'Back',
+    'modificarStock' => 'Edit',
+    
+
+//    -------------------------------------------------------------------
+//    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------
+//    -------------------------------------------------------------------
+    
 )
 ?>

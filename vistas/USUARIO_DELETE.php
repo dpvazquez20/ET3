@@ -3,6 +3,7 @@
 if(!isset($_SESSION)){
     session_start();
 }
+include_once ('../modelos/USUARIO_Model.php');
 class Usuario_delete{
 
     function __construct(){
@@ -18,7 +19,8 @@ class Usuario_delete{
             <div class="col-sm-9">
 
                 <title><?php echo $literales['eliminar usuario']; ?></title>
-                <?php $resul = getUsuario($_GET['idUser']);
+                <?php
+                $resul = Usuario_modelo::getUsuario($_GET['idUser']);
                 $row= mysqli_fetch_assoc($resul);
                 ?>
                 <script type="text/javascript">

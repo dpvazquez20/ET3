@@ -4,6 +4,7 @@ if(!isset($_SESSION)){
     session_start();
 }
 require_once ('../modelos/PERFIL_Model.php');
+include_once ('../modelos/USUARIO_Model.php');
 
 class Usuario_edit{
 
@@ -18,7 +19,7 @@ class Usuario_edit{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
-                <?php $resul = getUsuario($_GET['idUser']);
+                <?php $resul = Usuario_modelo::getUsuario($_GET['idUser']);
                 $row= mysqli_fetch_assoc($resul);
                 ?>
                 <div class="alert alert-warning"><?php echo $literales['usuarioMODIFY']?></div>

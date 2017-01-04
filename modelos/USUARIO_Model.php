@@ -108,13 +108,21 @@ class Usuario_modelo{
         $resul = $conexion->query($sql);
         return $resul;
     }
-    public static function getUsuarioSinBorrar($idUsuario){
+    public static function getUsuarioSinBorrar($idUsuario)
+    {
         $conexion = conectarBD();
         $sql = "SELECT * FROM usuario WHERE id_usuario ='" . $idUsuario . "';";
         $resul = $conexion->query($sql);
         return $resul;
-
     }
+
+        public function getUsuario($idUsuario){
+            $conexion= conectarBD();
+            $sql="SELECT * FROM usuario WHERE id_usuario='".$idUsuario."';";
+            $resul =$conexion->query($sql);
+            return $resul;
+        }
+
 }
 
 

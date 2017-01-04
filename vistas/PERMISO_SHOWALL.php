@@ -81,7 +81,7 @@ class Permiso_showAll{
                     <tbody>
                     <?php
                     if(isset($_GET['perfilBuscar'])) {
-                        $resul= Permiso_modelo::getPermiso($_GET['idPermiso']);
+                        $resul= Permiso_modelo::getPermiso($_GET['perfilBuscar']);
                     }else{
                         $resul= Permiso_modelo::listarPermisos();
                     }

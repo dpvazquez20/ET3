@@ -78,6 +78,36 @@ class Usuario_modelo{
         $resul = $conexion->query($sql);
         return $resul;
     }
+    public static function getUsuarioNombre($nombre){
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM usuario WHERE borrado='0'";
+        } else {
+            $sql = "SELECT * FROM usuario WHERE nombre LIKE '%".$nombre."%'AND borrado='0';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    public static function  getUsuarioApellido($apellido){
+        $conexion = conectarBD();
+        if ($apellido == "") {
+            $sql = "SELECT * FROM usuario WHERE borrado='0'";
+        } else {
+            $sql = "SELECT * FROM usuario WHERE apellido LIKE '%".$apellido."%'AND borrado='0';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    public static function  getUsuarioDNI($dni){
+        $conexion = conectarBD();
+        if ($dni == "") {
+            $sql = "SELECT * FROM usuario WHERE borrado='0'";
+        } else {
+            $sql = "SELECT * FROM usuario WHERE DNI LIKE '%".$dni."%'AND borrado='0';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
 }
 
 function getUsuario($idUsuario){

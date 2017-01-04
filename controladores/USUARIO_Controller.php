@@ -31,7 +31,6 @@ switch ($_GET['id']) {
             $modelo = new Usuario_modelo();
             $_SESSION['mensaje'] = $modelo->altaUsuario($usuario);
             new Mensaje_usuario();
-
         }
             }else {
            new Permiso_denegado();

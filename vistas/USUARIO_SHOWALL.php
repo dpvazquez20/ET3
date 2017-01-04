@@ -41,30 +41,85 @@ class Usuario_showAll{
                         }
                 ?>
                     </div>
+                    <!-- Buscador por perfil -->
                     <div class="col-sm-4">
                         <form role="form" method="get">
                             <input type="hidden" name="id" value="BUSCARUSUARIO"/>
                             <input type="hidden" name="ctr" value="USUARIO"/>
                             <div class="row">
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                                <select id="perfilBuscar" name="perfilBuscar"style="width: 200px" class=" form-control">
-                                    <?php
-                                    $perfiles= Perfil_modelo::listarPerfiles();
-                                    echo"<option selected value=''> </option>";
-                                    while($row = mysqli_fetch_assoc($perfiles)){
-                                        echo "<option value='".$row['nombre']."' >".$row['nombre']."</option>";
-                                    }
-                                    ?>
-                                </select>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">Buscar</button>
-                                </span>
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <select id="perfilBuscar" name="perfilBuscar"style="width: 200px" class=" form-control">
+                                            <?php
+                                            $perfiles= Perfil_modelo::listarPerfiles();
+                                            echo"<option selected value=''> </option>";
+                                            while($row = mysqli_fetch_assoc($perfiles)){
+                                                echo "<option value='".$row['nombre']."' >".$row['nombre']."</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                        <!-- Buscador por nombre-->
+                        <form role="form" method="get">
+                            <input type="hidden" name="id" value="BUSCARUSUARIO"/>
+                            <input type="hidden" name="ctr" value="USUARIO"/>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="form-group">
+                                            <input placeholder="Nombre a buscar" type="text" id="nombreBuscar" name="nombreBuscar"style="width: 200px" class=" form-control"> </input>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                        <div class="col-sm-4">
+                        <form role="form" method="get">
+                            <input type="hidden" name="id" value="BUSCARUSUARIO"/>
+                            <input type="hidden" name="ctr" value="USUARIO"/>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="form-group">
+                                            <input placeholder="Apellido a buscar" type="text" id="apellidoBuscar" name="apellidoBuscar"style="width: 200px" class=" form-control"> </input>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                            <form role="form" method="get">
+                                <input type="hidden" name="id" value="BUSCARUSUARIO"/>
+                                <input type="hidden" name="ctr" value="USUARIO"/>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="form-group">
+                                                <input placeholder="DNI a buscar" type="text" id="dniBuscar" name="dniBuscar"style="width: 200px" class=" form-control"> </input>
+                                            </div>
+                                            <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
                     </div>
+
+
                 </div>
                 <table class=" table table-striped table-responsive">
                     <thead>
@@ -81,7 +136,21 @@ class Usuario_showAll{
                     if(isset($_GET['perfilBuscar'])) {
                         $resul=Usuario_modelo::getUsuarioPerfil($_GET['perfilBuscar']);
                     }else{
-                          $resul= Usuario_modelo::listar();
+                        if(isset($_GET['nombreBuscar'])){
+                            $resul=Usuario_modelo::getUsuarioNombre($_GET['nombreBuscar']);
+
+                        }else {
+                            if(isset($_GET['apellidoBuscar'])){
+                                $resul=Usuario_modelo::getUsuarioApellido($_GET['apellidoBuscar']);
+
+                            }else {
+                                if(isset($_GET['dniBuscar'])){
+                                    $resul=Usuario_modelo::getUsuarioDNI($_GET['dniBuscar']);
+                                }else {
+                                    $resul = Usuario_modelo::listar();
+                                }
+                            }
+                        }
                     }
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['DNI'] . "</td> <td>" . $row['perfil'] . "</td> <td>";

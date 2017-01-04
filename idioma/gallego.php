@@ -46,7 +46,7 @@ $literales = array(
     'idioma'=> 'Seleccione el idioma',
     'nuevo usuario'=>'NUEVO USUARIO',
     'enviar'=>'Enviar',
-    'reset'=>'Resetear'
+    'reset'=>'Resetear',
     
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------

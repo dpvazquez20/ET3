@@ -16,19 +16,13 @@ class Pedido_modelo
 
     }
 
-    function altaPedido($pedido)
-    {
-        $this->mysql = conectarBD();
-        $sql = "SELECT * FROM pedido WHERE id_proveedor='" . $pedido->getIDProveedor() . "' AND fecha='" . $pedido->getFecha() . "' ;";
-        $resultado = $this->mysql->query($sql);
-        if ($resultado->num_rows == 0) {
-            $insertar = "INSERT INTO pedido (id_proveedor,id_usuario,fecha) VALUES('" . $pedido->getIDProveedor() . "','" . $pedido->getIDUsuario() . "','" . $pedido->getFecha() . "');";
-            $this->mysql->query($insertar);
+    function altaPedido($pedido){
+
+        $insertar = "INSERT INTO pedido (id_proveedor,id_usuario,fecha) VALUES('" . $pedido->getIDProveedor() . "','" . $pedido->getIDUsuario() . "','" . $pedido->getFecha() . "');";
+        $this->mysql->query($insertar);
 
             return "Se creo el pedido correctamente";
-        } else {
-            return "El pedido ya existe";
-        }
+
     }
 
 
@@ -54,7 +48,7 @@ class Pedido_modelo
             return "el pedido ha sido modificado correctamente";
 
         } else {
-            return "el pedido ya existe";
+            return "Lo sentimos, no se ha podido modificar el pedido";
         }
     }
 
@@ -74,68 +68,6 @@ class Pedido_modelo
         $resul = $conexion->query($sql);
         return $resul;
     }
-
-    /*public static function listarProveedores(){
-        $conexion = conectarBD();
-        $sql = "SELECT * FROM proveedor";
-        $resul = $conexion->query($sql);
-        return $resul;
-    }*/
-
-    /*public static function listarUsuarios(){
-
-        $conexion = conectarBD();
-        $sql = "SELECT * FROM usuario";
-        $resul = $conexion->query($sql);
-        return $resul;
-
-    }*/
-
-
-    /*public static function getProveedor($IDProveedor)
-    {
-        $conexion = conectarBD();
-        $sql = "SELECT * FROM proveedor WHERE id ='" . $IDProveedor . "';";
-        $resul = $conexion->query($sql);
-
-        $row = mysqli_fetch_assoc($resul);
-
-        return $row;
-    }*/
-
-    /*public static function getUsuario($IDUsuario)
-    {
-        $conexion = conectarBD();
-        $sql = "SELECT * FROM usuario WHERE id_usuario ='" . $IDUsuario . "';";
-        $resul = $conexion->query($sql);
-
-        $row = mysqli_fetch_assoc($resul);
-
-        return $row;
-    }*/
-
-
-    /*public static function convertirNifProveedor_IDProveedor($nifProveedor)
-    {
-        $conexion = conectarBD();
-        $sql = "SELECT id FROM proveedor WHERE nif ='" . $nifProveedor . "';";
-        $resul = $conexion->query($sql);
-
-        $row = mysqli_fetch_assoc($resul);
-
-        return $row['id'];
-    }
-
-    public static function convertirDNIUsuario_IDUsuario($dniUsuario)
-    {
-        $conexion = conectarBD();
-        $sql = "SELECT id_usuario FROM usuario WHERE DNI ='" . $dniUsuario . "';";
-        $resul = $conexion->query($sql);
-
-        $row = mysqli_fetch_assoc($resul);
-
-        return $row['id_usuario'];
-    }*/
 }
 
 ?>

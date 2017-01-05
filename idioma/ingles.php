@@ -7,46 +7,46 @@ $literales = array(
     'ADD'=>'NEW',
     'permisoSHOW'=>'This is the information for the profile ',
     'permisoMODIFY'=>'This is the information for the profile: ',
-    'permisoDELETE'=>'¿ Are you sure you want to errase this profile ?',
+    'permisoDELETE'=>' Are you sure that you want to erase this profile ?',
     'seleccion accion'=>'Select action',
     'seleccion controlador'=>'Select controller',
     'seleccion perfil'=>'Select profile',
-    'permisoADD'=>'Write the p',
-    'usuarioSHOW'=>'Este son los datos del Usuario',
-    'usuarioMODIFY'=>'Estos son los datos del Usuario',
-    'usuarioADD'=>'Indique los datos del nuevo Usuario ',
-    'usuarioDELETE'=>'¿ Esta seguro que desea eliminar el Usuario ?',
-    'perfilSHOW'=>'Este son los datos del Perfil',
-    'perfilMODIFY'=>'¿Esta seguro que desea modificar el Perfil?',
-    'perfilADD'=>'Indique el nombre del nuevo Perfil',
-    'perfilDELETE'=>'¿ Esta seguro que desea eliminar el Perfil ?',
-    'accionSHOW'=>'Este son los datos de la Acción',
-    'accionMODIFY'=>'¿Esta seguro que desea modificar la Acción?',
-    'accionADD'=>'Indique el nombre de la nueva Acción',
-    'accionDELETE'=>'¿ Esta seguro que desea eliminar esta Acción ?',
-    'datosControlador'=> 'Estos son los datos del controlador',
-    'volver'=>'<< Volver',
-    'confirmar borrado'=>'¿Esta seguro que desea borrar el usuario? ',
-    'modificar'=>'Modificar',
-    'cancelar'=>'Cancelar',
-    'eliminar'=>'Eliminar',
-    'eliminar usuario'=>'Eliminar usuario',
-    'seleccion perfil'=> 'Seleccion del perfil:',
-    'bienvenida' => 'Nos alegramos de verte de nuevo',
-    'editar usuario'=>'Editar usuario',
-    'nombre'=>'Nombre',
-    'apellido'=>'apellido',
+    'permisoADD'=>'Write the perimeters for the profile',
+    'usuarioSHOW'=>'This is the information of the user',
+    'usuarioMODIFY'=>'This is the information of the user',
+    'usuarioADD'=>'Write the information of the user ',
+    'usuarioDELETE'=>'¿ Are you sure you want to erase this user ?',
+    'perfilSHOW'=>'This is the information for the profile',
+    'perfilMODIFY'=>'Are you sure you want to modify the profile?',
+    'perfilADD'=>'Write the name of the new profile',
+    'perfilDELETE'=>'Are you sure that you want to erase this profile  ?',
+    'accionSHOW'=>'This is the information of the action',
+    'accionMODIFY'=>'Are you sure that you want to modify the name of the action?',
+    'accionADD'=>'Write the name of the action',
+    'accionDELETE'=>'Are you sure that you want to erase this action ?',
+    'datosControlador'=> 'This is the information for the controller',
+    'volver'=>'<< Return',
+    'confirmar borrado'=>'Are you sure that you want to erase this user? ',
+    'modificar'=>'Modify',
+    'cancelar'=>'Cancel',
+    'eliminar'=>'Erase',
+    'eliminar usuario'=>'Erase user',
+    'seleccion perfil'=> 'Select profile:',
+    'bienvenida' => 'Welcome, nice to have you back',
+    'editar usuario'=>'Edit usuario',
+    'nombre'=>'First Name',
+    'apellido'=>'Last Name',
     'dni'=>'DNI',
     'password'=>'Password',
-    'perfil'=>'Perfil',
-    'accion'=>'Acción',
+    'perfil'=>'Profile',
+    'accion'=>'Action',
     'usuarios'=>'USERS',
-    'gestion' => 'GESTIÓN',
-    'alta usuario'  =>'Alta usuario',
-    'idioma'=> 'Seleccione el idioma',
-    'nuevo usuario'=>'NUEVO USUARIO',
-    'enviar'=>'Enviar',
-    'reset'=>'Resetear',
+    'gestion' => 'MANAGEMENT',
+    'alta usuario'  =>'Create user',
+    'idioma'=> 'Choose the language',
+    'nuevo usuario'=>'NEW USER',
+    'enviar'=>'Send',
+    'reset'=>'Reset',
 
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------
@@ -94,7 +94,7 @@ $literales = array(
     
     'stADD'=>'ADD',
     
-    'listaStock' => 'List of stocks',
+    'listaStock' => 'List of stock',
     'detalleStock'=>"Stock's details",
     'borrarStock' => 'Delete stock',
     'addStock' => 'Add stock',
@@ -120,6 +120,17 @@ $literales = array(
 
 //    -------------------------------------------------------------------
 //    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------
+//    -------------------------------------------------------------------
+
+
+//    -------------------------------------------------------------------
+//    -------------- MODIFICADO PROVEEDORES Y PEDIDOS -------------------
+//    -------------------------------------------------------------------
+
+
+
+//    -------------------------------------------------------------------
+//    ----------------- FIN PROVEEDORES Y PEDIDOS -----------------------
 //    -------------------------------------------------------------------
     
 )

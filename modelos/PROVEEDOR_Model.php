@@ -55,7 +55,7 @@ class Proveedor_modelo
             return "el proveedor ha sido modificado correctamente";
 
         } else {
-            return "el proveedor ya existe";
+            return "Lo sentimos, no se ha modificado el proveedor";
 
         }
     }

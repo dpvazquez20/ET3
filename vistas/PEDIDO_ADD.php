@@ -23,6 +23,12 @@ class Pedido_add{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
+                <!-- para el calendario -->
+                <script>
+                    $( function() {
+                        $( "#fecha" ).datepicker();
+                    } );
+                </script>
 
                 <title><?php echo $literales['nuevo pedido']; ?></title>
 
@@ -53,13 +59,8 @@ class Pedido_add{
                     </div>
 
                     <div class="form-group">
-                        <label for="usuario">Usuario2</label>
-                        <input name="usuario" class="form-control" value="<?php echo $_SESSION['dni']?>">
-                    </div>
-
-                    <div class="form-group">
                         <label for="fecha">Fecha</label>
-                        <input type="date" name="fecha" class="form-control" placeholder="ej: 2015-12-15" id="fecha">
+                        <input type="text" name="fecha" class="form-control" placeholder="ej: 2015-12-15" id="fecha">
                     </div>
 
 

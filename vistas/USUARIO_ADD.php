@@ -23,6 +23,13 @@ class Usuario_add
                 <!-- Título de la página -->
                 <div class="col-sm-9">
 
+                    <script>
+                        $( function() {
+                            $( "#datepicker" ).datepicker();
+                        } );
+                    </script>
+
+                    <p>Date: <input type="text" id="datepicker"></p>
                     <title><?php echo $literales['nuevo usuario']; ?></title>
 
                     <div class="alert alert-info"><?php echo $literales['usuarioADD'] ?></div>
@@ -35,6 +42,7 @@ class Usuario_add
                                    required
                                    placeholder="Introduce nombre del usuario">
                         </div>
+
                         <div class="form-group">
                             <label for="apellido">Apellido</label>
                             <input type="text" class="form-control" id="apellido" name="apellido"

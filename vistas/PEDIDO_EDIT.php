@@ -20,6 +20,13 @@ class Pedido_edit{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
+                <!-- para el calendario -->
+                <script>
+                    $( function() {
+                        $( "#fecha" ).datepicker();
+                    } );
+                </script>
+
                 <?php $resul = Pedido_modelo::getPedido($_GET['idPedido']);
                 $row1= mysqli_fetch_assoc($resul);
 
@@ -58,11 +65,13 @@ class Pedido_edit{
                         </select>
                     </div>
 
+
                     <div  style="align-items: center" class="form-group">
                         <label for="fecha">Fecha</label>
                         <input type="text" class="form-control" name="fecha" id="fecha"
                                value="<?php echo $row1['fecha']?>">
                     </div>
+
                     <div class="form-group">
                         <input id ="modificar" name="modificar"class="btn btn-warning"value="<?php echo $literales['modificar']?>" type="submit">
                         <a class="btn btn-default" href="../controladores/PEDIDO_Controller.php?id=SHOWALLPEDIDO&ctr=PEDIDO";">&laquo; Volver atrás</a>

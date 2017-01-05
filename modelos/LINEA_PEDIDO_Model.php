@@ -17,7 +17,8 @@ class Linea_Pedido_modelo
 
     function altaLineaPedido($linea_pedido)
     {
-            $insertar = "INSERT INTO linea_pedido (id_material,id_pedido,cantidad,estado,precio,IVA) VALUES('" . $linea_pedido->getIDMaterial() . "','" . $linea_pedido->getIDPedido() . "','" . $linea_pedido->getCantidad() . "','" . $linea_pedido->getEstado() . "','" . $linea_pedido->getPrecio() . "','" . $linea_pedido->getIVA() . "');";
+        $this->mysql = conectarBD();
+        $insertar = "INSERT INTO linea_pedido (id_material,id_pedido,cantidad,estado,precio,IVA) VALUES('" . $linea_pedido->getIDMaterial() . "','" . $linea_pedido->getIDPedido() . "','" . $linea_pedido->getCantidad() . "','" . $linea_pedido->getEstado() . "','" . $linea_pedido->getPrecio() . "','" . $linea_pedido->getIVA() . "');";
             $this->mysql->query($insertar);
     }
 

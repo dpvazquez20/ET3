@@ -17,7 +17,7 @@ class Pedido_modelo
     }
 
     function altaPedido($pedido){
-
+        $this->mysql = conectarBD();
         $insertar = "INSERT INTO pedido (id_proveedor,id_usuario,fecha) VALUES('" . $pedido->getIDProveedor() . "','" . $pedido->getIDUsuario() . "','" . $pedido->getFecha() . "');";
         $this->mysql->query($insertar);
 

@@ -49,12 +49,17 @@ class Pedido_add{
                             <?php while($rowU = mysqli_fetch_assoc($resul)){?>
                                 <option value="<?php echo $rowU["id_usuario"] ?>"><?= "Nombre: " . $rowU["nombre"]. " " .$rowU["apellido"] . " DNI: ". $rowU["DNI"] ?></option>
                         <?php } ?>
-                    </select>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario">Usuario2</label>
+                        <input name="usuario" class="form-control" value="<?php echo $_SESSION['dni']?>">
                     </div>
 
                     <div class="form-group">
                         <label for="fecha">Fecha</label>
-                        <input type="text" name="fecha" class="form-control" placeholder="ej: 2015-12-15" id="fecha">
+                        <input type="date" name="fecha" class="form-control" placeholder="ej: 2015-12-15" id="fecha">
                     </div>
 
 

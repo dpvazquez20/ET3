@@ -178,18 +178,10 @@ switch ($_GET['id']) {
                 $_SESSION['mensaje'] = $modelo->modifyLineaPedido($_POST['id_linea'], $lineaModificado);
                 $idPedido = $_POST['id_pedido'];
                 $dirUrl = 'PEDIDO_Controller.php?id=SHOWPEDIDO&ctr=PEDIDO&idPedido=' . $idPedido;
-                /*new Mensaje_usuario(); ?>
-                <script language="javascript">
-                    var dirUrl = '<?php echo $dirUrl; ?>';
-                    setTimeout("location.href=dirUrl", 3000);
-                </script><?php*/
+                new Mensaje_usuario();
+
             }
         }else{
-            /*echo "Permiso denegado"; ?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php*/
 
             new Permiso_denegado();
         }

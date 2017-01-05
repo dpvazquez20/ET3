@@ -47,8 +47,11 @@ class Linea_Pedido_add{
                     </div>
                     <div class="form-group">
                         <label for="estado">Estado</label>
-                        <input  type="text" class="form-control" id="estado" name="estado"
-                                placeholder="Estado">
+                        <select id="estado" name="estado">
+                            <option value="completa">completa</option>
+                            <option value="pendiente">pendiente</option>
+                            <option value="por llegar">por llegar</option>
+                        </select>
                     </div>
                     <div  style="align-items: center" class="form-group">
                         <label for="precio">Precio</label>

@@ -83,8 +83,6 @@ class Pedido_show{
                     </div>
 
                 </form>
-
-                <div class="col-sm-9">
                     <div>
                         <div class="col-sm-4">
                             <?php $listaControladores = Controlador_modelo::controladores($_SESSION['perfil']);
@@ -115,7 +113,8 @@ class Pedido_show{
                     $resul2= Linea_Pedido_modelo::listarLineasPedido($_GET['idPedido']);
                     while($row3 = mysqli_fetch_assoc($resul2)) {
 
-                        $rowM = Linea_Pedido_modelo::getMaterial($row3['id_material']);
+                        $resulM = Material_modelo::getMaterial($row3['id_material']);
+                        $rowM = mysqli_fetch_assoc($resulM);
 
                         echo "</td> <td>" . $row3['id'] . "</td> <td>" . $rowM['nombre'] . "</td> <td>" . $row3['cantidad'] . "</td> <td>" . $row3['precio'] . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores($_SESSION['perfil']);

@@ -115,6 +115,9 @@ $literales = array(
     'cancelarStock' => 'Cancelar',
     'volverStock' => 'Volver',
     'modificarStock' => 'Modificar',
+    
+    'buscarMaterial' => 'Buscar',
+    'buscarStock' => 'Buscar',
 
 //    -------------------------------------------------------------------
 //    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------

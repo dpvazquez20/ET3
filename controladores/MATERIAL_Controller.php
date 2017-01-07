@@ -26,18 +26,10 @@ switch ($_GET['id']) {
 
                 $_SESSION['mensaje'] = $modelo->altaMaterial($material);
                 
-                new Mensaje_usuario();?>
-                
-                <script language="javascript">
-                    setTimeout("location.href='MATERIAL_Controller.php?id=SHOWALLMATERIAL&ctr=MATERIAL'", 1000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
         }
         break;
 
@@ -52,17 +44,10 @@ switch ($_GET['id']) {
                 
                 $_SESSION['mensaje'] = $modelo->deleteMaterial($_POST['idB']);
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='MATERIAL_Controller.php?id=SHOWALLMATERIAL&ctr=MATERIAL'", 1000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
         }
         break;
 
@@ -74,17 +59,10 @@ switch ($_GET['id']) {
             } else {
                 $modelo = new Material_modelo();
                 $_SESSION['mensaje'] = $modelo->modifyMaterial($_POST['nombreM'],$_POST['descripcionM'], $_POST['idB']);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='MATERIAL_Controller.php?id=SHOWALLMATERIAL&ctr=MATERIAL'", 1000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
         }
         break;
 
@@ -93,11 +71,7 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Material_show();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Permiso_denegado();
         }
         break;
 
@@ -109,11 +83,7 @@ switch ($_GET['id']) {
             (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
             new Material_showAll();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            echo "Permiso denegado";
         }
 
 }

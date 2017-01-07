@@ -18,9 +18,9 @@ class Material_modelo{
         $this->mysql = conectarBD();
         $insertar = "INSERT INTO material (nombre,descripcion) VALUES('".utf8_encode($materialAInsertar->getNombre())."','".utf8_encode($materialAInsertar->getDescripcion())."');";
         if($this->mysql->query($insertar)){
-            return "Se creo la acción correctamente";
+            return "Se creo el material correctamente";
         }else{
-            return "No se ha podido insertar";
+            return "No se ha podido insertar el material";
         } 
 
     }
@@ -29,10 +29,10 @@ class Material_modelo{
         $this->mysql = conectarBD();
         $sql = "UPDATE material SET borrado='1' WHERE id='".$idBorrar."';";
         if($this->mysql->query($sql)){
-            return"Se ha eliminado correctamente la acción";
+            return"Se ha eliminado correctamente el material";
 
         }else{
-            return"Lo sentimos, no se ha podido eliminar la acción";
+            return"Lo sentimos, no se ha podido eliminar el material";
 
         }
 
@@ -62,6 +62,29 @@ class Material_modelo{
         $sql= "SELECT * from material WHERE id='".$id."';";
         return $conexion->query($sql);
     }
+    
+    public static function getMaterialNombre($nombre){
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM material WHERE borrado='0'";
+        } else {
+            $sql = "SELECT * FROM material WHERE nombre LIKE '%".$nombre."%' AND borrado='0';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    
+    public static function getMaterialId($id){
+        $conexion = conectarBD();
+        if ($id == "") {
+            $sql = "SELECT * FROM material WHERE borrado='0'";
+        } else {
+            $sql = "SELECT * FROM material WHERE id='".$id."' AND borrado='0';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    
 }
 
 

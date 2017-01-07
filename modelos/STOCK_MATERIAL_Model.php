@@ -24,9 +24,9 @@ class Stock_material_modelo{
             $insertar = "INSERT INTO stock_material (id_material,id_albaran,id_producto) VALUES('". $stockAInsertar->getId_material() . "','" . $stockAInsertar->getId_albaran() . "','". $stockAInsertar->getId_producto() ."');";
         }
         if($this->mysql->query($insertar)){
-            return "Se creo la acción correctamente";
+            return "Se creo el stock correctamente";
         }else{
-            return "No se ha podido insertar";
+            return "No se ha podido insertar el stock";
         } 
     }
     
@@ -36,17 +36,16 @@ class Stock_material_modelo{
         $sql = "DELETE FROM stock_material WHERE id='".$idBorrar."';";
         
         if($this->mysql->query($sql)){
-            return"Se ha eliminado correctamente la acción";
+            return"Se ha eliminado correctamente el stock";
 
         }else{
-            return"Lo sentimos, no se ha podido eliminar la acción";
+            return"Lo sentimos, no se ha podido eliminar el stock";
 
         }
 
     }
     
     function modifyStock_material($idB,$id_materialM,$id_albaranM,$id_productoM){
-        //$_POST['id_materialM'],$_POST['id_albaranM'], $_POST['id_productoM']
         $prod=$_POST['id_productoM'];
         $this->mysql= conectarBD();
         if($prod=='null'){
@@ -56,10 +55,10 @@ class Stock_material_modelo{
         }
 
         if($this->mysql->query($sql)){
-            return "El material ha sido modificado correctamente";
+            return "El stock ha sido modificado correctamente";
 
         }else{
-            return "El material no ha podido modificarse";
+            return "El stock no ha podido modificarse";
 
         }
     }
@@ -94,6 +93,74 @@ class Stock_material_modelo{
         $conexion= conectarBD();
         $sql= "SELECT * FROM producto ORDER BY nombre;";
         return $conexion->query($sql);
+    }
+    
+    public static function getProducto($id){
+        $conexion= conectarBD();
+        $sql= "SELECT * FROM producto WHERE id=".$id." ORDER BY nombre;";
+        $resul= $conexion->query($sql);
+        $row = mysqli_fetch_assoc($resul);
+        return $row['nombre'];
+    }
+    
+    public static function getMaterial($id){
+        $conexion= conectarBD();
+        $sql= "SELECT * FROM material WHERE id=".$id." ORDER BY nombre;";
+        $resul= $conexion->query($sql);
+        $row = mysqli_fetch_assoc($resul);
+        return $row['nombre'];
+    }
+    
+    public static function getStockId($id){
+        $conexion = conectarBD();
+        if ($id == "") {
+            $sql = "SELECT * FROM stock_material;";
+        } else {
+            $sql = "SELECT * FROM stock_material WHERE id='".$id."';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    
+    public static function getStockMaterial($nombre){
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM stock_material;";
+        } else {
+            $sql2 = "SELECT * FROM material WHERE nombre LIKE '%".utf8_encode($nombre)."%' AND borrado='0';";
+            $resul2 = $conexion->query($sql2);
+            $row = mysqli_fetch_assoc($resul2);
+            $id=$row['id'];
+            $sql = "SELECT * FROM stock_material WHERE id_material='".$id."';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    
+    public static function getStockAlbaran($id){
+        $conexion = conectarBD();
+        if ($id == "") {
+            $sql = "SELECT * FROM stock_material;";
+        } else {
+            $sql = "SELECT * FROM stock_material WHERE id_albaran='".$id."';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+    
+    public static function getStockProducto($nombre){
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM stock_material;";
+        } else {
+            $sql2 = "SELECT * FROM producto WHERE nombre LIKE '%".utf8_encode($nombre)."%';";
+            $resul2 = $conexion->query($sql2);
+            $row = mysqli_fetch_assoc($resul2);
+            $id=$row['id'];
+            $sql = "SELECT * FROM stock_material WHERE id_producto='".$id."';";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
     }
 }
 

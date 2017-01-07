@@ -42,6 +42,88 @@ class Stock_material_showAll{
                     }
                     ?>
                 </div>
+                
+                <!-- Buscador por id -->
+                <div class="col-sm-3">
+
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
+                        <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder=<?php echo $literales['stockId'] ?> type="text" pattern="[0123456789]*" id="idBuscar" name="idBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarStock'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                        
+                <!-- Buscador por material-->
+                <div class="col-sm-3">
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
+                        <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder="<?php echo $literales['stockId_material'] ?>" type="text" id="materialBuscar" name="materialBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarStock'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Buscador por albaran-->
+                <div class="col-sm-3">
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
+                        <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder="<?php echo $literales['stockId_albaran'] ?>" type="text" pattern="[0123456789]*" id="albaranBuscar" name="albaranBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarStock'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Buscador por producto-->
+                <div class="col-sm-3">
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
+                        <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder="<?php echo $literales['stockId_producto'] ?>" type="text" id="productoBuscar" name="productoBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarStock'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
@@ -54,13 +136,38 @@ class Stock_material_showAll{
                     </thead>
                     <tbody>
                     <?php
-                    $resul= Stock_material_modelo::listarStock();
+                    
+                    if(isset($_GET['idBuscar'])) {
+                        $resul=Stock_material_modelo::getStockId($_GET['idBuscar']);
+                    }else{
+                        if(isset($_GET['materialBuscar'])){
+                            $resul=Stock_material_modelo::getStockMaterial($_GET['materialBuscar']);
+
+                        }else {
+                            if(isset($_GET['albaranBuscar'])){
+                                $resul=Stock_material_modelo::getStockAlbaran($_GET['albaranBuscar']);
+
+                            }else {
+                                if(isset($_GET['productoBuscar'])){
+                                    $resul=Stock_material_modelo::getStockProducto($_GET['productoBuscar']);
+                                }else {
+                                    $resul= Stock_material_modelo::listarStock();
+                                }
+                            }
+                        }
+                    }
+                    
                     while($row = mysqli_fetch_assoc($resul)) {
-                        $prod = utf8_decode($row['id_producto']);
+                        
+                        $prod = $row['id_producto'];
                         if($prod == null) {
                             $prod ="(No asignado)";
+                        }else{
+                            $prod=utf8_decode(Stock_material_modelo::getProducto($row['id_producto']));
                         }
-                        echo "<tr><td>" . utf8_decode($row['id']) . "</td> <td>" . utf8_decode($row['id_material']) .  "</td> <td>" . utf8_decode($row['id_albaran']) . "</td> <td>" . $prod . "</td> <td>";
+                        $mat= utf8_decode(Stock_material_modelo::getMaterial($row['id_material']));
+                        
+                        echo "<tr><td>" . $row['id'] . "</td> <td>" . $mat .  "</td> <td>" . $row['id_albaran'] . "</td> <td>" . $prod . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));
                         while($accion = mysqli_fetch_assoc($listaControladores)){
                             if($accion['controlador']==$_GET['ctr']) {

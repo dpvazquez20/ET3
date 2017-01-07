@@ -42,6 +42,48 @@ class Material_showAll{
                     }
                     ?>
                 </div>
+                
+                <!-- Buscador por id -->
+                <div class="col-sm-3">
+
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARMATERIAL"/>
+                        <input type="hidden" name="ctr" value="MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder=<?php echo $literales['materialID'] ?> type="text" pattern="[0123456789]*" id="idBuscar" name="idBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarMaterial'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                        
+                <!-- Buscador por nombre-->
+                <div class="col-sm-3">
+                    <form role="form" method="get">
+                        <input type="hidden" name="id" value="BUSCARMATERIAL"/>
+                        <input type="hidden" name="ctr" value="MATERIAL"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <input placeholder="<?php echo $literales['materialNombre'] ?>" type="text" id="nombreBuscar" name="nombreBuscar"style="width: 200px" class=" form-control"> </input>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><?php echo $literales['buscarMaterial'] ?></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
@@ -53,9 +95,17 @@ class Material_showAll{
                     </thead>
                     <tbody>
                     <?php
-                    $resul= Material_modelo::listarMateriales();
+                    if(isset($_GET['idBuscar'])) {
+                        $resul=Material_modelo::getMaterialId($_GET['idBuscar']);
+                    }else{
+                        if(isset($_GET['nombreBuscar'])){
+                            $resul=Material_modelo::getMaterialNombre(utf8_encode($_GET['nombreBuscar']));
+                        }else {
+                            $resul= Material_modelo::listarMateriales();
+                        }
+                    }
                     while($row = mysqli_fetch_assoc($resul)) {
-                        echo "<tr><td>" . utf8_decode($row['id']) . "</td> <td>" . utf8_decode($row['nombre']) . "</td> <td>" . utf8_decode($row['descripcion']) . "</td> <td>";
+                        echo "<tr><td>" . $row['id'] . "</td> <td>" . utf8_decode($row['nombre']) . "</td> <td>" . utf8_decode($row['descripcion']) . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));
                         while($accion = mysqli_fetch_assoc($listaControladores)){
                             if($accion['controlador']==$_GET['ctr']) {

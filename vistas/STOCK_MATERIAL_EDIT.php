@@ -48,9 +48,9 @@ class Stock_material_edit{
                             $resul = Stock_material_modelo::getMateriales();
                             while($row = mysqli_fetch_assoc($resul)){
                                 if($row['id']==$generalMat){
-                                    echo "<option value='".$row['id']."' selected>".$row['nombre']."</option>";
+                                    echo "<option value='".$row['id']."' selected>".utf8_decode($row['nombre'])."</option>";
                                 }else{
-                                    echo "<option value='".$row['id']."'>".$row['nombre']."</option>";
+                                    echo "<option value='".$row['id']."'>".utf8_decode($row['nombre'])."</option>";
                                 }                                
                             }      
                         ?>
@@ -84,9 +84,9 @@ class Stock_material_edit{
                                     "<option value='null' selected>(No asignado)</option>";
                                 }else{
                                     if($row['id']==$generalPro && $row['id']!=null){
-                                        echo "<option value='".$row['id']."' selected>".$row['nombre']."</option>";
+                                        echo "<option value='".$row['id']."' selected>".utf8_decode($row['nombre'])."</option>";
                                     }else{
-                                        echo "<option value='".$row['id']."'>".$row['nombre']."</option>";
+                                        echo "<option value='".$row['id']."'>".utf8_decode($row['nombre'])."</option>";
                                     }
                                 }
                             }       

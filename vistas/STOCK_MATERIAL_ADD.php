@@ -29,14 +29,14 @@ class Stock_material_add
                     
                     <div class="form-group">
                         <label for="Id_material"><?php echo $literales['stockId_material']; ?></label>
-                        <select name="Id_material" required>
+                        <select name="Id_material" class="form-control" required>
                         <?php
                             $resul = Stock_material_modelo::getMateriales();
                             if($row = mysqli_fetch_assoc($resul)){
-                                echo "<option value='".$row['id']."' selected>".$row['nombre']."</option>";
+                                echo "<option value='".$row['id']."' selected>". utf8_decode($row['nombre']) ."</option>";
                             }
                             while($row = mysqli_fetch_assoc($resul)){
-                                echo "<option value='".$row['id']."'>".$row['nombre']."</option>"; 
+                                echo "<option value='".$row['id']."'>". utf8_decode($row['nombre'])."</option>"; 
                             }       
                         ?>
                         </select>
@@ -44,7 +44,7 @@ class Stock_material_add
 
                     <div class="form-group">
                         <label for="Id_albaran"><?php echo $literales['stockId_albaran']; ?></label>
-                        <select name="Id_albaran" required>
+                        <select name="Id_albaran" class="form-control" required>
                         <?php
                             $resul = Stock_material_modelo::getAlbaranes();
                             if($row = mysqli_fetch_assoc($resul)){
@@ -59,12 +59,12 @@ class Stock_material_add
 
                     <div class="form-group">
                         <label for="Id_producto"><?php echo $literales['stockId_producto']; ?></label>
-                        <select name="Id_producto" required>
+                        <select name="Id_producto" class="form-control" required>
                         <?php
                             $resul = Stock_material_modelo::getProductos();
                             echo "<option value='null'>(No asignado)</option>";
                             while($row = mysqli_fetch_assoc($resul)){
-                                echo "<option value='".$row['id']."'>".$row['nombre']."</option>"; 
+                                echo "<option value='".$row['id']."'>".utf8_decode($row['nombre'])."</option>"; 
                             }       
                         ?>
                         </select>

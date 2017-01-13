@@ -182,7 +182,7 @@ $literales = array(
     'proveedorSHOW' => 'Detalles do Proveedor',
     'mostrar proveedor' => 'Mostrar Proveedor',
 
-    'se ha creado correctamente: ' => ' se ha creado correctamente: '
+    'se ha creado correctamente: ' => ' se ha creado correctamente: ',
 
 
 

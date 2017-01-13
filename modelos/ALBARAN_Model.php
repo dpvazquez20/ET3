@@ -89,6 +89,32 @@ Class Albaran_Model{
 
     }
 
+    static function getAlbaranesById($id){
+      $conexion = conectarBD();
+        if ($id == "") {
+            $sql = "SELECT * FROM albaran ";
+        } else {
+            $sql = "SELECT * FROM albaran WHERE id LIKE '".$id."%';";
+        }
+
+        $resul = $conexion->query($sql);
+        return $resul;
+
+    }
+
+    static function getAlbaranesByFecha($fecha){
+      $conexion = conectarBD();
+        if ($fecha == "") {
+            $sql = "SELECT * FROM albaran ";
+        } else {
+            $sql = "SELECT * FROM albaran WHERE fecha LIKE '".$fecha."%';";
+        }
+
+        $resul = $conexion->query($sql);
+        return $resul;
+
+    }
+
     public static function getAlbaran($id){
     	$conexion= conectarBD();
         $sql= "SELECT * from albaran WHERE id='".$id."';";
@@ -102,6 +128,13 @@ Class Albaran_Model{
         $resul = $conexion->query($sql);
 
         return $resul;
+    }
+
+    public static function getLineaAlbaran($idLinea){
+      $conexion= conectarBD();
+        $sql= "SELECT * from linea_albaran WHERE id='".$idLinea."';";
+        return $conexion->query($sql);
+
     }
 
 

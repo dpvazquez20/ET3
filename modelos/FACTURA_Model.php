@@ -89,6 +89,48 @@ Class Factura_Model{
 
     }
 
+
+    static function getFacturasById($id){
+      $conexion = conectarBD();
+        if ($id == "") {
+            $sql = "SELECT * FROM factura ";
+        } else {
+            $sql = "SELECT * FROM factura WHERE id LIKE '".$id."%';";
+        }
+
+        $resul = $conexion->query($sql);
+        return $resul;
+
+    }
+
+    static function getFacturasByFecha($fecha){
+      $conexion = conectarBD();
+        if ($fecha == "") {
+            $sql = "SELECT * FROM factura ";
+        } else {
+            $sql = "SELECT * FROM factura WHERE fecha LIKE '".$fecha."%';";
+        }
+
+        $resul = $conexion->query($sql);
+        return $resul;
+
+    }
+
+    static function getFacturasByNIF($NIF){
+      $conexion = conectarBD();
+        if ($NIF == "") {
+            $sql = "SELECT * FROM factura ";
+        } else {
+            $sql = "SELECT * FROM factura WHERE NIF LIKE '".$NIF."%';";
+        }
+
+        $resul = $conexion->query($sql);
+        return $resul;
+
+    }
+
+
+
     public static function getFactura($id){
     	$conexion= conectarBD();
         $sql= "SELECT * from factura WHERE id='".$id."';";
@@ -113,6 +155,12 @@ Class Factura_Model{
         return $resul;
     }
 
+  public static function getLineaFactura($idLinea){
+      $conexion= conectarBD();
+        $sql= "SELECT * from linea_factura WHERE id='".$idLinea."';";
+        return $conexion->query($sql);
+
+    }
 
 
 

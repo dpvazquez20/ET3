@@ -44,7 +44,7 @@ class Stock_material_showAll{
                 </div>
                 
                 <!-- Buscador por id -->
-                <div class="col-sm-3">
+                <div class="col-sm-4">
 
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
@@ -62,10 +62,8 @@ class Stock_material_showAll{
                             </div>
                         </div>
                     </form>
-                </div>
                         
                 <!-- Buscador por material-->
-                <div class="col-sm-3">
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
                         <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
@@ -85,7 +83,7 @@ class Stock_material_showAll{
                 </div>
 
                 <!-- Buscador por albaran-->
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
                         <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>
@@ -102,10 +100,8 @@ class Stock_material_showAll{
                             </div>
                         </div>
                     </form>
-                </div>
                 
                 <!-- Buscador por producto-->
-                <div class="col-sm-3">
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARSTOCK_MATERIAL"/>
                         <input type="hidden" name="ctr" value="STOCK_MATERIAL"/>

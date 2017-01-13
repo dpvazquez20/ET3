@@ -19,7 +19,7 @@
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login">
                 <h4>Crear Base de datos.</h4>
-                <form role="form" action="crearBD.php" method="post" class="login-form">
+                <form role="form" action="install.php" method="post" class="login-form">
                     <input type="text"  name="usuario" id="usuario" class="form-control input-sm chat-input" placeholder="username" />
                     </br>
                     <input type="password"  name="password"id="password" class="form-control input-sm chat-input" placeholder="password" />

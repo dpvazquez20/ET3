@@ -31,7 +31,7 @@ class Perfil_edit{
                 <form role="form" action="PERFIL_Controller.php?id=EDITPERFIL&ctr=PERFIL" method="POST">
                     <input type="hidden" id="nombreAModificar" name="nombreAModificar" value="<?php echo $row['nombre']?>">
                     <div class="form-group">
-                        <label for="nombreM">Nombre</label>
+                        <label for="nombreM"><?php echo $literales['nombre']?></label>
                         <input  type="text" class="form-control" id="nombreM" name="nombreM"
                                 value="<?php  echo $row['nombre']?>">
                     </div>
@@ -49,7 +49,4 @@ class Perfil_edit{
         <?php include_once ('pieDePagina.php');
     }
 }
-/*}else
-    echo "Permiso denegado.";
-*/
 ?>

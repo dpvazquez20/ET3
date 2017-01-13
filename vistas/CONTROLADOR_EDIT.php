@@ -25,12 +25,12 @@ class Controlador_edit{
                     $row = mysqli_fetch_assoc($resul);
 
                 ?>
-                <div class="alert alert-warning">¿Esta seguro que desea modificar el controlador?</div>
+                <div class="alert alert-warning"><?php echo $literales['controladorMODIFY'] ?></div>
 
                 <form role="form" action="CONTROLADOR_Controller.php?id=EDITCONTROLADOR&ctr=CONTROLADOR" method="POST">
                     <input type="hidden" id="nombreAModificar" name="nombreAModificar" value="<?php echo $row['nombre']?>">
                     <div class="form-group">
-                        <label for="nombreM">Nombre</label>
+                        <label for="nombreM"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreM" name="nombreM"
                                 value="<?php  echo $row['nombre']?>">
                     </div>

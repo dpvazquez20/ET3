@@ -25,7 +25,7 @@ class Controlador_add{
 
                 <form role="form" action="CONTROLADOR_Controller.php?id=ADDCONTROLADOR&ctr=CONTROLADOR" method="POST">
                     <div class="form-group">
-                        <label for="Nombre">Nombre</label>
+                        <label for="Nombre"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombre" name="nombre" required
                                 placeholder="Introduce nombre del controlador">
                     </div>

@@ -1,6 +1,7 @@
 <?php
 
 $literales = array(
+    'controladorMODIFY'=>'This is the information for the controller',
     'SHOW'=>'SHOW CURRENT',
     'DELETE'=>'DELETE',
     'EDIT'=>'EDIT',

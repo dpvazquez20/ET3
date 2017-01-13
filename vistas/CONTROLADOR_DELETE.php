@@ -27,7 +27,7 @@ class Controlador_delete{
 
                 <form role="form" action="CONTROLADOR_Controller.php?id=DELETECONTROLADOR&ctr=CONTROLADOR" method="POST">
                     <div class="form-group">
-                        <label for="nombreB">Nombre</label>
+                        <label for="nombreB"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreB" name="nombreB" readonly="readonly"
                                 value="<?php  echo $row['nombre']?>">
                     </div>

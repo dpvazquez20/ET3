@@ -28,7 +28,7 @@ class Perfil_show{
 
                 <form role="form" action="PERFIL_Controller.php?id=MODIFYPERFIL&ctr=PERFIL" method="POST">
                     <div class="form-group">
-                        <label for="nombreB">Nombre</label>
+                        <label for="nombreB"><?php echo $literales['nombre']?></label>
                         <input  type="text" class="form-control" id="nombreB" name="nombreB" readonly="readonly"
                                 value="<?php  echo $row['nombre']?>">
                     </div>
@@ -45,7 +45,4 @@ class Perfil_show{
         <?php include_once ('pieDePagina.php');
     }
 }
-/*}else
-    echo "Permiso denegado.";
-*/
 ?>

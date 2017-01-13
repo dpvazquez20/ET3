@@ -1,13 +1,9 @@
 <?php
 
-//Si no hay una sesión iniciada, la inicia.
+
 if(!isset($_SESSION)){
     session_start();
 }
-//Comprueba si el usuario inició sesión y si es admin antes de cargar la página.
-//if(isset($_SESSION['grupo']) && strcmp($_SESSION['grupo'],"Admin") == 0 || strcmp($_SESSION['grupo'],'Secretario')==0){
-
-//Crea la clase e instancia la función render en el constructor.
 class Perfil_add{
 
     function __construct(){
@@ -25,7 +21,7 @@ class Perfil_add{
 
                 <form role="form" action="PERFIL_Controller.php?id=ADDPERFIL&ctr=PERFIL" method="POST">
                     <div class="form-group">
-                        <label for="Nombre">Nombre</label>
+                        <label for="Nombre"><?php echo $literales['nombre']?></label>
                         <input  type="text" class="form-control" id="nombre" name="nombre" required
                                 placeholder="Introduce nombre del controlador">
                     </div>
@@ -43,7 +39,4 @@ class Perfil_add{
         <?php include_once ('pieDePagina.php');
     }
 }
-/*}else
-    echo "Permiso denegado.";
-*/
 ?>

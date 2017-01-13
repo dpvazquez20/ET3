@@ -28,7 +28,7 @@ class Usuario_add
 
                     <form role="form" action="USUARIO_Controller.php?id=ADDUSUARIO&ctr=USUARIO" method="POST">
                         <div class="form-group">
-                            <label for="Nombre">Nombre</label>
+                            <label for="Nombre"><?php echo $literales['nombre'] ?></label>
                             <input type="text" class="form-control" id="nombre" name="nombre"
                                    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
                                    required
@@ -36,20 +36,20 @@ class Usuario_add
                         </div>
 
                         <div class="form-group">
-                            <label for="apellido">Apellido</label>
+                            <label for="apellido"><?php echo $literales['apellido'] ?></label>
                             <input type="text" class="form-control" id="apellido" name="apellido"
                                    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
                                    required
                                    placeholder="Apellido">
                         </div>
                         <div style="align-items: center" class="form-group">
-                            <label for="DNI">DNI</label>
+                            <label for="DNI"><?php echo $literales['dni'] ?></label>
                             <input type="text" class="form-control" id="DNI" name="DNI" required
                                    pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"
                                    placeholder="DNI/NIE Usuario">
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <label for="password"><?php echo $literales['password'] ?></label>
                             <input type="password" class="form-control" id="password" name="password"
                                    pattern="[A-Za-z0-9!?-]{8,12}" required
                                    placeholder="Contraseña">

@@ -41,8 +41,8 @@ class Controlador_showAll{
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th colspan="3"  >Acción</th>
+                        <th><?php echo $literales['nombre']?></th>
+                        <th colspan="3"  ><?php echo $literales['accion']?></th>
                     </tr>
                     </thead>
                     <tbody>

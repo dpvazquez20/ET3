@@ -79,7 +79,6 @@ switch ($_GET['id']) {
             new Permiso_denegado();
         }
         break;
-
     default:
         if((Permiso_modelo::mostrarPagina($controlador,$accion="ADD", $_SESSION['perfil'])==true) ||
             (Permiso_modelo::mostrarPagina($controlador,$accion="DELETE", $_SESSION['perfil'])==true) ||

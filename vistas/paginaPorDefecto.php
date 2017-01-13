@@ -8,7 +8,10 @@
             <?php include_once('menu.php'); ?>
             <div class="col-sm-9">
                 <?php
-                echo "Tu perfil es:".$_SESSION['perfil'];?>
+                echo "Tu perfil es:".$_SESSION['perfil'];
+                echo "Tu id es :" .$_SESSION['id_usuario'];
+                ?>
+
 
             </div>
             <?php require_once ('pieDePagina.php') ?>

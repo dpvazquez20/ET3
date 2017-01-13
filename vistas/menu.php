@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-inverse sidebar" role="navigation">
+<nav style="padding-left: 24px" class="navbar navbar-inverse sidebar" role="navigation">
          <div class="navbar-header">
              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
                  <span class="sr-only">Toggle navigation</span>
@@ -36,7 +36,7 @@
 
                          array_push($arrayPerfilesIntroducidos, $row['controlador']);
 
-                         echo "<li style='padding-left: 10px'><a class='btn btn-default' href='../controladores/" . $row['controlador'] . "_Controller.php?id=SHOWALL" . $row['controlador'] . "&ctr=" . $row['controlador'] . "'>
+                         echo "<li><a class='btn btn-default' href='../controladores/" . $row['controlador'] . "_Controller.php?id=SHOWALL" . $row['controlador'] . "&ctr=" . $row['controlador'] . "'>
                                 " . $literales['gestion'] . " " . $row['controlador'] . "</a></li><p></p>";
 
                      }

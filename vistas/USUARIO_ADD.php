@@ -22,14 +22,6 @@ class Usuario_add
                 <?php include('menu.php'); ?>
                 <!-- Título de la página -->
                 <div class="col-sm-9">
-
-                    <script>
-                        $( function() {
-                            $( "#datepicker" ).datepicker();
-                        } );
-                    </script>
-
-                    <p>Date: <input type="text" id="datepicker"></p>
                     <title><?php echo $literales['nuevo usuario']; ?></title>
 
                     <div class="alert alert-info"><?php echo $literales['usuarioADD'] ?></div>

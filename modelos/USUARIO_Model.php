@@ -116,12 +116,14 @@ class Usuario_modelo{
         return $resul;
     }
 
-        public static function getUsuario($idUsuario){
-            $conexion= conectarBD();
-            $sql="SELECT * FROM usuario WHERE id_usuario='".$idUsuario."';";
-            $resul =$conexion->query($sql);
-            return $resul;
-        }
+
+    public static function getUsuario($idUsuario){
+        $conexion= conectarBD();
+        $sql="SELECT * FROM usuario WHERE id_usuario='".$idUsuario."';";
+        $resul =$conexion->query($sql);
+        return $resul;
+    }
+
 
 }
 

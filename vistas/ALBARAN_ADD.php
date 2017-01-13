@@ -19,13 +19,19 @@ class Albaran_add{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
+            <title> <?php echo $literales['añadirAlbaran'] ?></title>
+             <script>
+                    $( function() {
+                        $( "#fecha" ).datepicker({dateFormat: "yy-mm-dd"});
+                    } );
+            </script>
                 <div class="alert alert-info"><?php echo $literales['albaranADD']?> </div>
 
                 <form role="form" action="ALBARAN_Controller.php?id=ADDALBARAN&ctr=ALBARAN" method="POST">
 
                     <!-- Seleccion del pedido-->
                     <div class="form-group">
-                        <label for="pedido"><?php  echo $literales['selectPedido']?></label>
+                        <label for="pedido"><?php  echo $literales['idPedido']?></label>
                         <select id="pedido" name="pedido"style="width: 200px" class=" form-control">
                             <?php
                             //CAMBIAR POR MODELO PEDIDO
@@ -39,12 +45,13 @@ class Albaran_add{
                 <!-- Seleccion de la fecha-->
                     <div class="form-group">
                             <label for="fecha"><?php  echo $literales['inputFecha']?></label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" <?php echo 'value="'.date("Y-m-d").'"';?>>
+                            <?php echo '<input type="text" class="form-control" id="fecha" name="fecha" placeholder="'.$literales['ejemploFecha'].'">'; 
+                            ?>
                         </div>
 
                     <div class="form-group">
                         <div class="col-sm-4"></div>
-                        <div class="col-sm-4"><input id="enviar" name="enviar" class="btn btn-primary"value="Enviar" type="submit">
+                        <div class="col-sm-4"><input id="enviar" name="enviar" class="btn btn-primary" value="Enviar" type="submit">
                             <a class="btn btn-default" href="ALBARAN_Controller.php?id=SHOWALLALBARAN&ctr=ALBARAN";">&laquo; <?php echo $literales['cancelar'];?></a>
                         </div>
 

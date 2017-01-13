@@ -17,7 +17,7 @@ class Albaran_delete{
             <!-- Título de la página -->
             <div class="col-sm-9">
 
-                <title>Borrar Albaran</title>
+                <title> <?php echo $literales['borrarAlbaran'] ?></title>
                 <?php $resul = Albaran_Model::getAlbaran($_GET['idAlbaran']);
                 $row= mysqli_fetch_assoc($resul);
                 ?>
@@ -33,22 +33,22 @@ class Albaran_delete{
 
 
                 </script>
-                <div class="alert alert-danger">Quieres borrar el albaran?</div>
+                <div class="alert alert-danger"> <?php echo $literales['albaranDELETE'] ?></div>
                 <form role="form" action="ALBARAN_Controller.php?id=DELETEALBARAN&ctr=ALBARAN" method="POST">
                     <div class="form-group">
                       
 
-                        <label for="id_albaran">ID albaran</label>
+                        <label for="id_albaran"><?php echo $literales['idAlbaran'] ?></label>
                         <input  type="text" class="form-control" id="id_albaran" name="id_albaran" readonly="readonly"
                                 value="<?php  echo $row['id']?>">
                     </div>
                      <div class="form-group">
-                        <label for="accionB">ID Pedido</label>
+                        <label for="accionB"><?php echo $literales['idPedido'] ?></label>
                         <input  type="text" class="form-control" id="id_pedido" name="id_pedido" readonly="readonly"
                                 value="<?php  echo $row['id_pedido']?>">
                     </div>
                     <div class="form-group">
-                        <label for="perfilB">Fecha</label>
+                        <label for="perfilB"><?php echo $literales['fecha'] ?></label>
                         <input  type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                 value="<?php  echo $row['fecha']?>">
                     </div>

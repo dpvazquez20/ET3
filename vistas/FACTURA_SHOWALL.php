@@ -29,6 +29,7 @@ class Factura_showAll{
         <?php include ('menu.php');?>
         <!-- Título de la página -->
         <div class="col-sm-9">
+        <title><?php echo $literales['mostrarFacturas'] ?></title>
             <div>
                 <div class="col-sm-4">
                     <?php $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));
@@ -45,23 +46,95 @@ class Factura_showAll{
 
                 </div>
 
+                <div class="col-sm-4">
+                
+                <form role="form" method="get">
+                    <input type="hidden" name="id" value="BUSCARFACTURA"/>
+                    <input type="hidden" name="ctr" value="FACTURA"/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input placeholder=<?php echo $literales['buscarPorId'] ?> type="text" id="idBuscar" name="idBuscar"
+                                           style="width: 200px" class=" form-control"> </input>
+                                </div>
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar'] ?></button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form role="form" method="get">
+                    <input type="hidden" name="id" value="BUSCARFACTURA"/>
+                    <input type="hidden" name="ctr" value="FACTURA"/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input placeholder="<?php echo $literales['buscarPorNif'] ?>" type="text" id="nifBuscar" name="nifBuscar"
+                                           style="width: 200px" class=" form-control"> </input>
+                                </div>
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar'] ?></button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form role="form" method="get">
+                    <input type="hidden" name="id" value="BUSCARFACTURA"/>
+                    <input type="hidden" name="ctr" value="FACTURA"/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input placeholder=<?php echo $literales['buscarPorFecha'] ?> type="text" id="fechaBuscar" name="fechaBuscar"
+                                           style="width: 200px" class=" form-control"> </input>
+                                </div>
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar'] ?></button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
 
                 
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th>ID_Factura</th>
-                        <th>NIF</th>
-                        <th>Fecha</th>
+                        <th><?php echo $literales['idFactura'] ?></th>
+                        <th><?php echo $literales['nif'] ?></th>
+                        <th><?php echo $literales['fecha'] ?></th>
                       
-                        <th colspan="3"  >Acciones</th>
+                        <th colspan="3"  ><?php echo $literales['accion'] ?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                    
                     //Facturaes a ver
-                    $resul= Factura_Model::listar();
+
+                    if (isset($_GET['idBuscar'])) {
+                        $resul = Factura_Model::getFacturasById($_GET['idBuscar']);
+                    }else {
+                        if(isset($_GET['nifBuscar'])){
+                            $resul = Factura_Model::getFacturasByNIF($_GET['nifBuscar']);
+                        }else{
+                            if(isset($_GET['fechaBuscar'])){
+                                $resul = Factura_Model::getFacturasByFecha($_GET['fechaBuscar']);
+                        }
+                            else{
+                                $resul= Factura_Model::listar();
+                        }
+                    }
+                }
+
+            
                     
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['id'] . "</td> <td>" . $row['NIF'] . "</td> <td>" . $row['fecha'] . "</td> <td>";

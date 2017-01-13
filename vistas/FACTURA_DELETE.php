@@ -17,43 +17,32 @@ class Factura_delete{
             <!-- Título de la página -->
             <div class="col-sm-9">
 
-                <title>Borrar Factura</title>
+                <title><?php echo $literales['borrarFactura']?></title>
                 <?php $resul = Factura_Model::getFactura($_GET['idFactura']);
                 $row= mysqli_fetch_assoc($resul);
                 ?>
-                <script type="text/javascript">
-                    function borrar() {
-                        var mensaje = confirm("¿Estas seguro que deseas borrar la factura?");
-                        if(mensaje){
-                            alert("Quieres borrarlo");
-                        }else{
-                            alert("No estas tan seguro no?")
-                        }
-                        }
-
-
-                </script>
-                <div class="alert alert-danger">Quieres borrar la factura?</div>
+               
+                <div class="alert alert-danger"><?php echo $literales['facturaDELETE'] ?></div>
                 <form role="form" action="FACTURA_Controller.php?id=DELETEFACTURA&ctr=FACTURA" method="POST">
                     <div class="form-group">
                       
 
-                        <label for="controlador">ID Factura</label>
+                        <label for="controlador"><?php echo $literales['idFactura'] ?></label>
                         <input  type="text" class="form-control" id="id_factura" name="id_factura" readonly="readonly"
                                 value="<?php  echo $row['id']?>">
                     </div>
                     <div class="form-group">
-                        <label for="accionB">ID Proveedor</label>
+                        <label for="accionB"><?php echo $literales['proveedor'] ?></label>
                         <input  type="text" class="form-control" id="id_proveedor" name="id_proveedor" readonly="readonly"
                                 value="<?php  echo $row['id_proveedor']?>">
                     </div>
                     <div class="form-group">
-                        <label for="perfilB">NIF</label>
+                        <label for="perfilB"><?php echo $literales['nif'] ?></label>
                         <input  type="text" class="form-control" id="NIF" name="NIF" readonly="readonly"
                                 value="<?php  echo $row['NIF']?>">
                     </div>
                     <div class="form-group">
-                        <label for="perfilB">Fecha</label>
+                        <label for="perfilB"><?php echo $literales['fecha'] ?></label>
                         <input  type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                 value="<?php  echo $row['fecha']?>">
                     </div>

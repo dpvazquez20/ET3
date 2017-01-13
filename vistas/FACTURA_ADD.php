@@ -19,13 +19,20 @@ class Factura_add{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
-                <div class="alert alert-info"> Introduce los siguientes parámetros</div>
+            <title><?php echo $literales['añadirFactura']?></title>
+            <script>
+                    $( function() {
+                        $( "#fecha" ).datepicker({dateFormat: "yy-mm-dd"});
+                    } );
+            </script>
+
+                <div class="alert alert-info"><?php echo $literales['facturaADD']?></div>
 
                 <form role="form" action="FACTURA_Controller.php?id=ADDFACTURA&ctr=FACTURA" method="POST">
 
                     <!-- Seleccion del pedido-->
                     <div class="form-group">
-                        <label for="proveedor">Proveedor</label>
+                        <label for="proveedor"><?php echo $literales['proveedor']?></label>
                         <select id="id_proveedor" name="id_proveedor"style="width: 200px" class=" form-control">
                             <?php
                             //CAMBIAR POR MODELO PROVEEDOR
@@ -38,18 +45,18 @@ class Factura_add{
                     </div>
                 <!-- Seleccion de la fecha-->
                 <div class="form-group">
-                        <label for="Nombre">NIF</label>
-                        <input type="text" class="form-control" id="NIF" name="NIF" required
+                        <label for="Nombre"><?php echo $literales['nif']?></label>
+                        <input type="text" class="form-control" id="NIF" name="NIF" required placeholder="<?php echo $literales['ejemploNif']?>"
                              >
                     </div>
                     <div class="form-group">
-                            <label for="fecha">Fecha</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" <?php echo 'value="'.date("Y-m-d").'"';?>>
+                            <label for="fecha"><?php echo $literales['fecha']?></label>
+                            <input type="text" class="form-control" required id="fecha" name="fecha" placeholder="<?php echo $literales['ejemploFecha']?>">
                         </div>
 
                     <div class="form-group">
                         <div class="col-sm-4"></div>
-                        <div class="col-sm-4"><input id="enviar" name="enviar" class="btn btn-primary"value="Enviar" type="submit">
+                        <div class="col-sm-4"><input id="enviar" name="enviar" class="btn btn-primary" value="Enviar" type="submit">
                             <a class="btn btn-default" href="FACTURA_Controller.php?id=SHOWALLFACTURA&ctr=FACTURA";">&laquo; <?php echo $literales['cancelar'];?></a>
                         </div>
 

@@ -29,9 +29,11 @@ class Albaran_showAll{
         <?php include ('menu.php');?>
         <!-- Título de la página -->
         <div class="col-sm-9">
+        <title> <?php echo $literales['mostrarAlbaranes'] ?></title>
             <div>
                 <div class="col-sm-4">
                     <?php $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));
+               
                     $allowADD=false;
                     while($row=mysqli_fetch_assoc($listaControladores)){
                         if($row['controlador']==$_GET['ctr']){
@@ -46,21 +48,70 @@ class Albaran_showAll{
                 </div>
 
 
+                <div class="col-sm-4">
+                
+                <form role="form" method="get">
+                    <input type="hidden" name="id" value="BUSCARALBARAN"/>
+                    <input type="hidden" name="ctr" value="ALBARAN"/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input placeholder=<?php echo $literales['buscarPorId'] ?> type="text" id="idBuscar" name="idBuscar"
+                                           style="width: 200px" class=" form-control"> </input>
+                                </div>
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form role="form" method="get">
+                    <input type="hidden" name="id" value="BUSCARALBARAN"/>
+                    <input type="hidden" name="ctr" value="ALBARAN"/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input placeholder=<?php echo $literales['buscarPorFecha'] ?> type="text" id="fechaBuscar" name="fechaBuscar"
+                                           style="width: 200px" class=" form-control"> </input>
+                                </div>
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
                 
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th>ID_Albaran</th>
-                        <th>Fecha</th>
+                        <th><?php echo $literales['idAlbaran'] ?></th>
+                        <th><?php echo $literales['fecha'] ?></th>
                       
-                        <th colspan="3"  >Acciones</th>
+                        <th colspan="3"  ><?php echo $literales['accion'] ?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                    
+                     if (isset($_GET['idBuscar'])) {
+                        $resul = Albaran_Model::getAlbaranesById($_GET['idBuscar']);
+                    }else {
+                        if(isset($_GET['fechaBuscar'])){
+                            $resul = Albaran_Model::getAlbaranesByFecha($_GET['fechaBuscar']);
+                        }else{
+                            $resul= Albaran_Model::listar();
+                        }
+                    }
+
                     //Albaranes a ver
-                    $resul= Albaran_Model::listar();
+                    //$resul= Albaran_Model::listar();
                     
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['id'] . "</td> <td>" . $row['fecha'] . "</td> <td>";
@@ -70,14 +121,15 @@ class Albaran_showAll{
                                 if ($accion['accion'] != "ADD") {
                                     $estilo = 'btn btn-default';
                                     $nombreBoton =$accion['accion'];
-                                    if ($accion['accion'] == "EDIT") {
-                                        $estilo = 'btn btn-warning';
-                                        $nombreBoton= $literales['EDIT'];
-                                    }
 
                                     if ($accion['accion'] == "SHOW") {
                                         $estilo = 'btn btn-success';
                                         $nombreBoton= $literales['SHOW'];
+                                    }
+
+                                    if ($accion['accion'] == "EDIT") {
+                                        $estilo = 'btn btn-warning';
+                                        $nombreBoton= $literales['EDIT'];
                                     }
 
                                     if ($accion['accion'] == "DELETE") {

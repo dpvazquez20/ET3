@@ -20,32 +20,33 @@ class Factura_show{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
+            <title><?php echo $literales['mostrarFactura'] ?></title>
                 <?php
                 $resul = Factura_model::getFactura($_GET['idFactura']);
                 $row = mysqli_fetch_assoc($resul);
                 ?>
-                <div class="alert alert-success">Estos son los datos de la factura</div>
+                <div class="alert alert-success"><?php echo $literales['facturaSHOWCURRENT'] ?></div>
 
                 <form role="form" action="FACTURA_Controller.php?id=SHOWFACTURA&ctr=FACTURA" method="POST">
                     <div class="form-group">
                       
 
-                        <label for="controlador">ID Factura</label>
+                        <label for="controlador"><?php echo $literales['idFactura'] ?></label>
                         <input  type="text" class="form-control" id="id_factura" name="id_factura" readonly="readonly"
                                 value="<?php  echo $row['id']?>">
                     </div>
                     <div class="form-group">
-                        <label for="accionB">ID Proveedor</label>
+                        <label for="accionB"><?php echo $literales['proveedor'] ?></label>
                         <input  type="text" class="form-control" id="id_proveedor" name="id_proveedor" readonly="readonly"
                                 value="<?php  echo $row['id_proveedor']?>">
                     </div>
                     <div class="form-group">
-                        <label for="perfilB">NIF</label>
+                        <label for="perfilB"><?php echo $literales['nif'] ?></label>
                         <input  type="text" class="form-control" id="NIF" name="NIF" readonly="readonly"
                                 value="<?php  echo $row['NIF']?>">
                     </div>
                     <div class="form-group">
-                        <label for="perfilB">Fecha</label>
+                        <label for="perfilB"><?php echo $literales['fecha'] ?></label>
                         <input  type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                 value="<?php  echo $row['fecha']?>">
                     </div>
@@ -57,13 +58,28 @@ class Factura_show{
 
                 </form>
 
+                <div>
+                        <div class="col-sm-4">
+                            <?php $listaControladores = Controlador_modelo::controladores($_SESSION['perfil']);
+                            $allowADD=false;
+                            while($row2=mysqli_fetch_assoc($listaControladores)){
+                                if($row2['controlador']=="FACTURA"){
+                                    if($row2['accion']=='ADD'){
+                                        echo "<a href='../controladores/".$row2['controlador']."_Controller.php?id=".$row2['accion']."LINEA".$row2['controlador']."&idFactura=".$_GET['idFactura']."'><button class='btn  btn-primary'>".$row2['accion']." LINEA ".$row2['controlador']."</button></a></br></br>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
 
 
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th>ID_Linea</th>
-                        <th>ID_Albaran</th>
+                        <th><?php echo $literales['idLinea'] ?></th>
+                        <th><?php echo $literales['idAlbaran'] ?></th>
+                        <th colspan="3"  ><?php echo $literales['accion'] ?></th>
                         
                       
                         
@@ -79,6 +95,33 @@ class Factura_show{
                     $controladorAct = "FACTURA";
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['id_linea'] . "</td> <td>" . $row['id_albaran'] . "</td> <td>";
+
+
+                        $listaControladores = Controlador_modelo::controladores($_SESSION['perfil']);
+
+                        while($accion = mysqli_fetch_assoc($listaControladores)){
+                            if($accion['controlador']=="FACTURA") {
+                                if ($accion['accion'] != "ADD") {
+                                    $estilo = 'btn btn-default';
+                                    $nombreBoton =$accion['accion'];
+                                    if ($accion['accion'] == "EDIT") {
+                                        $estilo = 'btn btn-warning';
+                                        $nombreBoton= $literales['EDIT'];
+                                    }
+
+                                    if ($accion['accion'] == "SHOW") {
+                                        $estilo = 'btn btn-success';
+                                        $nombreBoton= $literales['SHOW'];
+                                    }
+
+                                    if ($accion['accion'] == "DELETE") {
+                                        $estilo = 'btn btn-danger';
+                                        $nombreBoton= $literales['DELETE'];
+                                    }
+                                    echo "<a href='../controladores/" . $accion['controlador'] . "_Controller.php?id=" . $accion['accion'] . "LINEA" . $accion['controlador'] . "&idFactura=" . $row['id_factura'] . "&idLineaFactura=" . $row['id_linea'] . "'><button class='" . $estilo . "'>" . $nombreBoton . "</button></a>";
+                                }
+                            }
+                        }
                        
                         
                         echo"</td></tr>";

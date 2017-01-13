@@ -71,8 +71,8 @@ if(isset($_POST['usuario'])) {
     }else{
         session_start();
         $sqlPermiso= "SELECT perfil from usuario WHERE nombre='$usuario' AND password='$password'";
-        $reSqlPermiso= $db->query($sqlPermiso);
-        $row = mysqli_fetch_assoc($reSqlPermiso);
+        $row1= mysqli_fetch_assoc($resultado);
+        $_SESSION['id_usuario']= $row1['id_usuario'];
         $_SESSION['perfil']=$row['perfil'];
         $_SESSION['usuario']= $usuario;
         header("location: index.php");

@@ -26,7 +26,6 @@ class Pedido_edit{
                         $( "#fecha" ).datepicker();
                     } );
                 </script>
-
                 <?php $resul = Pedido_modelo::getPedido($_GET['idPedido']);
                 $row1= mysqli_fetch_assoc($resul);
 

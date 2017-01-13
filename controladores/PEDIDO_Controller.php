@@ -6,19 +6,26 @@ require_once ('../vistas/PEDIDO_SHOWALL.php');
 require_once ('../vistas/PEDIDO_DELETE.php');
 require_once('../vistas/PEDIDO_SHOWCURRENT.php');
 require_once('../vistas/PEDIDO_EDIT.php');
+
 require_once('../modelos/LINEA_PEDIDO_Model.php');
 require_once('../vistas/LINEA_PEDIDO_ADD.php');
 require_once ('../vistas/LINEA_PEDIDO_DELETE.php');
 require_once('../vistas/LINEA_PEDIDO_SHOWCURRENT.php');
 require_once('../vistas/LINEA_PEDIDO_EDIT.php');
+
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
+require_once ('../vistas/PERMISO_DENEGADO.php');
 
 
 
 $controlador = "pedido";
 
+$idUsuario = $_SESSION['id_usuario'];
+
 switch ($_GET['id']) {
+
+    //caso para añadir pedido
 
     case 'ADDPEDIDO':
         $accion = "ADD";
@@ -33,7 +40,8 @@ switch ($_GET['id']) {
 
                 $pedido = new Pedido($proveedor, $usuario, $fecha);
                 $modelo = new Pedido_modelo();
-                $_SESSION['mensaje'] = $modelo->altaPedido($pedido);
+                $_SESSION['mensaje'] = $modelo->altaPedido($pedido,$idUsuario);
+
                 new Mensaje_usuario();
             }
         }
@@ -42,6 +50,8 @@ switch ($_GET['id']) {
         }
         break;
 
+    //caso para borrar pedido
+
     case 'DELETEPEDIDO':
         $accion = "DELETE";
         if(Permiso_modelo::mostrarPagina($controlador,$accion,$_SESSION['perfil'])) {
@@ -49,14 +59,17 @@ switch ($_GET['id']) {
                 new Pedido_delete();
             } else {
                 $modelo = new Pedido_modelo();
-                $_SESSION['mensaje'] = $modelo->deletePedido($_POST['IDE']);
+                $_SESSION['mensaje'] = $modelo->deletePedido($_POST['IDE'], $idUsuario);
                 new Mensaje_usuario();
+
             }
         }
         else{
             new Permiso_denegado();
         }
         break;
+
+    //caso para mostrar el pedido en detalle, además de todas las lineas de pedido asociados a ese pedido
 
     case'SHOWPEDIDO':
         $accion = "SHOW";
@@ -66,6 +79,8 @@ switch ($_GET['id']) {
             new Permiso_denegado();
         }
         break;
+
+    //caso para modificar el pedido
 
     case'EDITPEDIDO':
         $accion="EDIT";
@@ -80,7 +95,8 @@ switch ($_GET['id']) {
                 $pedidoModificado = new Pedido($proveedor, $usuario, $fecha);
 
                 $modelo = new Pedido_modelo();
-                $_SESSION['mensaje']=$modelo->modifyPedido($_POST['id_pedido'], $pedidoModificado);
+                $_SESSION['mensaje']=$modelo->modifyPedido($_POST['id_pedido'], $pedidoModificado, $idUsuario);
+
                 new Mensaje_usuario();
             }
         }
@@ -89,12 +105,7 @@ switch ($_GET['id']) {
         }
         break;
 
-    case'BUSCARPEDIDO':
-        break;
-
-    /*case 'SHOWALLPEDIDO':
-           new Pedido_showAll();
-           break;*/
+    //caso añadir linea de pedido
 
     case 'ADDLINEAPEDIDO':
         $accion = "SHOW";
@@ -105,25 +116,18 @@ switch ($_GET['id']) {
                 $linea = new Linea_Pedido($_POST['nombre_material'], $_POST['id_pedido'], $_POST['cantidad'], $_POST['estado'], $_POST['precio'], $_POST['iva']);
                 $idPedido = $_POST['id_pedido'];
                 $modelo = new Linea_Pedido_modelo();
-                $_SESSION ['mensaje'] = $modelo->altaLineaPedido($linea);
+                $_SESSION ['mensaje'] = $modelo->altaLineaPedido($linea,$idUsuario);
+
                 new Mensaje_usuario();
-                /*$dirUrl = 'PEDIDO_Controller.php?id=SHOWPEDIDO&ctr=PEDIDO&idPedido=' . $idPedido;?>
-                <script language="javascript">
-                    var dirUrl = '<?php echo $dirUrl; ?>';
-                    setTimeout("location.href=dirUrl", 3000);
-                </script><?php*/
             }
         }
         else{
-            /*echo "Permiso denegado"; ?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php*/
             new Permiso_denegado();
         }
         break;
 
+
+    //caso borrar linea de pedido
 
     case 'DELETELINEAPEDIDO':
         $accion = "SHOW";
@@ -133,39 +137,31 @@ switch ($_GET['id']) {
             } else {
                 $modelo = new Linea_Pedido_modelo();
                 $idPedido = $_POST['IDPedidoE'];
-                $_SESSION['mensaje']=$modelo->deleteLineaPedido($_POST['IDE']);
+                $_SESSION['mensaje']=$modelo->deleteLineaPedido($_POST['IDE'],$idPedido,$idUsuario);
+
                 new Mensaje_usuario();
-                /*$dirUrl = 'PEDIDO_Controller.php?id=SHOWPEDIDO&ctr=PEDIDO&idPedido=' . $idPedido;?>
-                <script language="javascript">
-                    var dirUrl = '<?php echo $dirUrl; ?>';
-                    setTimeout("location.href=dirUrl", 3000);
-                </script><?php*/
             }
         }else{
-            /*echo "Permiso denegado"; ?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php*/
 
             new Permiso_denegado();
         }
         break;
+
+    //Sección del controlador de las lineas de pedido
+
+    //caso mostar en detalle de la linea de pedido
 
     case'SHOWLINEAPEDIDO':
         $accion = "SHOW";
         if (Permiso_modelo::mostrarPagina($controlador, $accion, $_SESSION['perfil'])) {
             new Linea_Pedido_show();
         } else {
-            /*echo "Permiso denegado"; ?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php*/
 
             new Permiso_denegado();
         }
         break;
+
+    //caso para editar
 
     case'EDITLINEAPEDIDO':
         $accion = "SHOW";
@@ -175,11 +171,9 @@ switch ($_GET['id']) {
             } else {
                 $lineaModificado = new Linea_Pedido($_POST['material'], $_POST['id_pedido'], $_POST['cantidad'], $_POST['estado'], $_POST['precio'], $_POST['iva']);
                 $modelo = new Linea_Pedido_modelo();
-                $_SESSION['mensaje'] = $modelo->modifyLineaPedido($_POST['id_linea'], $lineaModificado);
-                $idPedido = $_POST['id_pedido'];
-                $dirUrl = 'PEDIDO_Controller.php?id=SHOWPEDIDO&ctr=PEDIDO&idPedido=' . $idPedido;
-                new Mensaje_usuario();
+                $_SESSION['mensaje'] = $modelo->modifyLineaPedido($_POST['id_linea'], $lineaModificado, $idUsuario);
 
+                new Mensaje_usuario();
             }
         }else{
 
@@ -187,11 +181,8 @@ switch ($_GET['id']) {
         }
         break;
 
-    case'BUSCARLINEAPEDIDO':
-        break;
-    //default: new Linea_Pedido_showAll();
 
-
+    //caso por defecto: muestra la pagina que lista todos los pedidos
 
     default:
         if ((Permiso_modelo::mostrarPagina($controlador, $accion = "ADD", $_SESSION['perfil']) == true) ||

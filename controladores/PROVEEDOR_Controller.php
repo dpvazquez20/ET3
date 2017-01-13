@@ -6,6 +6,7 @@ require_once ('../vistas/PROVEEDOR_SHOWALL.php');
 require_once ('../vistas/PROVEEDOR_DELETE.php');
 require_once('../vistas/PROVEEDOR_SHOWCURRENT.php');
 require_once('../vistas/PROVEEDOR_EDIT.php');
+
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
 require_once ('../vistas/PERMISO_DENEGADO.php');
@@ -72,13 +73,6 @@ switch ($_GET['id']) {
             new Permiso_denegado();
         }
         break;
-
-    case'BUSCARPROVEEDOR':
-        break;
-
-    /*case 'SHOWALLPROVEEDOR':
-        new Proveedor_showAll();
-        break;*/
 
     default:
         if ((Permiso_modelo::mostrarPagina($controlador, $accion = "ADD", $_SESSION['perfil']) == true) ||

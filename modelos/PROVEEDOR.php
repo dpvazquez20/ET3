@@ -10,6 +10,8 @@ class Proveedor{
     var $provincia;
     var $mysql;
 
+    //constructor de la clase Proveedor
+
     function __construct($nombre=null, $nif=null, $correoE=null, $telefono=null, $direccion=null, $codigoP=null, $ciudad=null, $provincia=null)
     {
         $this->nombre=$nombre;
@@ -21,6 +23,8 @@ class Proveedor{
         $this->ciudad=$ciudad;
         $this->provincia= $provincia;
     }
+
+    //getters de la clase Proveedor
 
     public function getNombre()
     {

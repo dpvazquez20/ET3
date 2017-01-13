@@ -12,6 +12,10 @@ class Linea_Pedido_delete{
         $this->render();
     }
 
+    //Vista para borrar una linea de pedido. Los datos a
+    //que aparecen son material, cantidad, estado, precio unitario
+    //sin iva, y la iva
+
     function render(){
         include_once('cabecera.php');
         ?>
@@ -37,22 +41,22 @@ class Linea_Pedido_delete{
                                value="<?php echo $row['id_pedido']?>">
                     </div>
                     <div class="form-group">
-                        <label for="nombreE">Nombre Material</label>
+                        <label for="nombreE"><?php echo $literales['material']?></label>
                         <input type="text" class="form-control" id="nombreE" name="nombreE" readonly="readonly"
                                value="<?php echo $row2['nombre']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="CantidadE">Cantidad</label>
+                        <label for="CantidadE"><?php echo $literales['cantidad']?></label>
                         <input type="text" class="form-control" id="CantidadE" name="CantidadE" readonly="readonly"
                                value="<?php echo $row['cantidad']?>">
                     </div>
                     <div class="form-group">
-                        <label for="EstadoE">Estado</label>
+                        <label for="EstadoE"><?php echo $literales['estado']?></label>
                         <input type="text" class="form-control" id="EstadoE" name="EstadoE" readonly="readonly"
                                value="<?php echo $row['estado']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="PrecioE">Precio</label>
+                        <label for="PrecioE"><?php echo $literales['precio']?></label>
                         <input type="text" class="form-control" id="PrecioE" name="PrecioE" readonly="readonly"
                                value="<?php echo $row['precio']?>">
                     </div>

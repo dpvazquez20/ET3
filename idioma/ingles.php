@@ -128,6 +128,64 @@ $literales = array(
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO PROVEEDORES Y PEDIDOS -------------------
 //    -------------------------------------------------------------------
+    'proveedor'=>'Supplier',
+
+    'id pedido'=>"Order ID",
+    'nombre proveedor'=>'Supplier Name',
+    'direccion'=>'Address',
+    'codigo postal'=>'Postal Code',
+
+    'ciudad' => 'City',
+    'provincia' => 'Province',
+    'dni usuario' => 'User DNI',
+
+    'fecha'=>'Date',
+    'pedidoSHOW' => 'Order details',
+    'pedidoADD' => 'Do you want a new order?',
+    'pedidoDELETE'=>'Do you want to delete an order?',
+    'pedidoEDIT' => 'Do you want to modify an order?',
+    'mostarar pedido' => 'Show Order',
+    'usuario' => 'User',
+    'eliminar pedido' => 'Erase Order',
+
+    'nuevo pedido' => 'New Order',
+    'nif proveedor' => 'Supplier NIF',
+    'cantidad'=>'Amount',
+    'estado' => 'State',
+    'precio' => 'Unit Price without IVA',
+    'lineaDELETE' => 'Do you want to delete a line?',
+    'lineaSHOW' => 'Line details',
+    'lineaEDIT' => 'Do you want to modify a line?',
+    'lineaADD' => 'Do you want to add a line?',
+    'eliminar linea de pedido' => 'Erase Line',
+
+    'completa' => 'complete',
+    'pendiente' => 'pending',
+    'por llegar' => 'to come',
+    'descripcion' => ' Description: ',
+    'id linea' => 'Line ID',
+
+    'id pedido a buscar' => 'Search by Order ID',
+    'nombre proveedor a buscar' => 'Search by Supplier Name',
+    'nif proveedor a buscar' => 'Search by Supplier NIF',
+    'dni usuario a buscar' => 'Search by User DNI',
+    'fecha a buscar' => 'Search by Date',
+
+    'nuevo linea de pedido'=>'Add New Line',
+    'mostar linea de pedido' => 'Show New Line',
+
+    'nuevo proveedor' => 'New Supplier',
+    'correo electronico' => 'Email',
+    'telefono'=>'Telephone',
+    'eliminar proveedor' => 'Erase Supplier',
+    'proveedorDELETE' => 'Do you want to delete a supplier?',
+    'proveedorEDIT' => 'Do you want to modify a supplier?',
+    'proveedorADD' => 'Do you want to add a supplier?',
+    'proveedorSHOW' => 'Supplier details',
+    'mostrar proveedor' => 'Show Supplier',
+
+    'se ha creado correctamente: ' => ' was created correctly. '
+
 
 
 

@@ -128,5 +128,73 @@ $literales = array(
 //    ----------------- FIN MATERIAL Y STOCK_MATERIAL -------------------
 //    -------------------------------------------------------------------
 
+//    -------------------------------------------------------------------
+//    -------------- MODIFICADO PROVEEDORES Y PEDIDOS -------------------
+//    -------------------------------------------------------------------
+    'proveedor'=>'Proveedor',
+
+    'id pedido'=>"ID Pedido",
+    'nombre proveedor'=>'Nombre del Proveedor',
+    'direccion'=>'Direccion',
+    'codigo postal'=>'Codigo Postal',
+
+    'ciudad' => 'Ciudad',
+    'provincia' => 'Provincia',
+    'dni usuario' => 'DNI Usuario',
+
+    'fecha'=>'Fecha',
+    'pedidoSHOW' => 'Detalles Pedido',
+    'pedidoADD' => '¿Quieres un nuevo Pedido?',
+    'pedidoDELETE'=>'¿Quieres borrar un Pedido?',
+    'pedidoEDIT' => '¿Quieres modificar un Pedido?',
+    'mostarar pedido' => 'Mostar Pedido',
+    'usuario' => 'Usuario',
+    'eliminar pedido' => 'Borrar Pedido',
+
+    'nuevo pedido' => 'Nuevo Pedido',
+    'nif proveedor' => 'NIF Proveedor',
+    'cantidad'=>'Cantidad',
+    'estado' => 'Estado',
+    'precio' => 'Precio Unitario sin IVA',
+    'lineaDELETE' => '¿Quieres borrar una linea?',
+    'lineaEDIT' => '¿Quieres modificar una linea?',
+    'lineaADD' => '¿Quieres añadir una linea?',
+    'lineaSHOW' => 'Detalles linea',
+    'eliminar linea de pedido' => 'Borrar linea',
+
+    'completa' => 'completa',
+    'pendiente' => 'pendiente',
+    'por llegar' => 'por llegar',
+    'descripcion' => ' Descripción: ',
+    'id linea' => 'ID Linea',
+
+    'id pedido a buscar' => 'ID Pedido a Buscar',
+    'nombre proveedor a buscar' => 'Nombre Proveedor a Buscar',
+    'nif proveedor a buscar' => 'NIF Proveedor a Buscar',
+    'dni usuario a buscar' => 'DNI Usuario a Buscar',
+    'fecha a buscar' => 'Fecha a Buscar',
+
+    'nuevo linea de pedido'=>'Nueva Linea de Pedido',
+    'mostar linea de pedido' => 'Mostar Linea de Pedido',
+
+    'nuevo proveedor' => 'Nuevo Proveedor',
+    'correo electronico' => 'Correo Electronico',
+    'telefono'=>'Teléfono',
+    'eliminar proveedor' => 'Borrar Proveedor',
+    'proveedorDELETE' => '¿Quieres borrar un Proveedor?',
+    'proveedorEDIT' => '¿Quieres modificar un Proveedor?',
+    'proveedorADD' => '¿Quieres añadir un Proveedor?',
+    'proveedorSHOW' => 'Detalles del Proveedor',
+    'mostrar proveedor' => 'Mostrar Proveedor',
+
+    'se ha creado correctamente: ' => ' se ha creado correctamente: '
+
+
+
+
+//    -------------------------------------------------------------------
+//    ----------------- FIN PROVEEDORES Y PEDIDOS -----------------------
+//    -------------------------------------------------------------------
+
 )
 ?>

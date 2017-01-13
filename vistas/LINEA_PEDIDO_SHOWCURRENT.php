@@ -12,6 +12,10 @@ class Linea_Pedido_show{
         $this->render();
     }
 
+    //Vista para visualizar en detalle una linea de pedido. Los datos a
+    //que aparecen son material, cantidad, estado, precio unitario
+    //sin iva, y la iva
+
     function render(){
         include_once('cabecera.php');
         ?>
@@ -33,27 +37,27 @@ class Linea_Pedido_show{
                 <div class="alert alert-success"><?php echo $literales['lineaSHOW']?></div>
                 <form>
                     <div  style="align-items: center" class="form-group">
-                        <label for="IDPedidoE">ID Pedido</label>
+                        <label for="IDPedidoE"><?php echo $literales['id pedido']?></label>
                         <input type="text" class="form-control" id="IDPedidoE" name="IDPedidoE" readonly="readonly"
                                value="<?php echo $row['id_pedido']?>">
                     </div>
                     <div class="form-group">
-                        <label for="nombreE">Nombre Material</label>
+                        <label for="nombreE"><?php echo $literales['material']?></label>
                         <input type="text" class="form-control" id="nombreE" name="nombreE" readonly="readonly"
                                value="<?php echo $row2['nombre']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="cantidadE">Cantidad</label>
+                        <label for="cantidadE"><?php echo $literales['cantidad']?></label>
                         <input type="text" class="form-control" id="cantidad" name="cantidad" readonly="readonly"
                                value="<?php echo $row['cantidad']?>">
                     </div>
                     <div class="form-group">
-                        <label for="estadoE">Estado</label>
+                        <label for="estadoE"><?php echo $literales['estado']?></label>
                         <input type="text" class="form-control" id="estadoE" name="estadoE" readonly="readonly"
                                value="<?php echo $row['estado']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="precioE">Precio</label>
+                        <label for="precioE"><?php echo $literales['precio']?></label>
                         <input type="text" class="form-control" id="precioE" name="precioE" readonly="readonly"
                                value="<?php echo $row['precio']?>">
                     </div>

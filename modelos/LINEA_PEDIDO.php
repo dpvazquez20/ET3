@@ -8,6 +8,8 @@ class Linea_Pedido{
     var $IVA;
     var $mysql;
 
+    //contructor de la clase Linea de Pedido
+
     function __construct($id_material=null, $id_pedido=null, $cantidad=null, $estado=null, $precio=null, $IVA=null)
     {
         $this->id_material=$id_material;
@@ -17,6 +19,8 @@ class Linea_Pedido{
         $this->precio=$precio;
         $this->IVA=$IVA;
     }
+
+    //getters de la clase Linea de Pedido
 
     public function getIDMaterial()
     {

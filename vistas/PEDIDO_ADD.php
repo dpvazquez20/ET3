@@ -16,6 +16,9 @@ class Pedido_add{
         $this->render();
     }
 
+    //Formulario para rellenar los datos y crear un pedido. Los datos a
+    //rellenar son el proveedor, el usuario, y la fecha.
+
     function render(){
         include_once('cabecera.php');
         ?>
@@ -37,30 +40,30 @@ class Pedido_add{
                 <form role="form" action="PEDIDO_Controller.php?id=ADDPEDIDO&ctr=PEDIDO" method="POST">
 
                     <div class="form-group">
-                        <label for="proveedor">Proveedor</label>
-                        <select name="proveedor" class="form-control">
+                        <label for="proveedor"><?php echo $literales['proveedor']?></label>
+                        <select name="proveedor" class="form-control" required>
                             <option value="" selected></option>
                             <?php $resul = Proveedor_modelo::listarProveedores();?>
                             <?php while($rowP = mysqli_fetch_assoc($resul)){?>
-                                <option value="<?php echo $rowP["id"] ?>"><?= "Nombre: " . $rowP["nombre"]." NIF: ". $rowP["nif"] ?></option>
+                                <option value="<?php echo $rowP["id"] ?>"><?= $rowP["nombre"]." NIF: ". $rowP["nif"] ?></option>
                             <?php } ?>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="usuario">Usuario</label>
-                        <select name="usuario" class="form-control">
+                        <label for="usuario"><?php echo $literales['usuario']?></label>
+                        <select name="usuario" class="form-control" required>
                             <option value="" selected></option>
                             <?php $resul = Usuario_modelo::listar();?>
                             <?php while($rowU = mysqli_fetch_assoc($resul)){?>
-                                <option value="<?php echo $rowU["id_usuario"] ?>"><?= "Nombre: " . $rowU["nombre"]. " " .$rowU["apellido"] . " DNI: ". $rowU["DNI"] ?></option>
+                                <option value="<?php echo $rowU["id_usuario"] ?>"><?= $rowU["nombre"]. " " .$rowU["apellido"] . " DNI: ". $rowU["DNI"] ?></option>
                         <?php } ?>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="fecha">Fecha</label>
-                        <input type="text" name="fecha" class="form-control" placeholder="ej: 2015-12-15" id="fecha">
+                        <label for="fecha"><?php echo $literales['fecha']?></label>
+                        <input type="text" name="fecha" class="form-control" id="fecha" required>
                     </div>
 
 

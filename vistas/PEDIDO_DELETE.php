@@ -14,6 +14,10 @@ class Pedido_delete{
         $this->render();
     }
 
+    //Vista para borrar un pedido. Los datos a
+    //que aparecen son el nombre del proveedor, el NIF,
+    //el usuario, y la fecha
+
     function render(){
         include_once('cabecera.php');
         ?>
@@ -35,7 +39,7 @@ class Pedido_delete{
                 <div class="alert alert-danger"><?php echo $literales['pedidoDELETE']?></div>
                 <form role="form" action="PEDIDO_Controller.php?id=DELETEPEDIDO&ctr=PEDIDO" method="POST">
                     <div class="form-group">
-                        <label for="NIFE">Nombre Proveedor</label>
+                        <label for="NIFE"><?php echo $literales['proveedor']?></label>
                         <input type="text" class="form-control" id="NIFE" name="NIFE" readonly="readonly"
                                value="<?php echo $rowP['nombre']?>">
                     </div>
@@ -46,12 +50,12 @@ class Pedido_delete{
                     </div>
 
                     <div  style="align-items: center" class="form-group">
-                        <label for="DNIE">Usuario</label>
+                        <label for="DNIE"><?php echo $literales['usuario']?></label>
                         <input type="text" class="form-control" id="DNIE" name="DNIE" readonly="readonly"
                                value="<?php echo $rowU['DNI']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="fecha">Fecha</label>
+                        <label for="fecha"><?php echo $literales['date']?></label>
                         <input type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                value="<?php echo $row['fecha']?>">
                     </div>
@@ -59,12 +63,14 @@ class Pedido_delete{
                     <input type="hidden" class="form-control" id="IDE" name="IDE"
                            value="<?php echo $row['id']?>">
 
+                    <input type="hidden" class="form-control" id="IDPedidoE" name="IDPedidoE"
+                           value="<?php echo $row['id_usuario']?>">
+
                     <div class="form-group">
                         <input id ="borrar" name="borrar"class="btn btn-danger"value="<?php echo $literales['eliminar']?>"type="submit">
                         <a class="btn btn-default" href="PEDIDO_Controller.php?id=SHOWALLPEDIDO&ctr=PEDIDO";">&laquo; <?php echo $literales['cancelar'];?></a>
                     </div>
-
-                </form>
+                    </form>
             </div>
         </div>
         </div>

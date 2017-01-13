@@ -14,6 +14,10 @@ class Pedido_show{
         $this->render();
     }
 
+    //vista que devuelve los datos del pedido y del proveedor
+    //a los que va dirigido, además de todas las lineas de pedido
+    //asociado a ese pedido
+
     function render(){
         include_once('cabecera.php');
         ?>
@@ -37,12 +41,12 @@ class Pedido_show{
                 <form>
 
                     <div class="form-group">
-                        <label for="id_pedido">ID Pedido</label>
+                        <label for="id_pedido"><?php echo $literales['id pedido']?></label>
                         <input type="text" class="form-control" id="id_pedido" name="id_pedido" readonly="readonly"
                                value="<?php echo $row['id']?>">
                     </div>
                     <div class="form-group">
-                        <label for="NombrePE">Nombre Proveedor</label>
+                        <label for="NombrePE"><?php echo $literales['nombre proveedor']?></label>
                         <input type="text" class="form-control" id="NombrePE" name="NombrePE" readonly="readonly"
                                value="<?php echo $rowP['nombre']?>">
                     </div>
@@ -52,32 +56,32 @@ class Pedido_show{
                                value="<?php echo $rowP['nif']?>">
                     </div>
                     <div class="form-group">
-                        <label for="dirE">Dirección </label>
+                        <label for="dirE"><?php echo $literales['direccion']?></label>
                         <input type="text" class="form-control" id="dirE" name="dirE" readonly="readonly"
                                value="<?php echo $rowP['direccion']?>">
                     </div>
                     <div class="form-group">
-                        <label for="postalE">Codigo Postal </label>
+                        <label for="postalE"><?php echo $literales['codigo postal']?></label>
                         <input type="text" class="form-control" id="postalE" name="postalE" readonly="readonly"
                                value="<?php echo $rowP['codigo_postal']?>">
                     </div>
                     <div class="form-group">
-                        <label for="ciudadE">Ciudad </label>
+                        <label for="ciudadE"><?php echo $literales['ciudad']?></label>
                         <input type="text" class="form-control" id="ciudadE" name="ciudadE" readonly="readonly"
                                value="<?php echo $rowP['ciudad']?>">
                     </div>
                     <div class="form-group">
-                        <label for="provinciaE">Provincia </label>
+                        <label for="provinciaE"><?php echo $literales['provincia']?></label>
                         <input type="text" class="form-control" id="provinciaE" name="provinciaE" readonly="readonly"
                                value="<?php echo $rowP['provincia']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="DNIE">DNI Usuario</label>
+                        <label for="DNIE"><?php echo $literales['dni usuario']?></label>
                         <input type="text" class="form-control" id="DNIE" name="DNIE" readonly="readonly"
                                value="<?php echo $rowU['DNI']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="fecha">Fecha</label>
+                        <label for="fecha"><?php echo $literales['fecha']?></label>
                         <input type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                value="<?php echo $row['fecha']?>">
                     </div>
@@ -101,10 +105,10 @@ class Pedido_show{
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th>ID Linea</th>
-                        <th>Nombre Material</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
+                        <th><?php echo $literales['id linea']?></th>
+                        <th><?php echo $literales['material']?></th>
+                        <th><?php echo $literales['cantidad']?></th>
+                        <th><?php echo $literales['precio']?></th>
                         <th colspan="3"  >Acción</th>
                     </tr>
                     </thead>
@@ -116,7 +120,7 @@ class Pedido_show{
                         $resulM = Material_modelo::getMaterial($row3['id_material']);
                         $rowM = mysqli_fetch_assoc($resulM);
 
-                        echo "</td> <td>" . $row3['id'] . "</td> <td>" . $rowM['nombre'] . "</td> <td>" . $row3['cantidad'] . "</td> <td>" . $row3['precio'] . "</td> <td>";
+                        echo "<tr> <td>" . $row3['id'] . "</td> <td>" . $rowM['nombre'] . "</td> <td>" . $row3['cantidad'] . "</td> <td>" . $row3['precio'] . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores($_SESSION['perfil']);
 
                         while($accion = mysqli_fetch_assoc($listaControladores)){

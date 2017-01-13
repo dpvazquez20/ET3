@@ -190,5 +190,70 @@ $literales = array(
 //    -------------------------------------------------------------------
 //    ----------------- FIN PROVEEDORES Y PEDIDOS -----------------------
 //    -------------------------------------------------------------------
+    
+//    -------------------------------------------------------------------
+//    -------------------- ALBARANES Y FACTURAS -------------------------
+//    -------------------------------------------------------------------
+    'albaranADD' => 'Introduza os datos do albaran',
+    'idPedido' => 'ID do Pedido',
+    'inputFecha' => 'Introduza a data',
+    'ejemploFecha' => 'ex: 2017-01-01',
+    'idAlbaran' => 'ID do Albaran',
+    'borrarAlbaran' => 'Borrar Albaran',
+    'albaranDELETE' => '¿Quere borrar o albaran?',
+    'idPedido' => 'ID do pedido',
+    'fecha' => 'Data',
+    'albaranSHOW' => 'Estes son os datos do albaran',
+    'buscarPorId' => '"Id a buscar"',
+    'buscarPorFecha' => '"Data a buscar"',
+    'añadirAlbaran' => 'Engadir Albaran',
+    'editarAlbaran' => 'Editar Albaran',
+    'mostrarAlbaranes' => 'Mostrar Albarans',
+    'mostrarAlbaran' => 'Mostrar Albaran',
+    'albaranSHOWCURRENT' => 'Estes son os datos do albaran',
+    'idLinea' => 'ID da Liña',
+    'idMaterial' => 'ID do Material',
+    'nombreMaterial' => 'Nome do Material',
+    'cantidad' => 'Cantidad',
+
+    //-------------------------------
+
+    'newLineaAlbaran' => 'Nova liña de albaran',
+    'lineaAlbaranADD' => 'Introduza os datos da liña de albaran',
+    'material' => 'Material',
+    'cantidad' => 'Cantidade',
+    'añadirLinea' => 'Añadir Liña',
+    'borrarLinea' => 'Borrar Liña',
+    'lineaAlbaranDELETE' => '¿Borrar liña de albaran?',
+    'editarLinea' => 'Editar Liña',
+    'lineaAlbaranEDIT' => 'Introduza os novos datos da linea de Albaran',
+    'mostrarLinea' => 'Mostrar Liña',
+    'lineaAlbaranSHOW' => 'Estes son os datos da liña de albaran', 
+
+//-------------------------------------
+
+    'añadirFactura' => 'Crear Factura',
+    'proveedor' => 'Provedor',
+    'facturaADD' => 'Introduza os datos da factura',
+    'nif' => 'NIF',
+    'ejemploNif' => 'NIF',
+    'borrarFactura' => 'Borrar Factura',
+    'facturaDELETE' => '¿Quere borrar a factura?',
+    'idFactura' => 'ID da Factura',
+    'editarFactura' => 'Modificar Factura',
+    'facturaEDIT' => 'Estes son os datos da factura',
+    'mostrarFacturas' => 'Mostrar Facturas',
+    'buscarPorNif' => 'NIF a buscar',
+    'buscar' => 'Buscar',
+    'mostrarFactura' => 'Detalles Factura',
+    'facturaSHOWCURRENT' => 'Estes son os detalles da factura',
+    'lineaFacturaADD' => 'Introduza os datos da liña de factura',
+    'lineaFacturaDELETE' => '¿Desexa borrar esta liña de factura?',
+    'lineaFacturaEDIT' => 'Introduza os novos datos para a liña de factura',
+    'lineaFacturaSHOW' => 'Estes son os datos da liña de factura',
+    
+//    -------------------------------------------------------------------
+//    ------------------FIN ALBARANES Y FACTURAS ------------------------
+//    -------------------------------------------------------------------
 )
 ?>

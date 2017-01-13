@@ -45,7 +45,6 @@ class Material_showAll{
                 
                 <!-- Buscador por id -->
                 <div class="col-sm-4">
-
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARMATERIAL"/>
                         <input type="hidden" name="ctr" value="MATERIAL"/>
@@ -62,10 +61,8 @@ class Material_showAll{
                             </div>
                         </div>
                     </form>
-                </div>
-                        
+                       
                 <!-- Buscador por nombre-->
-                <div class="col-sm-4">
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARMATERIAL"/>
                         <input type="hidden" name="ctr" value="MATERIAL"/>

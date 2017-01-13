@@ -262,7 +262,9 @@ INSERT INTO `controlador` (`nombre`) VALUES
 ('PRODUCTO'),
 ('PROVEEDOR'),
 ('PRUEBA1'),
-('USUARIO');
+('USUARIO'),
+('ALBARAN'),
+('FACTURA');
 INSERT INTO `perfil` (`nombre`) VALUES
 ('Admin'),
 ('usuario');
@@ -358,7 +360,15 @@ INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
 (55, 'STOCK_MATERIAL', 'ADD', 'Admin'),
 (56, 'STOCK_MATERIAL', 'DELETE', 'Admin'),
 (57, 'STOCK_MATERIAL', 'EDIT', 'Admin'),
-(58, 'STOCK_MATERIAL', 'SHOW', 'Admin');
+(58, 'STOCK_MATERIAL', 'SHOW', 'Admin'),
+(59, 'ALBARAN', 'SHOW', 'Admin'),
+(60, 'ALBARAN', 'DELETE', 'Admin'),
+(61, 'ALBARAN', 'ADD', 'Admin'),
+(62, 'ALBARAN', 'EDIT', 'Admin'),
+(63, 'FACTURA', 'SHOW', 'Admin'),
+(64, 'FACTURA', 'DELETE', 'Admin'),
+(65, 'FACTURA', 'ADD', 'Admin'),
+(66, 'FACTURA', 'EDIT', 'Admin');
 INSERT INTO `material` (`id`, `nombre`, `descripcion`, `borrado`) VALUES
 ('00000000005', 'Tronco', 'Tronco de madera de 2 metros de longitud', '0'),
 ('00000000006', 'Barra metalica', 'Barra metalica de 5 cm de diametro y 3 m de largo', '0');

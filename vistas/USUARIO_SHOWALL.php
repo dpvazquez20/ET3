@@ -83,7 +83,7 @@ class Usuario_showAll{
                             </div>
                         </form>
                     </div>
-                        <div class="col-sm-4">
+                    <div class="col-sm-4">
                         <form role="form" method="get">
                             <input type="hidden" name="id" value="BUSCARUSUARIO"/>
                             <input type="hidden" name="ctr" value="USUARIO"/>
@@ -100,7 +100,8 @@ class Usuario_showAll{
                                 </div>
                             </div>
                         </form>
-                            <form role="form" method="get">
+
+                        <form role="form" method="get">
                                 <input type="hidden" name="id" value="BUSCARUSUARIO"/>
                                 <input type="hidden" name="ctr" value="USUARIO"/>
                                 <div class="row">
@@ -115,7 +116,7 @@ class Usuario_showAll{
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                        </form>
 
                     </div>
 

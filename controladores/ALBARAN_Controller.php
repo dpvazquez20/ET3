@@ -4,11 +4,16 @@
 require_once ('../vistas/ALBARAN_SHOWALL.php');
 require_once ('../modelos/ALBARAN_Model.php');
 require_once ('../vistas/ALBARAN_ADD.php');
+require_once ('../vistas/LINEA_ALBARAN_ADD.php');
+require_once ('../vistas/LINEA_ALBARAN_EDIT.php');
+require_once ('../vistas/LINEA_ALBARAN_DELETE.php');
+require_once ('../vistas/LINEA_ALBARAN_SHOWCURRENT.php');
 require_once ('../vistas/ALBARAN_DELETE.php');
 require_once('../vistas/ALBARAN_EDIT.php');
 require_once('../vistas/ALBARAN_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
+require_once ('../vistas/PERMISO_DENEGADO.php');
 
 
 $controlador="albaran";
@@ -24,17 +29,10 @@ switch ($_GET['id']) {
                 $nuevoAlbaran = new Albaran($_POST['pedido'], $_POST['fecha']);
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaAlbaran($nuevoAlbaran);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='ALBARAN_Controller.php?id=SHOWALLALBARAN&ctr=ALBARAN'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -43,24 +41,16 @@ switch ($_GET['id']) {
         $accion="ADD";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['addlinea'])) {
-                
+                new Linea_Albaran_add();
             } else {
                 
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaLineaAlbaran($_POST['id_albaran'],$_POST['id_material'], $_POST['cantidad']);
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='ALBARAN_Controller.php?id=EDITALBARAN&idAlbaran=". $_POST['id_albaran']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -78,18 +68,11 @@ switch ($_GET['id']) {
             
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteAlbaran($_POST['id_albaran']);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='ALBARAN_Controller.php?id=SHOWALLALBARAN&ctr=ALBARAN'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
             
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -98,24 +81,16 @@ switch ($_GET['id']) {
         $accion="DELETE";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['deletelinea'])) {
-                
+                new Linea_Albaran_delete();
             } else {
                 
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteLineaAlbaran($_POST['id_linea']);
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='ALBARAN_Controller.php?id=EDITALBARAN&idAlbaran=". $_POST['id_albaran']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -130,16 +105,10 @@ switch ($_GET['id']) {
                 $albaranModificado = new Albaran($_POST['id_pedido'], $_POST['fecha']);
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$modelo->updateAlbaran($_POST['id_albaran'], $albaranModificado);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='ALBARAN_Controller.php?id=SHOWALLALBARAN&ctr=ALBARAN'", 3000)
-                </script><?php             }
+                new Mensaje_usuario();
+                         }
         }else{
-            echo"Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -148,24 +117,18 @@ switch ($_GET['id']) {
         $accion="EDIT";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['editlinea'])) {
+
+                new Linea_Albaran_edit();
                 
             } else {
                 
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->editLineaAlbaran($_POST['id_linea'], $_POST['id_albaran'], $_POST['id_material'], $_POST['cantidad'] );
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='ALBARAN_Controller.php?id=EDITALBARAN&idAlbaran=". $_POST['id_albaran']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -175,13 +138,19 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Albaran_show();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
+
         break;
+
+    case 'SHOWLINEAALBARAN':
+        $accion="SHOW";
+        if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
+            
+            new Linea_Albaran_show();
+        }else{
+            new Mensaje_denegado();
+        }
 
         break;
 
@@ -193,11 +162,7 @@ switch ($_GET['id']) {
             (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
             new Albaran_showAll();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
 }

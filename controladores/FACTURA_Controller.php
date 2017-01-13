@@ -5,11 +5,16 @@ require_once ('../vistas/FACTURA_SHOWALL.php');
 require_once ('../modelos/FACTURA_Model.php');
 require_once ('../modelos/ALBARAN_Model.php');
 require_once ('../vistas/FACTURA_ADD.php');
+require_once ('../vistas/LINEA_FACTURA_ADD.php');
+require_once ('../vistas/LINEA_FACTURA_EDIT.php');
+require_once ('../vistas/LINEA_FACTURA_DELETE.php');
+require_once ('../vistas/LINEA_FACTURA_SHOWCURRENT.php');
 require_once ('../vistas/FACTURA_DELETE.php');
 require_once('../vistas/FACTURA_EDIT.php');
 require_once('../vistas/FACTURA_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
+require_once ('../vistas/PERMISO_DENEGADO.php');
 
 
 $controlador="factura";
@@ -25,17 +30,10 @@ switch ($_GET['id']) {
                 $nuevoFactura = new Factura($_POST['id_proveedor'],$_POST['NIF'], $_POST['fecha']);
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaFactura($nuevoFactura);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='FACTURA_Controller.php?id=SHOWALLFACTURA&ctr=FACTURA'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -44,24 +42,18 @@ switch ($_GET['id']) {
         $accion="ADD";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['addlinea'])) {
+
+                new Linea_Factura_Add();
                 
             } else {
                 
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaLineaFactura($_POST['id_factura'],$_POST['id_albaran']);
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='FACTURA_Controller.php?id=EDITFACTURA&idFactura=". $_POST['id_factura']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -79,18 +71,11 @@ switch ($_GET['id']) {
             
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteFactura($_POST['id_factura']);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='FACTURA_Controller.php?id=SHOWALLFACTURA&ctr=FACTURA'", 3000)
-                </script><?php
+                new Mensaje_usuario();
             }
             
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -99,24 +84,17 @@ switch ($_GET['id']) {
         $accion="DELETE";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['deletelinea'])) {
+                new Linea_Factura_delete();
                 
             } else {
                 
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteLineaFactura($_POST['id_linea']);
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='FACTURA_Controller.php?id=EDITFACTURA&idFactura=". $_POST['id_factura']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -131,16 +109,10 @@ switch ($_GET['id']) {
                 $facturaModificada = new Factura($_POST['id_proveedor'],$_POST['NIF'], $_POST['fecha']);
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$modelo->updateFactura($_POST['id_factura'], $facturaModificada);
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    setTimeout("location.href='FACTURA_Controller.php?id=SHOWALLFACTURA&ctr=FACTURA'", 3000)
-                </script><?php             }
+                new Mensaje_usuario();
+            }
         }else{
-            echo"Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -149,24 +121,17 @@ switch ($_GET['id']) {
         $accion="EDIT";
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             if (!isset($_POST['editlinea'])) {
+                new Linea_Factura_edit();
                 
             } else {
                 
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->editLineaFactura($_POST['id_linea'], $_POST['id_factura'], $_POST['id_albaran'] );
                 
-                new Mensaje_usuario();?>
-                <script language="javascript">
-                    <?php echo 'setTimeout("' . "location.href='FACTURA_Controller.php?id=EDITFACTURA&idFactura=". $_POST['id_factura']. "'". '", 1500)' ?>
-                    
-                </script><?php
+                new Mensaje_usuario();
             }
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
         break;
@@ -176,13 +141,18 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Factura_show();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
         break;
+
+      case 'SHOWLINEAFACTURA':
+        $accion="SHOW";
+        if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
+            
+            new Linea_Factura_show();
+        }else{
+            new Mensaje_denegado();
+        }
 
         break;
 
@@ -194,11 +164,7 @@ switch ($_GET['id']) {
             (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
             new Factura_showAll();
         }else{
-            echo "Permiso denegado";?>
-            <script language="javascript">
-                setTimeout("location.href='../vistas/paginaPorDefecto.php'", 1000)
-            </script>
-            <?php
+            new Mensaje_denegado();
         }
 
 }

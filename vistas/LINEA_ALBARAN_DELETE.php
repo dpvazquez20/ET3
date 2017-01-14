@@ -26,7 +26,7 @@ class Linea_Albaran_delete{
                 ?>
 
                  <div class="alert alert-danger"><?php echo $literales['lineaAlbaranDELETE']?></div>
-                <form role="form" action="ALBARAN_Controller.php?id=DELETELINEAALBARAN&ctr=ALBARAN?>" method="POST">
+                <form role="form" action="ALBARAN_Controller.php?id=DELETELINEAALBARAN&ctr=ALBARAN" method="POST">
 
                  <input type="hidden"  class="form-control" id="id_linea" name="id_linea" <?php echo 'value="'.$_GET['idLineaAlbaran'].'"'?> >
                                     <input type="hidden" class="form-control" id="id_albaran" name="id_albaran"

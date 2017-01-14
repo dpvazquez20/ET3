@@ -24,7 +24,7 @@ class Linea_Factura_edit{
 
                 ?>
                 <div class="alert alert-warning"><?php echo $literales['lineaFacturaEDIT']?></div>
-                <form role="form" action="FACTURA_Controller.php?id=EDITLINEAFACTURA&ctr=FACTURA?>" method="POST">
+                <form role="form" action="FACTURA_Controller.php?id=EDITLINEAFACTURA&ctr=FACTURA" method="POST">
 
                     <input type="hidden"  class="form-control" id="id_linea" name="id_linea" <?php echo 'value="'.$_GET['idLineaFactura'].'"'?> >
                                     <input type="hidden" class="form-control" id="id_factura" name="id_factura"

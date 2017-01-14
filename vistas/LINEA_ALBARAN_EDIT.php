@@ -23,7 +23,7 @@ class Linea_Albaran_edit{
 
                 ?>
                 <div class="alert alert-warning"><?php echo $literales['lineaAlbaranEDIT']?></div>
-                <form role="form" action="ALBARAN_Controller.php?id=EDITLINEAALBARAN&ctr=ALBARAN?>" method="POST">
+                <form role="form" action="ALBARAN_Controller.php?id=EDITLINEAALBARAN&ctr=ALBARAN" method="POST">
 
                     
                      <input type="hidden"  class="form-control" id="id_linea" name="id_linea" <?php echo 'value="'.$_GET['idLineaAlbaran'].'"'?> >

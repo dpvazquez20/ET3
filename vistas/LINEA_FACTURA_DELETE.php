@@ -26,7 +26,7 @@ class Linea_Factura_delete{
                 ?>
 
                 <div class="alert alert-danger"><?php echo $literales['lineaFacturaDELETE']?></div>
-                <form role="form" action="FACTURA_Controller.php?id=DELETELINEAFACTURA&ctr=FACTURA?>" method="POST">
+                <form role="form" action="FACTURA_Controller.php?id=DELETELINEAFACTURA&ctr=FACTURA" method="POST">
 
                  <input type="hidden"  class="form-control" id="id_linea" name="id_linea" <?php echo 'value="'.$_GET['idLineaFactura'].'"'?> >
                                     <input type="hidden" class="form-control" id="id_factura" name="id_factura"

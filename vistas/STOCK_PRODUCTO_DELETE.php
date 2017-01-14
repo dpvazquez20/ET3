@@ -44,7 +44,7 @@ class Stock_producto_delete{
                     </div>
 
                     <div class="form-group">
-                        <label for="costeB"><?php echo $literales['coste']; ?></label>
+                        <label for="costeB"><?php echo $literales['precio']; ?></label>
                         <input type="number" class="form-control" id="costeB" name="costeB" readonly="readonly"
                                value="<?php echo $row['coste']?>">
                     </div>

@@ -43,7 +43,7 @@ class Stock_material_edit{
                     
                     <div class="form-group">
                         <label for="id_materialM"><?php echo $literales['stockId_material']; ?></label>
-                        <select name="id_materialM" required>
+                        <select name="id_materialM" required class="form-control">
                         <?php
                             $resul = Stock_material_modelo::getMateriales();
                             while($row = mysqli_fetch_assoc($resul)){
@@ -59,7 +59,7 @@ class Stock_material_edit{
             
                     <div class="form-group">
                         <label for="id_albaranM"><?php echo $literales['stockId_albaran']; ?></label>
-                        <select name="id_albaranM" required>
+                        <select name="id_albaranM" required class="form-control">
                         <?php
                             $resul = Stock_material_modelo::getAlbaranes();
                             while($row = mysqli_fetch_assoc($resul)){
@@ -75,20 +75,20 @@ class Stock_material_edit{
                     
                     <div class="form-group">
                         <label for="id_productoM"><?php echo $literales['stockId_producto']; ?></label>
-                        <select name="id_productoM" required>
+                        <select name="id_productoM" required class="form-control">
                         <?php
                             $resul = Stock_material_modelo::getProductos();
-                            echo "<option value='null'>(No asignado)</option>";
-                            while($row = mysqli_fetch_assoc($resul)){
-                                if($row['id']==null && $row['id']==$generalPro){
-                                    "<option value='null' selected>(No asignado)</option>";
+                            if($row['id_producto']==null && $row['id_producto']==$generalPro){
+                                    echo "<option value='null' selected>(No asignado)</option>";
+                            }else{
+                                echo "<option value='null'>(No asignado)</option>";
+                            }
+                            while($row = mysqli_fetch_assoc($resul)){                                
+                                if($row['id_producto']==$generalPro && $row['id']!=null){
+                                    echo "<option value='".$row['id_producto']."' selected>".utf8_decode($row['nombre'])."</option>";
                                 }else{
-                                    if($row['id']==$generalPro && $row['id']!=null){
-                                        echo "<option value='".$row['id']."' selected>".utf8_decode($row['nombre'])."</option>";
-                                    }else{
-                                        echo "<option value='".$row['id']."'>".utf8_decode($row['nombre'])."</option>";
-                                    }
-                                }
+                                    echo "<option value='".$row['id_producto']."'>".utf8_decode($row['nombre'])."</option>";
+                                }                                
                             }       
                         ?>
                         </select>

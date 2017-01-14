@@ -51,9 +51,9 @@ class Linea_Pedido_add{
                     <div class="form-group">
                         <label for="estado"><?php echo $literales['estado']?></label>
                         <select id="estado" name="estado" style="width: 200px" class=" form-control" required>
-                            <option value="completa">completa</option>
-                            <option value="pendiente">pendiente</option>
-                            <option value="por llegar">por llegar</option>
+                            <option value="completa"><?php echo $literales['completa']?></option>
+                            <option value="pendiente"><?php echo $literales['pendiente']?></option>
+                            <option value="por llegar"><?php echo $literales['por llegar']?></option>
                         </select>
                     </div>
                     <div  style="align-items: center" class="form-group">

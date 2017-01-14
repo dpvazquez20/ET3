@@ -27,7 +27,7 @@ class Elaboracion_delete{
                 <form role="form" action="ELABORACION_Controller.php?id=DELETEELABORACION&ctr=ELABORACION" method="POST">
                     <div class="form-group">
                         <input type="hidden" id="elaboracionAEliminar" name="elaboracionAEliminar" value="<?php echo $row['id_elaboracion']?>">
-                        <label for="nombreB"><?php$literales['nombre'] ?></label>
+                        <label for="nombreB"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreB" name="nombreB" readonly="readonly"
                                 value="<?php  echo($row['nombre_elaboracion'])?>">
                     </div>

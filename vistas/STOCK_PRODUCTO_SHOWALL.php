@@ -67,7 +67,7 @@ class Stock_producto_showAll{
                                                style="width: 200px" class=" form-control"> </input>
                                     </div>
                                     <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">Buscar</button>
+                                    <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                 </span>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ class Stock_producto_showAll{
                                                style="width: 200px" class=" form-control"> </input>
                                     </div>
                                     <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">Buscar</button>
+                                <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                             </span>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ class Stock_producto_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">Buscar</button>
+                                <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                             </span>
                             </div>
                         </div>

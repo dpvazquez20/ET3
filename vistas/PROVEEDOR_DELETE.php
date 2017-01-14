@@ -31,7 +31,7 @@ class Proveedor_delete{
                 <div class="alert alert-danger"><?php echo $literales['proveedorDELETE']?></div>
                 <form role="form" action="PROVEEDOR_Controller.php?id=DELETEPROVEEDOR&ctr=PROVEEDOR" method="POST">
                     <div class="form-group">
-                        <label for="NombreE"><?php echo $literales['nombre']?></label>
+                        <label for="NombreE"><?php echo $literales['nombre proveedor']?></label>
                         <input type="text" class="form-control" id="NombreE" name="NombreE" readonly="readonly"
                                value="<?php echo $row['nombre']?>">
                     </div>

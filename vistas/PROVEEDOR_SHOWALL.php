@@ -61,7 +61,7 @@ class Proveedor_showAll
                                    style="width: 200px" class=" form-control"> </input>
                             </div>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">Buscar</button>
+                                    <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                 </span>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ class Proveedor_showAll
                                        style="width: 200px" class=" form-control"> </input>
                             </div>
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">Buscar</button>
+                                <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                             </span>
                         </div>
                     </div>
@@ -88,9 +88,9 @@ class Proveedor_showAll
         <table class=" table table-striped table-responsive">
         <thead>
         <tr>
-            <th><?php echo $literales['nombre']?></th>
+            <th><?php echo $literales['nombre proveedor']?></th>
             <th>NIF</th>
-            <th colspan="3">Acción</th>
+            <th colspan="3"><?php echo $literales['accion']?></th>
         </tr>
         </thead>
         <tbody>

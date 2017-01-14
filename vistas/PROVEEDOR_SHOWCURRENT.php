@@ -32,7 +32,7 @@ class Proveedor_show{
                 <div class="alert alert-success"><?php echo $literales['proveedorSHOW']?></div>
                 <form>
                     <div class="form-group">
-                        <label for="nombreS"><?php echo $literales['nombre']?></label>
+                        <label for="nombreS"><?php echo $literales['nombre proveedor']?></label>
                         <input type="text" class="form-control" id="nombreS" name="nombreS" readonly="readonly"
                                value="<?php echo $row['nombre']?>">
                     </div>

@@ -29,10 +29,10 @@ class Proveedor_add{
 
                 <form role="form" action="PROVEEDOR_Controller.php?id=ADDPROVEEDOR&ctr=PROVEEDOR" method="POST">
                     <div class="form-group">
-                        <label for="nombre"><?php echo $literales['nombre'] ?></label>
+                        <label for="nombre"><?php echo $literales['nombre proveedor'] ?></label>
                         <input  type="text" class="form-control" id="nombre" name="nombre" required
                                 pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
-                                placeholder="<?php echo $literales['nombre'] ?>">
+                                placeholder="<?php echo $literales['nombre proveedor'] ?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
                         <label for="NIF">NIF</label>

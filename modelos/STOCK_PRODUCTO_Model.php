@@ -157,21 +157,38 @@ class Stock_producto_modelo{
 
     public static function getPorCoste($coste){
         $conexion= conectarBD();
-        $sql = "SELECT * FROM stock_producto WHERE coste='".$coste."';";
+        if($coste == '') {
+            $sql = "SELECT * FROM stock_producto;";
+        } else{
+            $sql = "SELECT * FROM stock_producto WHERE coste='" . $coste . "';";
+        }
         $resul = $conexion->query($sql);
         return $resul;
     }
 
-    public static function getPorFecha($fecha){
+    public static function getNombreProducto($nombre){
         $conexion= conectarBD();
-        $sql = "SELECT * FROM stock_producto WHERE fecha='".$fecha."';";
-        $resul = $conexion->query($sql);
-        return $resul;
+        if ($nombre == "") {
+            $sql = "SELECT * FROM producto, stock_producto WHERE stock_producto.id_producto = producto.id_producto;";
+        } else {
+            $sql = "SELECT * from producto, stock_producto WHERE stock_producto.id_producto = producto.id_producto AND nombre LIKE '" . $nombre . "%';";
+        }
+        return $conexion->query($sql);
     }
 
+    public static function getPorFecha($fecha)
+    {
 
+        $conexion = conectarBD();
+        if ($fecha == '') {
+            $sql = "SELECT * FROM stock_producto;";
+        } else {
+            $sql = "SELECT * FROM stock_producto WHERE fecha='" . $fecha . "';";
+        }
 
-
+        $resul = $conexion->query($sql);
+        return $resul;
+        }
 
 }
 ?>

@@ -65,15 +65,24 @@ class Producto_modelo
         return $conexion->query($sql);
     }
 
-    public static function getNombreProducto($NOMBRE){
+    public static function getNombreProducto($nombre){
         $conexion= conectarBD();
-        $sql= "SELECT * from producto WHERE nombre LIKE '".$NOMBRE."%';";
+        if ($nombre == "") {
+            $sql = "SELECT * FROM producto;";
+        } else {
+            $sql = "SELECT * from producto WHERE nombre LIKE '" . $nombre . "%';";
+        }
         return $conexion->query($sql);
     }
 
     public static function getDEsProducto($id){
         $conexion= conectarBD();
-        $sql= "SELECT * from producto WHERE descripcion LIKE '".$id."%';";
+
+        if ($id == "") {
+            $sql = "SELECT * FROM producto;";
+        } else {
+            $sql = "SELECT * from producto WHERE descripcion LIKE '" . $id . "%';";
+        }
         return $conexion->query($sql);
     }
 

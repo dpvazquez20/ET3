@@ -297,8 +297,6 @@ INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
 (19, 'CONTROLADOR', 'EDIT', 'Admin'),
 (20, 'CONTROLADOR', 'SHOW', 'Admin'),
 (24, 'PERMISO', 'DELETE', 'Admin'),
-(25, 'PRODUCTO', 'ADD', 'Admin'),
-(26, 'PRODUCTO', 'DELETE', 'Admin'),
 (28, 'ACCION', 'ADD', 'Admin'),
 (29, 'ACCION', 'DELETE', 'Admin'),
 (30, 'ACCION', 'EDIT', 'Admin'),

@@ -31,13 +31,13 @@ class Producto_edit{
                 <form role="form" action="PRODUCTO_Controller.php?id=EDITPRODUCTO&ctr=PRODUCTO" method="POST">
                     <input type="hidden" id="productoAModificar" name="productoAModificar" value="<?php echo $row['id_producto']?>">
                     <div class="form-group">
-                        <label for="nombreM"><?php$literales['nombre'] ?></label>
+                        <label for="nombreM"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreM" name="nombreM" required maxlength="20" minlength="2"
                                 value="<?php  echo $row['nombre']?>">
                     </div>
 
                     <div class="form-group">
-                        <label for="descripcionM"><?php$literales['descripcion'] ?></label>
+                        <label for="descripcionM"><?php echo $literales['descripcion'] ?></label>
                         <input  type="text" class="form-control" id="descripcionM" name="descripcionM" required maxlength="40" minlength="2"
                                 value="<?php  echo $row['descripcion']?>">
                     </div>
@@ -55,7 +55,4 @@ class Producto_edit{
         <?php include_once ('pieDePagina.php');
     }
 }
-/*}else
-    echo "Permiso denegado.";
-*/
 ?>

@@ -27,12 +27,12 @@ class Producto_delete{
                 <form role="form" action="PRODUCTO_Controller.php?id=DELETEPRODUCTO&ctr=PRODUCTO" method="POST">
                     <div class="form-group">
                         <input type="hidden" id="productoAModificar" name="productoAModificar" value="<?php echo $row['id_producto']?>">
-                        <label for="nombreB"><?php$literales['nombre'] ?></label>
+                        <label for="nombreB"><?php echo $literales['nombre'] ?></label>
                         <input  type="text" class="form-control" id="nombreB" name="nombreB" readonly="readonly"
                                 value="<?php  echo($row['nombre'])?>">
                     </div>
                     <div class="form-group">
-                        <label for="descripcionB"><?php$literales['descripcion'] ?></label>
+                        <label for="descripcionB"><?php echo $literales['descripcion'] ?></label>
                         <input  type="text" class="form-control" id="descripcionB" name="descripcionB" readonly="readonly"
                                 value="<?php  echo ($row['descripcion'])?>">
                     </div>
@@ -50,7 +50,5 @@ class Producto_delete{
         <?php include_once ('pieDePagina.php');
     }
 }
-/*}else
-    echo "Permiso denegado.";
-*/
+
 ?>

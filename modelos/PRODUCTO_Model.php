@@ -65,9 +65,9 @@ class Producto_modelo
         return $conexion->query($sql);
     }
 
-    public static function getNombreProducto($id){
+    public static function getNombreProducto($NOMBRE){
         $conexion= conectarBD();
-        $sql= "SELECT * from producto WHERE nombre LIKE '".$id."%';";
+        $sql= "SELECT * from producto WHERE nombre LIKE '".$NOMBRE."%';";
         return $conexion->query($sql);
     }
 

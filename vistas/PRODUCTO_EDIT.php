@@ -32,13 +32,13 @@ class Producto_edit{
                     <input type="hidden" id="productoAModificar" name="productoAModificar" value="<?php echo $row['id_producto']?>">
                     <div class="form-group">
                         <label for="nombreM"><?php$literales['nombre'] ?></label>
-                        <input  type="text" class="form-control" id="nombreM" name="nombreM"
+                        <input  type="text" class="form-control" id="nombreM" name="nombreM" required maxlength="20" minlength="2"
                                 value="<?php  echo $row['nombre']?>">
                     </div>
 
                     <div class="form-group">
                         <label for="descripcionM"><?php$literales['descripcion'] ?></label>
-                        <input  type="text" class="form-control" id="descripcionM" name="descripcionM"
+                        <input  type="text" class="form-control" id="descripcionM" name="descripcionM" required maxlength="40" minlength="2"
                                 value="<?php  echo $row['descripcion']?>">
                     </div>
 

@@ -27,13 +27,13 @@ class Producto_add
                 <form role="form" action="PRODUCTO_Controller.php?id=ADDPRODUCTO&ctr=PRODUCTO" method="POST">
                     <div class="form-group">
                         <label for="Nombre"><?php$literales['nombre'] ?></label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required
+                        <input type="text" class="form-control" id="nombre" name="nombre" required required maxlength="20" minlength="2"
                                placeholder="Introduce el nombre del producto">
                     </div>
 
                     <div class="form-group">
                         <label for="Descripcion"><?php$literales['nombre'] ?></label>
-                        <input type="text" class="form-control" id="descripcio" name="descripcion" required
+                        <input type="text" class="form-control" id="descripcio" name="descripcion" required required maxlength="40" minlength="2"
                                placeholder="Introduce la descripcion del producto">
                     </div>
 

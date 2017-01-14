@@ -31,6 +31,7 @@ class Producto_modelo
 
         $this->mysql = conectarBD();
         $sql = "DELETE FROM producto WHERE id_producto='".$id_producto."';";
+        echo $sql;
         if($this->mysql->query($sql)){
             return"Se ha eliminado correctamente el producto";
 

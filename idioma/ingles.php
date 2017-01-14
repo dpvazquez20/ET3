@@ -239,6 +239,71 @@ $literales = array(
     'precio'=>'Price',
 
 //    -----------------FIN STOCK PRODUCTO----------------
+    
+//    -------------------------------------------------------------------
+//    -------------------- ALBARANES Y FACTURAS -------------------------
+//    -------------------------------------------------------------------
+    
+    'albaranADD' => 'Enter the details of the delivery note',
+    'idPedido' => 'Order ID',
+    'inputFecha' => 'Enter the date',
+    'ejemploFecha' => 'ex: 2017-01-01',
+    'idAlbaran' => 'Delivery note ID',
+    'borrarAlbaran' => 'Delete delivery note',
+    'albaranDELETE' => 'Do you want to delete the delivery note?',
+    'fecha' => 'Date',
+    'albaranSHOW' => 'These are the details of the delivery note',
+    'buscarPorId' => '"ID to search"',
+    'buscarPorFecha' => '"Date to search"',
+    'añadirAlbaran' => 'Add delivery note',
+    'editarAlbaran' => 'Edit delivery note',
+    'mostrarAlbaranes' => 'Show delivery notes',
+    'mostrarAlbaran' => 'Show delivery note',
+    'albaranSHOWCURRENT' => 'These are the details of the delivery note',
+    'idLinea' => 'Line ID',
+    'idMaterial' => 'Material ID',
+    'nombreMaterial' => 'Material name',
+    'cantidad' => 'Quantity',
+
+    //-------------------------------
+
+    'newLineaAlbaran' => 'New delivery note line',
+    'lineaAlbaranADD' => 'Enter delivery note data',
+    'material' => 'Material',
+    'cantidad' => 'Quantity',
+    'añadirLinea' => 'New line',
+    'borrarLinea' => 'Delete line',
+    'lineaAlbaranDELETE' => 'Delete delivery note line?',
+    'editarLinea' => 'Edit line',
+    'lineaAlbaranEDIT' => 'Enter new data from the delivery note line',
+    'mostrarLinea' => 'Show line',
+    'lineaAlbaranSHOW' => 'These are the data of the delivery note line', 
+
+//-------------------------------------
+
+    'añadirFactura' => 'Create invoice',
+    'proveedor' => 'Provider',
+    'facturaADD' => 'Enter the details of the invoice',
+    'nif' => 'FIN',
+    'ejemploNif' => 'FIN',
+    'borrarFactura' => 'Delete invoice',
+    'facturaDELETE' => 'Do you want to delete the invoice?',
+    'idFactura' => 'Invoice ID',
+    'editarFactura' => 'Modify invoice',
+    'facturaEDIT' => 'These are the invoice data',
+    'mostrarFacturas' => 'Show incvoices',
+    'buscarPorNif' => 'FIN to search',
+    'buscar' => 'Search',
+    'mostrarFactura' => 'Invoice details',
+    'facturaSHOWCURRENT' => 'These are the details of the invoice',
+    'lineaFacturaADD' => 'Enter invoice line data',
+    'lineaFacturaDELETE' => 'Do you want to delete this invoice line?',
+    'lineaFacturaEDIT' => 'Enter new data for the invoice line',
+    'lineaFacturaSHOW' => 'These are the invoice line data',
+
+//    -------------------------------------------------------------------
+//    ------------------FIN ALBARANES Y FACTURAS ------------------------
+//    -------------------------------------------------------------------
 
 
     

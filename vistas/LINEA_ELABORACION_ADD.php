@@ -58,7 +58,7 @@ class Linea_Elaboracion_add{
 
                     <div class="form-group">
 
-                        <a class="btn btn-default" href="ELABORACION_Controller.php?id=SHOWALLELABORACION&ctr=ELABORACION";">&laquo; <?php echo $literales['cancelar'];?></a
+                        
                         <div class="col-sm-4"><input class="btn btn-primary"value="Enviar" type="submit">
                             <input class="btn btn-default" value="<?php echo $literales['reset']; ?>" type="reset"></div>
                     </div>

@@ -12,6 +12,7 @@ require_once ("../vistas/LINEA_ELABORACION_DELETE.php");
 require_once ("../vistas/LINEA_ELABORACION_EDIT.php");
 
 require_once ("../vistas/MENSAJE_USUARIO.php");
+require_once ("../vistas/MENSAJE_LINEA_ELABORACION.php");
 require_once ("../vistas/PERMISO_DENEGADO.php");
 require_once ("../modelos/PERMISO_Model.php");
 require_once("../modelos/ELABORACION_Model.php");
@@ -99,7 +100,7 @@ switch ($_GET['id']) {
                 $linea = new Linea_elaboracion($_POST['id_elaboracion'],$_POST['material'],$_POST['cantidad']);
 
                 $_SESSION['mensaje'] = $modelo->altaLineaElaboracion($linea);
-                new Mensaje_usuario();
+                new Mensaje_linea_elaboracion();
             }
         }else{
             new Permiso_denegado();
@@ -123,7 +124,7 @@ switch ($_GET['id']) {
             } else {
                 $modelo = new Linea_elaboracion_modelo();
                 $_SESSION['mensaje'] = $modelo->deleteLineaElaboracion($_POST['idE']);
-                new Mensaje_usuario();
+                new Mensaje_linea_elaboracion();
             }
         }else{
             new Permiso_denegado();
@@ -138,7 +139,7 @@ switch ($_GET['id']) {
             } else {
                 $modelo = new Linea_elaboracion_modelo();
                 $_SESSION['mensaje'] = $modelo->modifyLineaElaboracion($_POST['idM'],$_POST['materialM'], $_POST['cantidadM']);
-                new Mensaje_usuario();
+                new Mensaje_linea_elaboracion();
             }
         }else{
             new Permiso_denegado();

@@ -90,7 +90,6 @@ class Producto_showAll{
                     <tr>
                         <th><?php echo $literales['nombreProductoSA'] ?></th>
                         <th><?php echo $literales['descripcionProductoSA'] ?></th>
-                        <th></th>
                         <th colspan="3"  ><?php echo $literales['accionProductoSA']?></th>
                     </tr>
                     </thead>

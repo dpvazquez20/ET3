@@ -124,7 +124,6 @@ class Usuario_modelo{
         return $resul;
     }
 
-
 }
 
 

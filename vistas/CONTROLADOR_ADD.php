@@ -26,7 +26,7 @@ class Controlador_add{
                 <form role="form" action="CONTROLADOR_Controller.php?id=ADDCONTROLADOR&ctr=CONTROLADOR" method="POST">
                     <div class="form-group">
                         <label for="Nombre"><?php echo $literales['nombre'] ?></label>
-                        <input  type="text" class="form-control" id="nombre" name="nombre" required
+                        <input  type="text" class="form-control" id="nombre" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-_]{2,48}" required
                                 placeholder="Introduce nombre del controlador">
                     </div>
 

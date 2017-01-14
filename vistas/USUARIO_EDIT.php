@@ -22,7 +22,6 @@ class Usuario_edit{
                 <?php $resul = Usuario_modelo::getUsuario($_GET['idUser']);
                 $row= mysqli_fetch_assoc($resul);
                 ?>
-                <?php mcrypt_decrypt() ?>
                 <div class="alert alert-warning"><?php echo $literales['usuarioMODIFY']?></div>
                 <form role="form" action="USUARIO_Controller.php?id=EDITUSUARIO&ctr=USUARIO" method="POST">
 
@@ -45,8 +44,8 @@ class Usuario_edit{
                     </div>
                     <div class="form-group">
                         <label for="passwordM">Password</label>
-                        <input type="password" class="form-control" id="passwordM" name="passwordM" pattern="[A-Za-z0-9!?-]{8,12}" required
-                               value="<?php echo $_SESSION['password']?>">
+                        <input type="password" class="form-control" id="passwordM" name="passwordM" required
+                               value="<?php echo $row['password']?>">
                     </div>
                     <div class="form-group">
                         <label for="perfil"><?php  echo $literales['seleccion perfil']?></label>

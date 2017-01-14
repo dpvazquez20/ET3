@@ -70,7 +70,12 @@ switch ($_GET['id']) {
             if (!isset($_POST['modificar'])) {
                 new Usuario_edit();
             } else {
-                $_POST['passwordM']= md5($_POST['passwordM']);
+                $usuarioAux= Usuario_modelo::getUsuario($_POST['id_usuario']);
+                $row= mysqli_fetch_assoc($usuarioAux);
+                $passwordV= $row['password'];
+                if($passwordV!=$_POST['passwordM']){
+                    $_POST['passwordM']= md5($_POST['passwordM']);
+                }
                 $usuarioModificado = new Usuario($_POST['nombreM'], $_POST['apellidoM'], $_POST['DNIM'], $_POST['passwordM'], $_POST['perfilM']);
                 $modelo = new Usuario_modelo();
                 $_SESSION['mensaje']=$modelo->modifyUsuario($_POST['id_usuario'], $usuarioModificado);

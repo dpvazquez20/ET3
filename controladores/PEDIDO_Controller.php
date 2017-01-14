@@ -14,6 +14,7 @@ require_once('../vistas/LINEA_PEDIDO_SHOWCURRENT.php');
 require_once('../vistas/LINEA_PEDIDO_EDIT.php');
 
 require_once ('../vistas/MENSAJE_USUARIO.php');
+require_once('../vistas/MENSAJE_LINEA_PEDIDO.php');
 require_once ('../modelos/PERMISO_Model.php');
 require_once ('../vistas/PERMISO_DENEGADO.php');
 
@@ -118,7 +119,7 @@ switch ($_GET['id']) {
                 $modelo = new Linea_Pedido_modelo();
                 $_SESSION ['mensaje'] = $modelo->altaLineaPedido($linea,$idUsuario);
 
-                new Mensaje_usuario();
+                new Mensaje_linea_pedido();
             }
         }
         else{
@@ -139,7 +140,7 @@ switch ($_GET['id']) {
                 $idPedido = $_POST['IDPedidoE'];
                 $_SESSION['mensaje']=$modelo->deleteLineaPedido($_POST['IDE'],$idPedido,$idUsuario);
 
-                new Mensaje_usuario();
+                new Mensaje_linea_pedido();
             }
         }else{
 
@@ -173,7 +174,7 @@ switch ($_GET['id']) {
                 $modelo = new Linea_Pedido_modelo();
                 $_SESSION['mensaje'] = $modelo->modifyLineaPedido($_POST['id_linea'], $lineaModificado, $idUsuario);
 
-                new Mensaje_usuario();
+                new Mensaje_linea_pedido();
             }
         }else{
 

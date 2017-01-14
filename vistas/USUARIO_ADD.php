@@ -30,7 +30,7 @@ class Usuario_add
                         <div class="form-group">
                             <label for="Nombre"><?php echo $literales['nombre'] ?></label>
                             <input type="text" class="form-control" id="nombre" name="nombre"
-                                   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+                                   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-0123456789]{2,48}"
                                    required
                                    placeholder="Introduce nombre del usuario">
                         </div>

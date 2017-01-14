@@ -37,17 +37,40 @@ class Accion_showAll{
                         }
                     }
                     ?>
+                    </div>
+                    <div class="col-sm-4">
+                        <form role="form" method="get">
+                            <input type="hidden" name="id" value="BUSCARACCION"/>
+                            <input type="hidden" name="ctr" value="ACCION"/>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="form-group">
+                                            <input placeholder="Nombre a buscar" type="text" id="nombreBuscar" name="nombreBuscar"style="width: 200px" class=" form-control"> </input>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+                <div>
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th><?php$literales['nombre'] ?></th>
-                        <th colspan="3"  ><?php$literales['accion']?></th>
+                        <th><?php echo $literales['nombre'] ?></th>
+                        <th colspan="3"  ><?php echo $literales['accion']?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                     $resul= Accion_modelo::listarAcciones();
+                    if(isset($_GET['nombreBuscar'])) {
+                       $resul= Accion_modelo::getBuscarAccion($_GET['nombreBuscar']);
+                    }
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['nombre'] . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));

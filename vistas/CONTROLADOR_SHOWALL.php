@@ -38,6 +38,26 @@ class Controlador_showAll{
                         }
                         ?>
                     </div>
+                    <div class="col-sm-4">
+                        <form role="form" method="get">
+                            <input type="hidden" name="id" value="BUSCARCONTROLADOR"/>
+                            <input type="hidden" name="ctr" value="CONTROLADOR"/>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="form-group">
+                                            <input placeholder="Nombre a buscar" type="text" id="nombreBuscar" name="nombreBuscar"style="width: 200px" class=" form-control"> </input>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
@@ -48,6 +68,9 @@ class Controlador_showAll{
                     <tbody>
                     <?php
                     $resul=Controlador_modelo::listarControladores();
+                    if(isset($_GET['nombreBuscar'])) {
+                        $resul = Controlador_modelo::getBuscarControlador($_GET['nombreBuscar']);
+                    }
                     while($row = mysqli_fetch_assoc($resul)) {
                         echo "<tr><td>" . $row['nombre'] . "</td> <td>";
                         $listaControladores = Controlador_modelo::controladores(($_SESSION['perfil']));

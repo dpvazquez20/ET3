@@ -63,6 +63,17 @@ class Accion_modelo{
         $sql= "SELECT * from accion WHERE nombre='".$nombre."';";
         return $conexion->query($sql);
     }
+    public static function getBuscarAccion($nombre)
+    {
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM accion";
+        } else {
+            $sql = "SELECT * FROM accion WHERE nombre LIKE '%" . $nombre . "%'";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
 }
 
 

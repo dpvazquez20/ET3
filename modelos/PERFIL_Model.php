@@ -72,6 +72,17 @@ class Perfil_modelo{
         $sql= "SELECT * from perfil WHERE nombre='".$nombre."';";
         return $conexion->query($sql);
     }
+    public static function getBuscarPerfil($nombre)
+    {
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM perfil";
+        } else {
+            $sql = "SELECT * FROM perfil WHERE nombre LIKE '%" . $nombre . "%'";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
 }
 
 

@@ -73,6 +73,18 @@ class Controlador_modelo{
         $sql= "SELECT * from controlador WHERE nombre='".$nombre."';";
         return $conexion->query($sql);
     }
+
+    public static function getBuscarControlador($nombre)
+    {
+        $conexion = conectarBD();
+        if ($nombre == "") {
+            $sql = "SELECT * FROM controlador";
+        } else {
+            $sql = "SELECT * FROM controlador WHERE nombre LIKE '%" . $nombre . "%'";
+        }
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
 }
 
 

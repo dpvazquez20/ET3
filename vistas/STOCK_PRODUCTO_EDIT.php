@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="productoM"><?php echo $literales['producto']?></label>
+                            <label for="productoM"><?php echo $literales['nombre']?></label>
                             <select name="productoM" id="productoM" class="form-control">
                                 <option value=""></option>
                                 <?php $resul = Producto_modelo::listarProducto();?>

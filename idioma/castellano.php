@@ -270,6 +270,61 @@ $literales = array(
             'stockcoste' =>'Coste',
 //    -----------------FIN STOCK PRODUCTO----------------
 
+    
+//    -------------------------------------------------------------------
+//    -------------------------------PRODUCTO ---------------------------
+//    -------------------------------------------------------------------
+
+    'productoADD'=>'AÑADIR NUEVO PRODUCTO',
+    'productoDELETE'=>'Estos son los datos del Producto ¿Estas seguro de que deseas borrarlos?',
+    'productoMODIFY'=>'Estos son los datos del Producto ¿Deseas modificarlos?',
+    'productoSHOW'=>'DETALLES DEL PRODUCTO',
+    'produccionADD'=>'Añadir:',
+    'descripcionProductoSA'=>'Descripcion',
+    'nombreProductoSA'=>'Nombre',
+    'accionProductoSA'=>'Accion',
+
+//    -------------------------------------------------------------------
+//    --------------- ELABORACION y LINEA DE ELABORACION-----------------
+//    -------------------------------------------------------------------
+
+
+    'productoDELETE'=>'Estos son los datos del Producto ¿Estas seguro de que deseas borrarlos?',
+    'descripcion'=>'Descripcion de la elaboracion',
+    'elaboracionMODIFY'=>'Nombre de elaboracion a modificar:',
+    'seleccion producto'=>'Selecciona un producto para cambiar el nombre de la elaboración',
+    'elaboracionSHOW'=>'Estos son los datos del Producto y su elaboración',
+    'elaboracionADD'=>'Selecciona el producto para su elaboración',
+    'elaboracionDELETE'=>'¿Estas seguro de que quieres borrar esta elaboración?',
+    'seleccion producto ADD'=>'Selecciona un producto para la elaboración',
+    'seleccionMaterial'=>'Seleccioname el nuevo material para el producto',
+    'id_elaboracionON'=>'ESTE ES EL NÚMERO DE TU ELABORACIÓN:',
+    'nuevo linea de elaboracion'=>'nuevo linea de elaboracion:',
+    'elaboracionADD'=>'Introduce los datos:',
+    'seleccion material'=>'Seleccioname el material que quieras:',
+    'lineaDELETE'=>'¿Estas seguro de que quieres eliminar esta linea?',
+    'elaboracionMODIFY'=>'MODIFICACION DE LA ELABORACION',
+    'lineaEDIT'=>'¿Desea modificar la linea?',
+
+
+
+//    ----------------------------------------------------
+//     -----------------STOCK_PRODUCTO--------------------
+//    ----------------------------------------------------
+
+    'stockId_id_producto'=>'Producto',
+    'nombre'=>'Nombre',
+    'stockcoste'=>'Coste',
+    'stockfecha'=>'Fecha',
+    'Accion'=>'Accion',
+    'materialproducto'=>'Material',
+    'fecha'=>'Fecha',
+    'precio'=>'Precio',
+
+
+//    -----------------FIN STOCK PRODUCTO----------------
+
+
 
     
     

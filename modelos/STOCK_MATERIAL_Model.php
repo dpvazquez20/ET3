@@ -97,7 +97,7 @@ class Stock_material_modelo{
     
     public static function getProducto($id){
         $conexion= conectarBD();
-        $sql= "SELECT * FROM producto WHERE id=".$id." ORDER BY nombre;";
+        $sql= "SELECT * FROM producto WHERE id_producto=".$id." ORDER BY nombre;";
         $resul= $conexion->query($sql);
         $row = mysqli_fetch_assoc($resul);
         return $row['nombre'];

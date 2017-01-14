@@ -277,7 +277,13 @@ INSERT INTO `controlador` (`nombre`) VALUES
 ('PRODUCTO'),
 ('PROVEEDOR'),
 ('PRUEBA1'),
-('USUARIO');
+('USUARIO'),
+('MATERIAL'),
+('STOCK_MATERIAL'),
+('STOCK_PRODUCTO'),
+('ELABORACION'),
+('FACTURA'),
+('ALBARAN');
 INSERT INTO `perfil` (`nombre`) VALUES
 ('Admin'),
 ('usuario');
@@ -312,7 +318,35 @@ INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
 (47, 'PEDIDO', 'ADD', 'Admin'),
 (48, 'PEDIDO', 'DELETE', 'Admin'),
 (49, 'PEDIDO', 'EDIT', 'Admin'),
-(50, 'PEDIDO', 'SHOW', 'Admin');
+(50, 'PEDIDO', 'SHOW', 'Admin'),
+(51, 'MATERIAL', 'ADD', 'Admin'),
+(52, 'MATERIAL', 'DELETE', 'Admin'),
+(53, 'MATERIAL', 'EDIT', 'Admin'),
+(54, 'MATERIAL', 'SHOW', 'Admin'),
+(55, 'STOCK_MATERIAL', 'ADD', 'Admin'),
+(56, 'STOCK_MATERIAL', 'DELETE', 'Admin'),
+(57, 'STOCK_MATERIAL', 'EDIT', 'Admin'),
+(58, 'STOCK_MATERIAL', 'SHOW', 'Admin'),
+(59, 'PRODUCTO', 'ADD', 'Admin'),
+(60, 'PRODUCTO', 'DELETE', 'Admin'),
+(61, 'PRODUCTO', 'EDIT', 'Admin'),
+(62, 'PRODUCTO', 'SHOW', 'Admin'),
+(63, 'STOCK_PRODUCTO', 'ADD', 'Admin'),
+(64, 'STOCK_PRODUCTO', 'DELETE', 'Admin'),
+(65, 'STOCK_PRODUCTO', 'EDIT', 'Admin'),
+(66, 'STOCK_PRODUCTO', 'SHOW', 'Admin'),
+(67, 'ELABORACION', 'ADD', 'Admin'),
+(68, 'ELABORACION', 'DELETE', 'Admin'),
+(69, 'ELABORACION', 'EDIT', 'Admin'),
+(70, 'ELABORACION', 'SHOW', 'Admin'),
+(71, 'FACTURA', 'ADD', 'Admin'),
+(72, 'FACTURA', 'DELETE', 'Admin'),
+(73, 'FACTURA', 'EDIT', 'Admin'),
+(74, 'FACTURA', 'SHOW', 'Admin'),
+(75, 'ALBARAN', 'ADD', 'Admin'),
+(76, 'ALBARAN', 'DELETE', 'Admin'),
+(77, 'ALBARAN', 'EDIT', 'Admin'),
+(78, 'ALBARAN', 'SHOW', 'Admin');
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `DNI`, `password`, `perfil`, `borrado`) VALUES
 (57, 'dkjskjdkjsdkjskjd', 'JARDIM', '12345679A', '25f9e794323b453885f5181f1b624d0b', 'usuario', 0),-- Contraseña 123456789
 (58, 'Admin', 'adminadmin', '12345672A', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Admin', 0),-- contraseña adminadmin
@@ -386,18 +420,6 @@ INSERT INTO `pedido` (`id`, `id_proveedor`, `id_usuario`, `fecha`) VALUES
 INSERT INTO `albaran` (`id`, `id_pedido`, `fecha`) VALUES
 ('00000000000', '00000000000', '2017-10-04'),
 ('00000000001', '00000000001', '2017-10-04');
-INSERT INTO `controlador` (`nombre`) VALUES
-('MATERIAL'),
-('STOCK_MATERIAL');
-INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
-(51, 'MATERIAL', 'ADD', 'Admin'),
-(52, 'MATERIAL', 'DELETE', 'Admin'),
-(53, 'MATERIAL', 'EDIT', 'Admin'),
-(54, 'MATERIAL', 'SHOW', 'Admin'),
-(55, 'STOCK_MATERIAL', 'ADD', 'Admin'),
-(56, 'STOCK_MATERIAL', 'DELETE', 'Admin'),
-(57, 'STOCK_MATERIAL', 'EDIT', 'Admin'),
-(58, 'STOCK_MATERIAL', 'SHOW', 'Admin');
 INSERT INTO `material` (`id`, `nombre`, `descripcion`, `borrado`) VALUES
 ('00000000005', 'Tronco', 'Tronco de madera de 2 metros de longitud', '0'),
 ('00000000006', 'Barra metalica', 'Barra metalica de 5 cm de diametro y 3 m de largo', '0');
@@ -512,5 +534,7 @@ ADD UNIQUE KEY `id_elaboracion` (`id_elaboracion`),
 MODIFY `id_elaboracion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 
 ALTER TABLE `linea_elaboracion`
-ADD PRIMARY KEY (`id_linea_elaboracion`),
+ADD PRIMARY KEY (`id_linea_elaboracion`), ADD KEY `lineaelab_elaboracion_idx` (`id_elaboracion`),ADD KEY `lineaelab_material_idx` (`id_material`),
+ADD CONSTRAINT `lineaelab_elaboracion` FOREIGN KEY (`id_elaboracion`) REFERENCES `elaboracion`(`id_elaboracion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `lineaelab_material` FOREIGN KEY (`id_material`) REFERENCES `material`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 MODIFY `id_linea_elaboracion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;

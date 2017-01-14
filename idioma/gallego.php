@@ -48,6 +48,8 @@ $literales = array(
     'nuevo usuario'=>'NUEVO USUARIO',
     'enviar'=>'Enviar',
     'reset'=>'Resetear',
+    'buscar' => 'Buscar',
+    'linea' => 'LINEA',
     
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------
@@ -127,10 +129,10 @@ $literales = array(
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO PROVEEDORES Y PEDIDOS -------------------
 //    -------------------------------------------------------------------
-    'proveedor'=>'Proveedor',
+    'proveedor'=>'Provedor',
 
     'id pedido'=>"ID Pedido",
-    'nombre proveedor'=>'Nome del Proveedor',
+    'nombre proveedor'=>'Nome do Provedor',
     'direccion'=>'Direccion',
     'codigo postal'=>'Codigo Postal',
 
@@ -138,7 +140,7 @@ $literales = array(
     'provincia' => 'Provinza',
     'dni usuario' => 'DNI Usuario',
 
-    'fecha'=>'Fecha',
+    'fecha'=>'Data',
     'pedidoSHOW' => 'Detalles Pedido',
     'pedidoADD' => '¿Queres un novo Pedido?',
     'pedidoDELETE'=>'¿Queres borrar un Pedido?',
@@ -165,8 +167,8 @@ $literales = array(
     'id linea' => 'ID Linea',
 
     'id pedido a buscar' => 'ID Pedido a Buscar',
-    'nombre proveedor a buscar' => 'Nome Proveedor a Buscar',
-    'nif proveedor a buscar' => 'NIF Proveedor a Buscar',
+    'nombre proveedor a buscar' => 'Nome Provedor a Buscar',
+    'nif proveedor a buscar' => 'NIF Provedor a Buscar',
     'dni usuario a buscar' => 'DNI Usuario a Buscar',
     'fecha a buscar' => 'Fecha a Buscar',
 
@@ -176,12 +178,12 @@ $literales = array(
     'nuevo proveedor' => 'Novo Proveedor',
     'correo electronico' => 'Correo Electronico',
     'telefono'=>'Teléfone',
-    'eliminar proveedor' => 'Borrar Proveedor',
-    'proveedorDELETE' => '¿Queres borrar un Proveedor?',
-    'proveedorEDIT' => '¿Queres modificar un Proveedor?',
-    'proveedorADD' => '¿Queres añadir un Proveedor?',
-    'proveedorSHOW' => 'Detalles do Proveedor',
-    'mostrar proveedor' => 'Mostrar Proveedor',
+    'eliminar proveedor' => 'Borrar Provedor',
+    'proveedorDELETE' => '¿Queres borrar un Provedor?',
+    'proveedorEDIT' => '¿Queres modificar un Provedor?',
+    'proveedorADD' => '¿Queres añadir un Provedor?',
+    'proveedorSHOW' => 'Detalles do Provedor',
+    'mostrar proveedor' => 'Mostrar Provedor',
 
     'se ha creado correctamente: ' => ' se ha creado correctamente: ',
 
@@ -215,7 +217,7 @@ $literales = array(
     'idLinea' => 'ID da Liña',
     'idMaterial' => 'ID do Material',
     'nombreMaterial' => 'Nome do Material',
-    'cantidad' => 'Cantidad',
+    'cantidad' => 'Cantidade',
 
     //-------------------------------
 

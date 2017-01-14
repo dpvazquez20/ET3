@@ -5,7 +5,7 @@ $literales = array(
     'SHOW'=>'SHOW CURRENT',
     'DELETE'=>'DELETE',
     'EDIT'=>'EDIT',
-    'ADD'=>'ADD',
+    'ADD'=>'NEW',
     'permisoSHOW'=>'This is the information for the profile ',
     'permisoMODIFY'=>'This is the information for the profile: ',
     'permisoDELETE'=>' Are you sure that you want to erase this profile ?',
@@ -48,6 +48,8 @@ $literales = array(
     'nuevo usuario'=>'NEW USER',
     'enviar'=>'Send',
     'reset'=>'Reset',
+    'buscar' => 'Search',
+    'linea' => 'LINE',
 
 //    -------------------------------------------------------------------
 //    -------------- MODIFICADO MATERIAL Y STOCK_MATERIAL ---------------

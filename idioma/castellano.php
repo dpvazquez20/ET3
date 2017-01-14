@@ -48,6 +48,8 @@ $literales = array(
         'nuevo usuario'=>'NUEVO USUARIO',
         'enviar'=>'Enviar',
         'reset'=>'Resetear',
+        'buscar' => 'Buscar',
+        'linea' => 'LINEA',
     
     
 //    -------------------------------------------------------------------

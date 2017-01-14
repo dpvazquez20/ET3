@@ -155,6 +155,23 @@ class Stock_producto_modelo{
         return $resul;
     }
 
+    public static function getPorCoste($coste){
+        $conexion= conectarBD();
+        $sql = "SELECT * FROM stock_producto WHERE coste='".$coste."';";
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+
+    public static function getPorFecha($fecha){
+        $conexion= conectarBD();
+        $sql = "SELECT * FROM stock_producto WHERE fecha='".$fecha."';";
+        $resul = $conexion->query($sql);
+        return $resul;
+    }
+
+
+
+
 
 }
 ?>

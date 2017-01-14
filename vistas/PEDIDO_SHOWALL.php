@@ -68,7 +68,7 @@ class Pedido_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                         </span>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ class Pedido_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                         </span>
                             </div>
                         </div>
@@ -104,7 +104,7 @@ class Pedido_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                         </span>
                             </div>
                         </div>
@@ -121,7 +121,7 @@ class Pedido_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                         </span>
                             </div>
                         </div>
@@ -139,7 +139,7 @@ class Pedido_showAll{
                                            style="width: 200px" class=" form-control"> </input>
                                 </div>
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Buscar</button>
+                                            <button class="btn btn-default" type="submit"><?php echo $literales['buscar']?></button>
                                         </span>
                             </div>
                         </div>
@@ -155,7 +155,7 @@ class Pedido_showAll{
                         <th><?php echo $literales['nif proveedor']?></th>
                         <th><?php echo $literales['dni usuario']?></th>
                         <th><?php echo $literales['fecha']?></th>
-                        <th colspan="3"  >Acción</th>
+                        <th colspan="3"  ><?php echo $literales['accion']?></th>
                     </tr>
                     </thead>
                     <tbody>

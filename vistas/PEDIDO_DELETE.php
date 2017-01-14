@@ -55,7 +55,7 @@ class Pedido_delete{
                                value="<?php echo $rowU['DNI']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">
-                        <label for="fecha"><?php echo $literales['date']?></label>
+                        <label for="fecha"><?php echo $literales['fecha']?></label>
                         <input type="text" class="form-control" id="fecha" name="fecha" readonly="readonly"
                                value="<?php echo $row['fecha']?>">
                     </div>

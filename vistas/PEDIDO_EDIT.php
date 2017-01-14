@@ -78,7 +78,7 @@ class Pedido_edit{
 
                     <div class="form-group">
                         <input id ="modificar" name="modificar"class="btn btn-warning"value="<?php echo $literales['modificar']?>" type="submit">
-                        <a class="btn btn-default" href="../controladores/PEDIDO_Controller.php?id=SHOWALLPEDIDO&ctr=PEDIDO";">&laquo; Volver atrás</a>
+                        <a class="btn btn-default" href="../controladores/PEDIDO_Controller.php?id=SHOWALLPEDIDO&ctr=PEDIDO";"><?php echo $literales['volver']?></a>
                     </div>
 
                 </form>

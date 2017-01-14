@@ -259,11 +259,60 @@ $literales = array(
 //    ------------------FIN ALBARANES Y FACTURAS ------------------------
 //    -------------------------------------------------------------------
     
+//    -------------------------------------------------------------------
+//    -------------------------------PRODUCTO ---------------------------
+//    -------------------------------------------------------------------
+
+    'productoADD'=>'AÑADIR NOVO PRODUCTO',
+    'productoDELETE'=>'Estes son os datos do produto ¿Está seguro de querer borralos?',
+    'productoMODIFY'=>'Estes son os datos do produto ¿Quere modificalos?',
+    'productoSHOW'=>'DETALLES DO PRODUCTO',
+    'produccionADD'=>'Engadir:',
+    'descripcionProductoSA'=>'Descrición',
+    'nombreProductoSA'=>'Nome',
+    'accionProductoSA'=>'Accion',
+
+
+
+//    -------------------------------------------------------------------
+//    --------------- ELABORACION y LINEA DE ELABORACION-----------------
+//    -------------------------------------------------------------------
+
+
+    'productoDELETE'=>'Estes son os datos do produto ¿Está seguro de querer borralos?',
+    'descripcion'=>'Descripcion da elaboracion',
+    'elaboracionMODIFY'=>'Nomme da elaboracion a modificar:',
+    'seleccion producto'=>'Seleccionar un produto para cambiar o nome da elaboración',
+    'elaboracionSHOW'=>'Estes son os datos do produto',
+    'elaboracionADD'=>'Introduce los datos:',
+    'elaboracionDELETE'=>'Estes son os datos do produto ¿Está seguro de querer borralos?',
+    'seleccion producto ADD'=>'Selecciona un producto para a elaboración',
+    'seleccionMaterial'=>'Selecciona o novo material para o producto',
+    'id_elaboracionON'=>'ESTE É EL NÚMERO DA SUA ELABORACIÓN:',
+    'nuevo linea de elaboracion'=>'nova linea de elaboracion:',
+    'elaboracionADD'=>'Introduce os datos:',
+    'seleccion material'=>'Seleccioname o material que quieras:',
+    'lineaDELETE'=>'¿Está seguro de querer borra a linea?',
+    'elaboracionMODIFY'=>'MODIFICACION DA ELABORACION',
+    'lineaEDIT'=>'¿Desexa modificar a linea?',
+
+
+
+//    ----------------------------------------------------
+//     -----------------STOCK_PRODUCTO--------------------
+//    ----------------------------------------------------
+
+    'stockId_id_producto'=>'Produto',
+    'nombre'=>'Nome',
+    'stockcoste'=>'Custo',
+    'stockfecha'=>'Data',
+    'Accion'=>'Accion',
+    'materialproducto'=>'Material',
+    'fecha'=>'Data',
+    'precio'=>'Prezo',
     
-//    ---------------STOCK PRODUCTOS ----------------------
-            'stockcoste' =>'Custo',
-//    -----------------FIN STOCK PRODUCTO----------------
-
-
+    
+    
+    
 )
 ?>

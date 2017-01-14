@@ -46,12 +46,11 @@ class Stock_material_modelo{
     }
     
     function modifyStock_material($idB,$id_materialM,$id_albaranM,$id_productoM){
-        $prod=$_POST['id_productoM'];
         $this->mysql= conectarBD();
-        if($prod=='null'){
+        if($id_productoM=='null'){
             $sql = "UPDATE stock_material SET id_material='" . $id_materialM ."',id_albaran='". $id_albaranM ."',id_producto=NULL WHERE id='".$idB."';";
         }else{
-            $sql = "UPDATE stock_material SET id_material='" . $id_materialM ."',id_albaran='". $id_albaranM ."',id_producto='" . $prod . "' WHERE id='".$idB."';";
+            $sql = "UPDATE stock_material SET id_material='" . $id_materialM ."',id_albaran='". $id_albaranM ."',id_producto='" . $id_productoM . "' WHERE id='".$idB."';";
         }
 
         if($this->mysql->query($sql)){

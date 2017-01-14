@@ -88,10 +88,10 @@ class Producto_showAll{
                 <table class=" table table-striped table-responsive">
                     <thead>
                     <tr>
-                        <th><?php$literales['nombreProductoSA'] ?></th>
-                        <th><?php$literales['DescripcionProductoSA'] ?></th>
+                        <th><?php echo $literales['nombreProductoSA'] ?></th>
+                        <th><?php echo $literales['descripcionProductoSA'] ?></th>
                         <th></th>
-                        <th colspan="3"  ><?php$literales['accionProductoSA']?></th>
+                        <th colspan="3"  ><?php echo $literales['accionProductoSA']?></th>
                     </tr>
                     </thead>
                     <tbody>

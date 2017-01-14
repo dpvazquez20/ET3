@@ -22,16 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MENSAJE_LINEA_FACTURA.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/MENSAJE_LINEA_FACTURA.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="159" lean-forward="false" selection-start-line="25" selection-start-column="159" selection-end-line="25" selection-end-column="159" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MENSAJE_LINEA_ALBARAN.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vistas/MENSAJE_LINEA_ALBARAN.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,11 +52,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PRODUCTO_SHOWALL.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PRODUCTO_SHOWALL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vistas/PRODUCTO_SHOWALL.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
               <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="STOCK_PRODUCTO_ADD.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/STOCK_PRODUCTO_ADD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="STOCK_PRODUCTO_EDIT.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vistas/STOCK_PRODUCTO_EDIT.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,16 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MENSAJE_LINEA_PEDIDO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/MENSAJE_LINEA_PEDIDO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="35" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -159,8 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modelos/PEDIDO_Model.php" />
-        <option value="$PROJECT_DIR$/controladores/PROVEEDOR_Controller.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/LINEA_PEDIDO_DELETE.php" />
         <option value="$PROJECT_DIR$/vistas/LINEA_PEDIDO_EDIT.php" />
@@ -210,6 +208,8 @@
         <option value="$PROJECT_DIR$/vistas/PRODUCTO_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/LINEA_FACTURA_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/PRODUCTO_SHOWALL.php" />
+        <option value="$PROJECT_DIR$/vistas/STOCK_PRODUCTO_ADD.php" />
+        <option value="$PROJECT_DIR$/vistas/STOCK_PRODUCTO_EDIT.php" />
       </list>
     </option>
   </component>
@@ -397,12 +397,12 @@
       <workItem from="1484143241587" duration="52404000" />
       <workItem from="1484330418369" duration="26234000" />
       <workItem from="1484410447100" duration="2410000" />
-      <workItem from="1484412390286" duration="1974000" />
+      <workItem from="1484412390286" duration="2289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="414427000" />
+    <option name="totallyTimeSpent" value="414742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
@@ -467,15 +467,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/ET3_aux/vistas/menu.php" />
     <entry file="file://$PROJECT_DIR$/modelos/ALBARAN_Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
@@ -871,6 +862,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/STOCK_PRODUCTO_ADD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/STOCK_PRODUCTO_EDIT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>

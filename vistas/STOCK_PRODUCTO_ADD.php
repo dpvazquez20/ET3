@@ -45,12 +45,12 @@ class Stock_producto_add
 
                     <div class="form-group">
                         <label for="fecha"><?php  echo $literales['fecha']?></label>
-                        <input type="text" class="form-control" id="fecha" name="fecha">
+                        <input type="text" class="form-control" id="fecha" name="fecha" required>
                     </div>
 
                     <div  style="align-items: center" class="form-group">
                             <label for="precio"><?php  echo $literales['precio']?></label>
-                            <input  type="text" class="form-control" id="precio" name="precio"
+                            <input  type="number" class="form-control" id="precio" name="precio" required
                                     placeholder="Precio">
                     </div>
 

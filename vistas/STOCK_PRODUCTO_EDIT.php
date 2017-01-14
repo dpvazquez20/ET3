@@ -58,12 +58,12 @@
 
                         <div class="form-group">
                             <label for="fechaM"><?php  echo $literales['fecha']?></label>
-                            <input type="text" class="form-control" id="fechaM" name="fechaM" value="<?php echo $row['fecha'] ?>">
+                            <input type="text" class="form-control" id="fechaM" name="fechaM" required value="<?php echo $row['fecha'] ?>">
                         </div>
 
                         <div  style="align-items: center" class="form-group">
                             <label for="precioM"><?php  echo $literales['precio']?></label>
-                            <input  type="text" class="form-control" id="precioM" name="precioM" value="<?php echo $row['coste']?>">
+                            <input  type="number" class="form-control" id="precioM" name="precioM"  required value="<?php echo $row['coste']?>">
                         </div>
 
                         <div class="form-group">

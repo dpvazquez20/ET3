@@ -112,7 +112,7 @@ class Pedido_modelo
         if ($nombre == "") {
             $sql = "SELECT * FROM pedido";
         } else {
-            $sql = "SELECT * FROM proveedor, pedido WHERE pedido.id_proveedor=proveedor.id and proveedor.nombre LIKE '".$nombre."%';";
+            $sql = "SELECT pedido.id as id, id_proveedor, id_usuario, fecha, nif FROM proveedor, pedido WHERE pedido.id_proveedor=proveedor.id and proveedor.nombre LIKE '".$nombre."%';";
             }
 
         $resul = $conexion->query($sql);
@@ -126,7 +126,7 @@ class Pedido_modelo
         if ($nif == "") {
             $sql = "SELECT * FROM pedido";
         } else {
-            $sql = "SELECT * FROM proveedor, pedido WHERE pedido.id_proveedor=proveedor.id and proveedor.nif LIKE '".$nif."%';";
+            $sql = "SELECT pedido.id as id, id_proveedor, id_usuario, fecha, nif FROM proveedor, pedido WHERE pedido.id_proveedor=proveedor.id and proveedor.nif LIKE '".$nif."%';";
         }
 
         $resul = $conexion->query($sql);

@@ -128,7 +128,7 @@ class Stock_producto_showAll{
                     <?php
 
                         if (isset($_GET['nombreBuscar'])) {
-                            $resul = Producto_modelo::getNombreProducto($_GET['nombreBuscar']);
+                            $resul = Stock_producto_modelo::getNombreProducto($_GET['nombreBuscar']);
                         }
                         else {
                             if (isset($_GET['costeBuscar'])) {

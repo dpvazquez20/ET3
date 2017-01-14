@@ -6,7 +6,7 @@ session_start();
 }
 
 
-class Mensaje_linea_pedido
+class Mensaje_linea_factura
 {
 
     function __construct()
@@ -23,7 +23,7 @@ class Mensaje_linea_pedido
             <!-- Título de la página -->
             <div class="col-sm-9">
                 <div class="alert alert-success"><h1><?php echo $_SESSION['mensaje']?></h1> </div>
-                <?php echo "<a href='../controladores/".$_GET['ctr']."_Controller.php?id=SHOW".$_GET['ctr']."&ctr=".$_GET['ctr']."&idFactura=".$_GET['idFactura']."'><button  class='btn  btn-default'>".$literales['volver']."</butto></a>";
+                <?php echo "<a href='../controladores/".$_GET['ctr']."_Controller.php?id=SHOW".$_GET['ctr']."&ctr=".$_GET['ctr']."&idFactura=".$_SESSION['id_factura']."'><button  class='btn  btn-default'>".$literales['volver']."</butto></a>";
                 ?>
 
             </div>

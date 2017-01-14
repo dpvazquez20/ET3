@@ -446,7 +446,41 @@ INSERT INTO `linea_elaboracion` (`id_linea_elaboracion`, `id_elaboracion`, `id_m
 (9, 3, 1, 12),
 (10, 1, 4, 127),
 (11, 3, 3, 8);
-
+INSERT INTO `albaran` (`id`, `id_pedido`, `fecha`) VALUES
+(8, 4, '2017-01-10'),
+(9, 26, '2017-01-16'),
+(10, 7, '2017-01-05'),
+(11, 22, '2017-01-16');
+INSERT INTO `factura` (`id`, `id_proveedor`, `NIF`, `fecha`) VALUES
+(5, 1, '544643215', '2017-01-16'),
+(6, 11, '545613464', '2017-01-09'),
+(7, 18, '46463584', '2017-01-31');
+INSERT INTO `linea_albaran` (`id`, `id_albaran`, `id_material`, `cantidad`) VALUES
+(23, 9, 1, 50),
+(24, 9, 2, 60),
+(25, 9, 5, 40),
+(26, 11, 4, 60),
+(27, 11, 1, 20),
+(28, 8, 3, 40),
+(29, 8, 6, 90),
+(30, 10, 3, 30),
+(31, 10, 6, 40),
+(32, 10, 1, 15),
+(33, 10, 5, 25);
+INSERT INTO `linea_factura` (`id`, `id_albaran`, `id_factura`) VALUES
+(10, 8, 5),
+(11, 9, 5),
+(12, 10, 6),
+(13, 11, 7);
+INSERT INTO `material_proveedor` (`id_material`,`id_proveedor`) VALUES
+(1,1),
+(2,4),
+(3,5),
+(4,7);
+INSERT INTO `stock_producto` (`id`,`id_producto`,`coste`,`fecha`) VALUES
+(1,1,50,'2017-01-16'),
+(2,5,25,'2017-01-16'),
+(3,10,33,'2017-01-16');
 
 --
 -- Indices, auto-increments y FK

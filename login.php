@@ -52,7 +52,7 @@
 </html>
 
 <?php
-
+session_start();
 include ('conectarBD.php');
 $db= conectarBD();
     $esAdmin=false;
@@ -61,19 +61,20 @@ if(isset($_POST['usuario'])) {
     if ($_POST['usuario'] == "Admin") {
         $esAdmin = true;
     }
+
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
-    $password = md5($password);
+    $_SESSION['password']=$password;
     $sql = "SELECT * FROM usuario WHERE nombre='$usuario' AND password='$password' AND borrado='0'";
     $resultado= $db->query($sql);
     if($resultado-> num_rows==0){
         echo"Lo sentimos ese usuario no existe";
     }else{
-        session_start();
         $sqlPermiso= "SELECT perfil from usuario WHERE nombre='$usuario' AND password='$password'";
         $resultado1= $db->query($sqlPermiso);
         $row= mysqli_fetch_assoc($resultado1);
         $rowId= mysqli_fetch_assoc($resultado);
+
         $_SESSION['id_usuario']= $rowId['id_usuario'];
         $_SESSION['perfil']=$row['perfil'];
         $_SESSION['usuario']= $usuario;

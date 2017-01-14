@@ -192,13 +192,52 @@ $literales = array(
 
 
 
+
 //    -------------------------------------------------------------------
-//    ----------------- FIN PROVEEDORES Y PEDIDOS -----------------------
+//    -------------------------------PRODUCTO ---------------------------
 //    -------------------------------------------------------------------
-    
-    
-//    ---------------STOCK PRODUCTOS ----------------------
-            'stockcoste' =>'Cost',
+
+    'productoADD'=>'ADD NEW PRODUCT',
+    'productoDELETE'=>'These are the data of the Product. Are you sure you want to delete them?',
+    'productoMODIFY'=>'These are the data of the Product. Do you want to modify them?',
+    'productoSHOW'=>'PRODUCT DETAILS',
+    'produccionADD'=>'Add:',
+    'descripcionProductoSA'=>'Description',
+    'nombreProductoSA'=>'Name',
+    'accionProductoSA'=>'Action',
+
+//    -------------------------------------------------------------------
+//    --------------- ELABORACION y LINEA DE ELABORACION-----------------
+//    -------------------------------------------------------------------
+
+    'elaboracionMODIFY'=>'Nombre de elaboracion a modificar:',
+    'seleccion producto'=>'Selecciona un producto para cambiar el nombre de la elaboración',
+    'elaboracionSHOW'=>'Estos son los datos del Producto y su elaboración',
+    'elaboracionDELETE'=>'¿Estas seguro de que quieres borrar esta elaboración?',
+    'seleccion producto ADD'=>'Selecciona un producto para la elaboración',
+    'seleccionMaterial'=>'Seleccioname el nuevo material para el producto',
+    'id_elaboracionON'=>'ESTE ES EL NÚMERO DE TU ELABORACIÓN:',
+    'nuevo linea de elaboracion'=>'nuevo linea de elaboracion:',
+    'elaboracionADD'=>'Enter the data:',
+    'seleccion material'=>'Select the material you want:',
+    'lineaDELETE'=>'Are you sure you want to delete this line?',
+    'elaboracionMODIFY'=>'MODIFICATION OF THE PREPARATION',
+
+
+
+//    ----------------------------------------------------
+//     -----------------STOCK_PRODUCTO--------------------
+//    ----------------------------------------------------
+
+    'stockId_id_producto'=>'Product',
+    'nombre'=>'Name',
+    'stockcoste'=>'Price',
+    'stockfecha'=>'Date',
+    'Accion'=>'Action',
+    'materialproducto'=>'Material',
+    'fecha'=>'Date',
+    'precio'=>'Price',
+
 //    -----------------FIN STOCK PRODUCTO----------------
 
 

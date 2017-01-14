@@ -172,11 +172,9 @@ ENGINE = InnoDB default charset=utf8 collate=utf8_spanish_ci;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ET3Grupo5`.`producto` ;
 CREATE TABLE IF NOT EXISTS `ET3Grupo5`.`producto` (
-  `id` INT(11) NOT NULL,
-  `nombre` VARCHAR(50) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` TEXT COLLATE utf8_spanish_ci NOT NULL,
-  `id_material` INT(11) NULL,
-  `cantidad` INT(11) NULL
+  `id_producto` INT(11) NOT NULL,
+  `nombre` VARCHAR(20) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` VARCHAR(40) COLLATE utf8_spanish_ci NOT NULL
   )
 ENGINE = InnoDB default charset=utf8 collate=utf8_spanish_ci;
 
@@ -202,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `ET3Grupo5`.`stock_producto` (
   `id` INT(11) NOT NULL,
   `id_producto` INT(11) NOT NULL,
   `coste` INT(11) NOT NULL,
-  `fecha` DATE NOT NULL
+  `fecha` varchar(100) COLLATE utf8_spanish_ci NOT NULL
   )
 ENGINE = InnoDB default charset=utf8 collate=utf8_spanish_ci;
 
@@ -242,6 +240,23 @@ CREATE TABLE IF NOT EXISTS `ET3Grupo5`.`linea_factura` (
   )
 ENGINE = InnoDB default charset=utf8 collate=utf8_spanish_ci;
 
+-- -----------------------------------------------------
+-- Table `ET3Grupo5`.`elaboracion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `elaboracion` (
+`id_elaboracion` int(11) NOT NULL,
+  `nombre_elaboracion` varchar(11) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- -----------------------------------------------------
+-- Table `ET3Grupo5`.`linea_elaboracion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `linea_elaboracion` (
+`id_linea_elaboracion` int(11) NOT NULL,
+  `id_elaboracion` int(11) NOT NULL,
+  `id_material` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Inserts
@@ -262,9 +277,7 @@ INSERT INTO `controlador` (`nombre`) VALUES
 ('PRODUCTO'),
 ('PROVEEDOR'),
 ('PRUEBA1'),
-('USUARIO'),
-('ALBARAN'),
-('FACTURA');
+('USUARIO');
 INSERT INTO `perfil` (`nombre`) VALUES
 ('Admin'),
 ('usuario');
@@ -303,46 +316,70 @@ INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `DNI`, `password`, `perfil`, `borrado`) VALUES
 (57, 'dkjskjdkjsdkjskjd', 'JARDIM', '12345679A', '25f9e794323b453885f5181f1b624d0b', 'usuario', 0),-- Contraseña 123456789
 (58, 'Admin', 'adminadmin', '12345672A', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Admin', 0),-- contraseña adminadmin
-(61, 'Marcos', 'Gonzalez', '12345675A', '25f9e794323b453885f5181f1b624d0b', 'Admin', 0);-- contraseña 123456789
-INSERT INTO `proveedor` (`id`, `nombre`, `nif`, `correo_electronico`, `telefono`, `direccion`, `codigo_postal`, `ciudad`, `provincia`) VALUES
-(1, 'RIPPER Inc.', '12345678A', 'trampa@uvigo.es', 12412341, 'Calle Redondo,12', '1234', 'Ourense', 'Ourense'),
-(4, 'jghfjh', '12345691M', 'grande@alumnos.es', 123123123, 'calle tonto', '0', 'Ourense', 'Ourense'),
-(5, 'Ã±daslkjfÃ±l', '01234567H', 'tonto@tonto.es', 123123125, 'rua gilipollas', '0', 'gilipollilandia', 'tontolaba'),
-(7, 'Prueba Proveedor', '33333333R', 'correo@correo.es', 123123128, 'calle gregoriano', '77777', 'Ourense', 'Ourense'),
-(8, 'otra prueba', '12345678R', 'prueba@yahoo.es', 12121212, 'rua gilipollas', '55555', 'Ourense', 'Ourense'),
-(9, 'Prueba Proveedor', '12121212H', 'h@hotmail.com', 123456789, 'calle tonto 22', '33333', 'Ourense', 'Ourense'),
-(10, 'Metalman', '44444444H', 'burning_angel@hotmail.com', 123456789, 'rua gilipollas 2', '66666', 'Ourense', 'Ourense');
+(61, 'Marcos', 'Gonzalez', '12345675A', '25f9e794323b453885f5181f1b624d0b', 'Admin', 0),-- contraseña 123456789
+(62,'Chico', 'Grande','66666666Z','0b4f471674b20b252c14a1024f493cb6','Admin', 0);
 INSERT INTO `linea_pedido` (`id`, `id_material`, `id_pedido`, `cantidad`, `estado`, `precio`, `IVA`) VALUES
-(2, 1, 4, 5, '', 200, 16),
-(3, 3, 3, 20, '', 200, 8),
-(4, 2, 3, 40, '', 50, 16),
-(7, 3, 4, 20, '', 50, 16),
-(8, 2, 4, 50, '', 250, 16),
-(9, 4, 4, 12, '', 120, 16),
-(12, 1, 3, 120, '', 120, 16),
-(13, 3, 5, 500, '', 300, 16),
-(14, 1, 5, 500, '', 200, 16),
+(2, 1, 4, 5, 'por llegar', 200, 16),
+(7, 3, 4, 20, 'completa', 50, 16),
+(8, 2, 4, 50, 'pendiente', 250, 16),
+(9, 4, 4, 12, 'pendiente', 120, 16),
+(13, 3, 5, 500, 'completa', 300, 16),
+(14, 1, 5, 500, 'completa', 200, 16),
 (16, 2, 5, 233, 'pendiente', 400, 16),
-(17, 1, 7, 666, '', 300, 16),
-(18, 2, 7, 777, '', 400, 16),
-(19, 4, 7, 123, '', 130, 16),
-(20, 2, 16, 123, '', 120, 16);
+(17, 1, 7, 666, 'pendiente', 300, 16),
+(18, 2, 7, 777, 'por llegar', 400, 16),
+(19, 4, 7, 123, 'pendiente', 130, 16),
+(20, 2, 16, 123, 'por llegar', 120, 16),
+(21, 3, 18, 123, 'pendiente', 120, 16),
+(22, 4, 18, 20, 'completa', 666, 666),
+(23, 2, 27, 123, 'por llegar', 123, 16),
+(24, 3, 27, 666, 'por llegar', 124, 16),
+(26, 1, 30, 120, 'pendiente', 30, 16),
+(27, 4, 14, 5, 'por llegar', 150, 8),
+(30, 2, 34, 130, 'pendiente', 10, 16);
 INSERT INTO `material` (`id`, `nombre`, `descripcion`, `borrado`) VALUES
 (1, 'Plastico', 'Buena Calidad', 0),
 (2, 'Hierro', 'Buena Calidad', 0),
 (3, 'Acero', 'Buena Calidad', 0),
 (4, 'Aleación de Titaneo', 'Buena Calidad', 0);
 INSERT INTO `pedido` (`id`, `id_proveedor`, `id_usuario`, `fecha`) VALUES
-(3, 8, 61, '2016-11-29'),
-(4, 1, 58, '2016-12-08'),
-(5, 8, 61, '2017-01-03'),
-(7, 7, 57, '2016-12-07'),
-(13, 4, 58, '2017-01-01'),
-(14, 1, 58, '2017-01-01'),
-(15, 7, 58, '2018-01-01'),
-(16, 1, 61, '2016-11-27');
+(4, 1, 58, '01/08/2017'),
+(5, 8, 61, '01/08/2017'),
+(7, 7, 57, '01/13/2017'),
+(13, 4, 58, '01/10/2017'),
+(14, 1, 58, '01/15/2017'),
+(15, 7, 58, '01/16/2017'),
+(16, 1, 61, '01/04/2017'),
+(17, 10, 57, '01/12/2017'),
+(18, 8, 58, '01/27/2017'),
+(19, 1, 62, '01/09/2017'),
+(20, 1, 62, '01/08/2017'),
+(21, 7, 62, '01/08/2017'),
+(22, 10, 62, '01/08/2017'),
+(23, 9, 61, '01/08/2017'),
+(24, 1, 62, '01/08/2017'),
+(25, 7, 61, '01/09/2017'),
+(26, 1, 57, '01/08/2017'),
+(27, 9, 61, '01/09/2017'),
+(30, 4, 62, '01/11/2017'),
+(33, 10, 58, '01/19/2017'),
+(34, 10, 58, '01/19/2017');
 INSERT INTO `proveedor` (`id`, `nombre`, `nif`, `correo_electronico`, `telefono`, `direccion`, `codigo_postal`, `ciudad`, `provincia`) VALUES
-(11, 'Prueba Proveedor 2', '33333332R', 'correo2@correo.es', 123123122, 'calle gregoriano 2', 77772, 'Ourense 2', 'Ourense 2');
+(1, 'RIPPER Inc.', 'A12345678', 'trampa@uvigo.es', 12412341, 'Calle Redondo,12', '01234', 'Ourense', 'Ourense'),
+(4, 'Try 3 Inc', 'M12345691', 'grande@alumnos.es', 123123123, 'Calle Zapatero,12', '97777', 'Ourense', 'Ourense'),
+(5, 'Deviants Inc', 'H01234567', 'tonto@tonto.es', 123123125, 'rua levante', '01234', 'Madrid', 'Madrid'),
+(7, 'Progreso Accion', 'R33333333', 'correo@correo.es', 123123128, 'Calle Gregoriano, 13', '77777', 'Ourense', 'Ourense'),
+(8, 'Otros Arcos', 'R12345678', 'prueba@yahoo.es', 12121212, 'rua samuel, 55', '55555', 'Ourense', 'Ourense'),
+(9, 'Procesos Imagen', 'H12121212', 'hora@hotmail.com', 123456789, 'Calle Lazarillo, 22', '33333', 'Ourense', 'Ourense'),
+(10, 'Metalman', 'H44444444', 'burning_angel@hotmail.com', 123456789, 'rua lazarillo, 2', '66666', 'Ourense', 'Ourense'),
+(11, 'Empresa Express ', 'H44444555', 'burningcat@hotmail.com', 444555666, 'Calle Alejandro, 12', '66666', 'Ourense', 'Ourense'),
+(12, 'Giant Battles', 'R99999999', 'mariposa@hotmail.com', 999888777, 'Rua Estrela, 44', '99999', 'Ourense', 'Ourense'),
+(13, '3 Line Inc.', 'G22222222', 'grande@hotmail.com', 987987987, 'Calle Ripper, 24', '23456', 'Ourense', 'Ourense'),
+(14, '4 Grande', 'H88877766', 'grande3@hotmail.com', 666555444, 'Rua Grande', '99999', 'Ourense', 'Ourense'),
+(15, 'Hierros Inc', 'T12345678', 'burningrr@hotmail.com', 12341234, 'Rua Especial, 44', '88888', 'Ourense', 'Ourense'),
+(16, 'Battle Angel Engines', 'Y12335678', '', 988012345, 'Rua Meta, 4', '09876', 'Ourense', 'Ourense'),
+(17, 'Corte Ingles', 'T55667788', 'trump@hotmail.com', 988223344, 'Calle la Plaza, 34', '09866', 'Vigo', 'Pontevedra'),
+(18, 'Trampa Tracks', 'Y98765432', 'trampa@correo.es', 988665544, 'Calle la Plaza, 64', '32589', 'Ourense', 'Ourense');
 INSERT INTO `pedido` (`id`, `id_proveedor`, `id_usuario`, `fecha`) VALUES
 ('00000000000', 11, '57','2017-10-03'),
 ('00000000001', 1, '58','2017-10-03');
@@ -360,15 +397,7 @@ INSERT INTO `permisos` (`id_permiso`, `controlador`, `accion`, `perfil`) VALUES
 (55, 'STOCK_MATERIAL', 'ADD', 'Admin'),
 (56, 'STOCK_MATERIAL', 'DELETE', 'Admin'),
 (57, 'STOCK_MATERIAL', 'EDIT', 'Admin'),
-(58, 'STOCK_MATERIAL', 'SHOW', 'Admin'),
-(59, 'ALBARAN', 'SHOW', 'Admin'),
-(60, 'ALBARAN', 'DELETE', 'Admin'),
-(61, 'ALBARAN', 'ADD', 'Admin'),
-(62, 'ALBARAN', 'EDIT', 'Admin'),
-(63, 'FACTURA', 'SHOW', 'Admin'),
-(64, 'FACTURA', 'DELETE', 'Admin'),
-(65, 'FACTURA', 'ADD', 'Admin'),
-(66, 'FACTURA', 'EDIT', 'Admin');
+(58, 'STOCK_MATERIAL', 'SHOW', 'Admin');
 INSERT INTO `material` (`id`, `nombre`, `descripcion`, `borrado`) VALUES
 ('00000000005', 'Tronco', 'Tronco de madera de 2 metros de longitud', '0'),
 ('00000000006', 'Barra metalica', 'Barra metalica de 5 cm de diametro y 3 m de largo', '0');
@@ -377,10 +406,24 @@ INSERT INTO `stock_material` (`id`, `id_material`, `id_albaran`, `id_producto`) 
 ('00000000001', '00000000006', '00000000001', '00000000001');
 INSERT INTO `stock_material` (`id`, `id_material`, `id_albaran`) VALUES
 ('00000000002', '00000000006', '00000000001');
-INSERT INTO `producto` (`id`, `nombre`, `descripcion`, `id_material`, `cantidad`) VALUES
-('00000000000', 'Mesa', 'Tronco descripcion', '00000000005', '36'),
-('00000000001', 'Jaula', 'Barra metalica descripcion', '00000000006', '27');
-
+INSERT INTO `producto` (`id_producto`, `nombre`, `descripcion`) VALUES
+(1, 'Casa', '30x30'),
+(5, 'portatil', 'es un portatil chulo'),
+(10, 'jaja', 'que troll'),
+(15, 'que tal?', 'pepe1'),
+(16, 'jaja', 'pepe');
+INSERT INTO `elaboracion` (`id_elaboracion`, `nombre_elaboracion`) VALUES
+(1, 'casa'),
+(3, 'jaja'),
+(7, 'que tal?'),
+(8, 'portatil');
+INSERT INTO `linea_elaboracion` (`id_linea_elaboracion`, `id_elaboracion`, `id_material`, `cantidad`) VALUES
+(1, 1, 1, 20),
+(2, 1, 2, 10),
+(6, 1, 2, 221),
+(9, 3, 1, 12),
+(10, 1, 4, 127),
+(11, 3, 3, 8);
 
 
 --
@@ -436,8 +479,7 @@ ADD PRIMARY KEY (`id`), ADD KEY `alabran_pedido_idx` (`id_pedido`), MODIFY `id` 
 ADD CONSTRAINT `alabran_pedido` FOREIGN KEY (`id_pedido`) REFERENCES `pedido`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE producto
-ADD PRIMARY KEY (`id`), ADD KEY `receta_material_idx` (`id_material`), MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT,
-ADD CONSTRAINT `receta_material` FOREIGN KEY (`id_material`) REFERENCES `material`(`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ADD PRIMARY KEY (`id_producto`),  MODIFY `id_producto` INT(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE stock_material
 ADD PRIMARY KEY (`id`), ADD KEY `stockmat_mat_idx` (`id_material`), ADD KEY `stockmat_albaran_idx` (`id_albaran`), ADD KEY `stockmat_producto_idx` (`id_producto`),
@@ -447,7 +489,7 @@ ADD CONSTRAINT `stockmat_albaran` FOREIGN KEY (`id_albaran`) REFERENCES `albaran
 
 ALTER TABLE stock_producto
 ADD PRIMARY KEY (`id`), ADD KEY `stockprod_producto_idx` (`id_producto`), MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT,
-ADD CONSTRAINT `stockprod_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto`(`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ADD CONSTRAINT `stockprod_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto`(`id_producto`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 ALTER TABLE linea_albaran
 ADD PRIMARY KEY (`id`), ADD KEY `lineaalbaran_albaran_idx` (`id_albaran`), ADD KEY `lineaalbaran_tipomat_idx` (`id_material`),
@@ -464,3 +506,11 @@ ADD PRIMARY KEY (`id`), ADD KEY `lineafact_albaran_idx` (`id_albaran`), ADD KEY 
 MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT,
 ADD CONSTRAINT `lineafact_albaran` FOREIGN KEY (`id_albaran`) REFERENCES `albaran`(`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
 ADD CONSTRAINT `lineafact_factura` FOREIGN KEY (`id_factura`) REFERENCES `factura`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `elaboracion`
+ADD UNIQUE KEY `id_elaboracion` (`id_elaboracion`),
+MODIFY `id_elaboracion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+
+ALTER TABLE `linea_elaboracion`
+ADD PRIMARY KEY (`id_linea_elaboracion`),
+MODIFY `id_linea_elaboracion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;

@@ -185,7 +185,7 @@ $literales = array(
     'proveedorSHOW' => 'Detalles do Provedor',
     'mostrar proveedor' => 'Mostrar Provedor',
 
-    'se ha creado correctamente: ' => ' se ha creado correctamente: ',
+    'Se ha añadido correctamente la linea' => 'The line was created correctly.',
 
 
 

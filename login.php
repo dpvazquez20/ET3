@@ -65,6 +65,7 @@ if(isset($_POST['usuario'])) {
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
     $_SESSION['password']=$password;
+    $password = md5($password);
     $sql = "SELECT * FROM usuario WHERE nombre='$usuario' AND password='$password' AND borrado='0'";
     $resultado= $db->query($sql);
     if($resultado-> num_rows==0){

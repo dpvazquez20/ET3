@@ -64,7 +64,6 @@ class Producto_showAll{
                     </form>
 
 
-
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARPRODUCTO"/>
                         <input type="hidden" name="ctr" value="PRODUCTO"/>
@@ -83,9 +82,6 @@ class Producto_showAll{
                         </div>
                     </form>
                 </div>
-
-
-
 
 
 

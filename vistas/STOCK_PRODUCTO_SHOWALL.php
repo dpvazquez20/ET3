@@ -58,7 +58,7 @@ class Stock_producto_showAll{
                 <div class="col-sm-4">
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARPRODUCTO"/>
-                        <input type="hidden" name="ctr" value="PRODUCTO"/>
+                        <input type="hidden" name="ctr" value="STOCK_PRODUCTO"/>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group">
@@ -76,7 +76,7 @@ class Stock_producto_showAll{
 
                     <form role="form" method="get">
                         <input type="hidden" name="id" value="BUSCARPRODUCTO"/>
-                        <input type="hidden" name="ctr" value="PRODUCTO"/>
+                        <input type="hidden" name="ctr" value="STOCK_PRODUCTO"/>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group">
@@ -96,7 +96,7 @@ class Stock_producto_showAll{
             <div class="col-sm-4">
                 <form role="form" method="get">
                     <input type="hidden" name="id" value="BUSCARPRODUCTO"/>
-                    <input type="hidden" name="ctr" value="PRODUCTO"/>
+                    <input type="hidden" name="ctr" value="STOCK_PRODUCTO"/>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="input-group">

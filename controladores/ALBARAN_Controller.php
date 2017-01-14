@@ -14,6 +14,7 @@ require_once('../vistas/ALBARAN_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
 require_once ('../vistas/PERMISO_DENEGADO.php');
+require_once ('../vistas/MENSAJE_LINEA_ALBARAN.php');
 
 
 $controlador="albaran";
@@ -47,7 +48,8 @@ switch ($_GET['id']) {
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaLineaAlbaran($_POST['id_albaran'],$_POST['id_material'], $_POST['cantidad']);
                 
-                new Mensaje_usuario();
+                $_SESSION['id_albaran']=$_POST['id_albaran'];
+                new Mensaje_linea_albaran();
             }
         }else{
             new Mensaje_denegado();
@@ -86,8 +88,9 @@ switch ($_GET['id']) {
                 
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteLineaAlbaran($_POST['id_linea']);
-                
-                new Mensaje_usuario();
+
+                $_SESSION['id_albaran']=$_POST['id_albaran'];
+                new Mensaje_linea_albaran();
             }
         }else{
             new Mensaje_denegado();
@@ -124,8 +127,9 @@ switch ($_GET['id']) {
                 
                 $modelo = new Albaran_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->editLineaAlbaran($_POST['id_linea'], $_POST['id_albaran'], $_POST['id_material'], $_POST['cantidad'] );
-                
-                new Mensaje_usuario();
+
+                $_SESSION['id_albaran']=$_POST['id_albaran'];
+                new Mensaje_linea_albaran();
             }
         }else{
             new Mensaje_denegado();

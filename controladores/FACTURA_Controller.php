@@ -15,6 +15,7 @@ require_once('../vistas/FACTURA_SHOWCURRENT.php');
 require_once ('../vistas/MENSAJE_USUARIO.php');
 require_once ('../modelos/PERMISO_Model.php');
 require_once ('../vistas/PERMISO_DENEGADO.php');
+require_once ("../vistas/MENSAJE_LINEA_FACTURA.php");
 
 
 $controlador="factura";
@@ -50,7 +51,8 @@ switch ($_GET['id']) {
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->altaLineaFactura($_POST['id_factura'],$_POST['id_albaran']);
                 
-                new Mensaje_usuario();
+                $_SESSION['id_factura']=$_POST['id_factura'];
+                new Mensaje_linea_factura();
             }
         }else{
             new Mensaje_denegado();
@@ -90,8 +92,9 @@ switch ($_GET['id']) {
                 
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->deleteLineaFactura($_POST['id_linea']);
-                
-                new Mensaje_usuario();
+
+                $_SESSION['id_factura']=$_POST['id_factura'];
+                new Mensaje_linea_factura();
             }
         }else{
             new Mensaje_denegado();
@@ -127,8 +130,9 @@ switch ($_GET['id']) {
                 
                 $modelo = new Factura_model();
                 $_SESSION['mensaje']=$mensaje = $modelo->editLineaFactura($_POST['id_linea'], $_POST['id_factura'], $_POST['id_albaran'] );
-                
-                new Mensaje_usuario();
+
+                $_SESSION['id_factura']=$_POST['id_factura'];
+                new Mensaje_linea_factura();
             }
         }else{
             new Mensaje_denegado();

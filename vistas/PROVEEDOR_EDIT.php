@@ -47,7 +47,7 @@ class Proveedor_edit{
                     </div>
                     <div  style="align-items: center" class="form-group">
                         <label for="telefonoM"><?php echo $literales['telefono']?></label>
-                        <input type="tel" class="form-control" id="telefonoM" name="telefonoM" required
+                        <input type="tel" class="form-control" id="telefonoM" name="telefonoM" required pattern="[0-9]{9}"
                                value="<?php echo $row['telefono']?>">
                     </div>
                     <div class="form-group">

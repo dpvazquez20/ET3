@@ -46,7 +46,7 @@ class Proveedor_add{
                     </div>
                     <div  style="align-items: center" class="form-group">
                         <label for="telefono"><?php echo $literales['telefono'] ?></label>
-                        <input  type="tel" class="form-control" id="telefono" name="telefono" required
+                        <input  type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9]{9}"
                                 placeholder="ej. 988123456">
                     </div>
                     <div class="form-group">

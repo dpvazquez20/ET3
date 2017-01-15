@@ -22,19 +22,18 @@ class Linea_elaboracion_modelo{
     function altaLineaElaboracion($linea_elaboracion)
     {
 
-         $this->mysql= conectarBD();
-        $sql="SELECT * FROM linea_elaboracion WHERE id_material='".$linea_elaboracion->getIdMaterial()."';";
+        $this->mysql= conectarBD();
+        $sql="SELECT * FROM linea_elaboracion WHERE id_elaboracion='".$linea_elaboracion->getIdElaboracion()."' AND id_material='".$linea_elaboracion->getIdMaterial()."';";
         $resultado= $this->mysql->query($sql);
         if($resultado->num_rows==0){
-        $this->mysql = conectarBD();
-        $insertar = "INSERT INTO linea_elaboracion (id_elaboracion,id_material,cantidad) VALUES('" . $linea_elaboracion->getIdElaboracion() . "','" . $linea_elaboracion->getIdMaterial() . "','" . $linea_elaboracion->getCantidad() . "');";
+            $insertar = "INSERT INTO linea_elaboracion (id_elaboracion,id_material,cantidad) VALUES('" . $linea_elaboracion->getIdElaboracion() . "','" . $linea_elaboracion->getIdMaterial() . "','" . $linea_elaboracion->getCantidad() . "');";
 
-        if ($this->mysql->query($insertar)) {
-            return "Se ha creado correctamente la linea de elaboración";
+            if ($this->mysql->query($insertar)) {
+                return "Se ha creado correctamente la linea de elaboración";
 
-        } else {
-            return "Lo sentimos, no se ha podido crear la linea";
-        }
+            } else {
+                return "Lo sentimos, no se ha podido crear la linea";
+            }
         }else{
             return "Lo sentimos, ese material ya esta agregado";
         }

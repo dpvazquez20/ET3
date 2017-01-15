@@ -16,18 +16,6 @@ class Stock_producto_modelo{
 
     function altaStock_producto($producto)
     {
-
-        $this->mysql=conectarBD();
-        $sqlProducto= "SELECT * FROM producto WHERE id_producto='".$producto->getIdProducto()."';";
-        $resulProducto= $this->mysql->query($sqlProducto);
-        $rowProducto= mysqli_fetch_assoc($resulProducto);
-        echo $rowProducto['nombre'];
-
-        $sqlElaboracion = "SELECT * FROM elaboracion WHERE nombre_elaboracion='".$rowProducto['nombre']."';";
-        $sqlElaboracionResul= $this->mysql->query($sqlElaboracion);
-        $rowElaboracion= mysqli_fetch_assoc($sqlElaboracionResul);
-        echo $rowElaboracion['id_elaboracion'];
-
         /* $this->mysql = conectarBD();
          $insertar = "INSERT INTO stock_producto (id_producto,coste,fecha) VALUES('". $producto->getIdProducto() . "','" . $producto->getFecha() . "','". $producto->getCoste() ."');";
          if($this->mysql->query($insertar)){
@@ -37,6 +25,63 @@ class Stock_producto_modelo{
          }
      }
         */
+        $this->mysql= conectarBD();
+        $sqlProducto = "SELECT * FROM producto WHERE id_producto='" . $producto->getIdProducto() . "';";
+        $resulProducto = $this->mysql->query($sqlProducto);
+        $rowProducto = mysqli_fetch_assoc($resulProducto);
+        echo $rowProducto['nombre'] . "</br>";
+
+
+        $sqlElaboracion = "SELECT * FROM elaboracion WHERE nombre_elaboracion='" . $rowProducto['nombre'] . "';";
+        $sqlElaboracionResul = $this->mysql->query($sqlElaboracion);
+        $rowElaboracion = mysqli_fetch_assoc($sqlElaboracionResul);
+        echo $rowElaboracion['nombre_elaboracion'] . "</br>";
+
+
+        $sqlLineasElaboracion = "SELECT * FROM linea_elaboracion WHERE id_elaboracion='" . $rowElaboracion['id_elaboracion'] . "';";
+        $resulLineasElaboracion = $this->mysql->query($sqlLineasElaboracion);
+
+        $materialesNecesarios = array();
+        $continuar = true;
+        while (($rowLineaElaboracion = mysqli_fetch_assoc($resulLineasElaboracion))&& $continuar==true) {
+            $cantidad = $rowLineaElaboracion['cantidad'];
+            echo $cantidad . "</br>";
+            $sqlMateriales = "SELECT * FROM stock_material WHERE id_material='".$rowLineaElaboracion['id_material']."';";
+            echo $sqlMateriales."</br>";
+            $resulMaterial = $this->mysql->query($sqlMateriales);
+            echo "//////////////////////"."</br>";
+            while ($rowMaterial = mysqli_fetch_assoc($resulMaterial)) {
+                if ($rowMaterial['id_material'] == $rowLineaElaboracion['id_material']) {
+                    if($rowMaterial['id_producto']==null && $cantidad!=0){
+                        echo "eoeoeoeoeooee". $rowMaterial['id_producto']."</br>";
+                        $sqlUpdateStock = "UPDATE stock_material SET id_producto='".$rowProducto['id_producto']."' WHERE id='".$rowMaterial['id']."';";
+                        echo $sqlUpdateStock;
+                        $this->mysql->query($sqlUpdateStock);
+                        echo "el valor de cantidad es ".$cantidad ."</br>";
+                        array_push($materialesNecesarios,$rowMaterial['id']);
+                        $cantidad=$cantidad-1;
+                    }
+                }
+            }
+            if($cantidad=='0'){
+                $continuar=true;
+            }else{
+                $continuar=false;
+            }
+        }
+        if($continuar==true){
+            echo "se puedeeeeee";
+        }else{
+            $sqlBorrar="SELECT * FROM stock_material";
+            echo $sqlBorrar;
+            $sqlResulBorrar= $this->mysql->query($sqlBorrar);
+            while($rowBorrar= mysqli_fetch_assoc($sqlResulBorrar)){
+                if(in_array($rowBorrar['id'],$materialesNecesarios)){
+                    $sqlCambiarProductoNoAsig="UPDATE sotck_material SET id_producto=NULL WHERE id='".$rowBorrar['id']."'";
+                    $this->mysql->query($sqlCambiarProductoNoAsig);
+                }
+            }
+        }
     }
 
     function deleteStock_producto($idBorrar){

@@ -1,2 +1,4 @@
-chmod 777 ./logs
-chown www-data:www-data ./logs
+#!/bin/sh
+chmod -R 777 logs/
+chown -R www-data:www-data logs/
+exit

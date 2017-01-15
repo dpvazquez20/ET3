@@ -77,6 +77,7 @@ class Stock_producto_modelo{
             $sqlResulBorrar= $this->mysql->query($sqlBorrar);
             while($rowBorrar= mysqli_fetch_assoc($sqlResulBorrar)){
                 if(in_array($rowBorrar['id'],$materialesNecesarios)){
+                    array_pop($rowBorrar['id'], $materialesNecesarios);
                     $sqlCambiarProductoNoAsig="UPDATE sotck_material SET id_producto=NULL WHERE id='".$rowBorrar['id']."'";
                     $this->mysql->query($sqlCambiarProductoNoAsig);
                 }

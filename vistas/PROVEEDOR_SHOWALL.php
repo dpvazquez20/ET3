@@ -41,7 +41,7 @@ class Proveedor_showAll
                 while ($row = mysqli_fetch_assoc($listaControladores)) {
                     if ($row['controlador'] == $_GET['ctr']) {
                         if ($row['accion'] == 'ADD') {
-                            echo "<a href='../controladores/" . $row['controlador'] . "_Controller.php?id=" . $row['accion'] . $row['controlador'] . "'><button class='btn  btn-primary'>" . $row['accion'] . " " . $row['controlador'] . "</button></a></br></br>";
+                            echo "<a href='../controladores/" . $row['controlador'] . "_Controller.php?id=" . $row['accion'] . $row['controlador'] . "'><button class='btn  btn-primary'>" . $literales['ADD'] . " " . $row['controlador'] . "</button></a></br></br>";
                         }
                     }
                 }

@@ -14,15 +14,29 @@ class Stock_producto_modelo{
 
     }
 
-    function altaStock_producto($producto){
+    function altaStock_producto($producto)
+    {
 
-        $this->mysql = conectarBD();
-        $insertar = "INSERT INTO stock_producto (id_producto,coste,fecha) VALUES('". $producto->getIdProducto() . "','" . $producto->getFecha() . "','". $producto->getCoste() ."');";
-        if($this->mysql->query($insertar)){
-            return "Se creo el stock correctamente";
-        }else{
-            return "No se ha podido insertar el stock";
-        }
+        $this->mysql=conectarBD();
+        $sqlProducto= "SELECT * FROM producto WHERE id_producto='".$producto->getIdProducto()."';";
+        $resulProducto= $this->mysql->query($sqlProducto);
+        $rowProducto= mysqli_fetch_assoc($resulProducto);
+        echo $rowProducto['nombre'];
+
+        $sqlElaboracion = "SELECT * FROM elaboracion WHERE nombre_elaboracion='".$rowProducto['nombre']."';";
+        $sqlElaboracionResul= $this->mysql->query($sqlElaboracion);
+        $rowElaboracion= mysqli_fetch_assoc($sqlElaboracionResul);
+        echo $rowElaboracion['id_elaboracion'];
+
+        /* $this->mysql = conectarBD();
+         $insertar = "INSERT INTO stock_producto (id_producto,coste,fecha) VALUES('". $producto->getIdProducto() . "','" . $producto->getFecha() . "','". $producto->getCoste() ."');";
+         if($this->mysql->query($insertar)){
+             return "Se creo el stock correctamente";
+         }else{
+             return "No se ha podido insertar el stock";
+         }
+     }
+        */
     }
 
     function deleteStock_producto($idBorrar){

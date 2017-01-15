@@ -34,7 +34,7 @@ switch ($_GET['id']) {
                 new Mensaje_usuario();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -55,7 +55,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_factura();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -77,7 +77,7 @@ switch ($_GET['id']) {
             }
             
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -97,7 +97,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_factura();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -115,7 +115,7 @@ switch ($_GET['id']) {
                 new Mensaje_usuario();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -135,7 +135,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_factura();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -145,7 +145,7 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Factura_show();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
         break;
 
@@ -155,7 +155,7 @@ switch ($_GET['id']) {
             
             new Linea_Factura_show();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -168,7 +168,7 @@ switch ($_GET['id']) {
             (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
             new Factura_showAll();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
 }

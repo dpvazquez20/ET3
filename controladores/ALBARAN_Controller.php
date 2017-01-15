@@ -33,7 +33,7 @@ switch ($_GET['id']) {
                 new Mensaje_usuario();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -52,7 +52,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_albaran();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -74,7 +74,7 @@ switch ($_GET['id']) {
             }
             
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -93,7 +93,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_albaran();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -111,7 +111,7 @@ switch ($_GET['id']) {
                 new Mensaje_usuario();
                          }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -132,7 +132,7 @@ switch ($_GET['id']) {
                 new Mensaje_linea_albaran();
             }
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -142,7 +142,7 @@ switch ($_GET['id']) {
         if(Permiso_modelo::mostrarPagina($controlador,$accion, $_SESSION['perfil'])){
             new Albaran_show();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -153,7 +153,7 @@ switch ($_GET['id']) {
             
             new Linea_Albaran_show();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
         break;
@@ -166,7 +166,7 @@ switch ($_GET['id']) {
             (Permiso_modelo::mostrarPagina($controlador,$accion="SHOW", $_SESSION['perfil'])==true) ){
             new Albaran_showAll();
         }else{
-            new Mensaje_denegado();
+            new Permiso_denegado();
         }
 
 }

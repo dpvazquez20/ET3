@@ -22,45 +22,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="STOCK_PRODUCTO_Model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="STOCK_PRODUCTO_Model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="1224">
               <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
-                <marker date="1484510745679" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
-                <marker date="1484510745679" expanded="true" signature="1300:1396" ph="SELECT * FRO... linea_elaboracion" />
-                <marker date="1484510745679" expanded="true" signature="1741:1829" ph="SELECT * FRO... stock_material" />
-                <marker date="1484510745679" expanded="true" signature="2257:2339" ph="UPDATE stock... " />
-                <marker date="1484510745679" expanded="true" signature="2257:2362" ph="UPDATE stock... " />
-                <marker date="1484510745679" expanded="true" signature="2726:2884" ph="INSERT INTO stock_producto... " />
-                <marker date="1484510745679" expanded="true" signature="3171:3248" ph="UPDATE sotck... " />
-                <marker date="1484510745679" expanded="true" signature="3513:3564" ph="DELETE FROM " />
-                <marker date="1484510745679" expanded="true" signature="3891:4005" ph="UPDATE stock... " />
-                <marker date="1484510745679" expanded="true" signature="4321:4349" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="4514:4561" ph="SELECT * fro... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="4703:4736" ph="SELECT * FRO... albaran" />
-                <marker date="1484510745679" expanded="true" signature="4878:4916" ph="SELECT * FRO... material" />
-                <marker date="1484510745679" expanded="true" signature="5057:5095" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="5238:5293" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="5511:5566" ph="SELECT * FRO... material" />
-                <marker date="1484510745679" expanded="true" signature="5814:5842" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="5883:5930" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="6152:6180" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="6222:6307" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="6454:6510" ph="SELECT * FRO... stock_material" />
-                <marker date="1484510745679" expanded="true" signature="6723:6751" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="6792:6847" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="7069:7097" ph="SELECT * FRO... stock_material" />
-                <marker date="1484510745679" expanded="true" signature="7139:7208" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="7355:7411" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="7624:7652" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="7692:7749" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="7971:8065" ph="SELECT * FRO... producto" />
-                <marker date="1484510745679" expanded="true" signature="8106:8235" ph="SELECT * fro... producto" />
-                <marker date="1484510745679" expanded="true" signature="8431:8459" ph="SELECT * FRO... stock_producto" />
-                <marker date="1484510745679" expanded="true" signature="8500:8557" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
+                <marker date="1484511122224" expanded="true" signature="1300:1396" ph="SELECT * FRO... linea_elaboracion" />
+                <marker date="1484511122224" expanded="true" signature="1741:1829" ph="SELECT * FRO... stock_material" />
+                <marker date="1484511122224" expanded="true" signature="2257:2339" ph="UPDATE stock... " />
+                <marker date="1484511122224" expanded="true" signature="2257:2362" ph="UPDATE stock... " />
+                <marker date="1484511122224" expanded="true" signature="2726:2884" ph="INSERT INTO stock_producto... " />
+                <marker date="1484511122224" expanded="true" signature="3171:3248" ph="UPDATE sotck... " />
+                <marker date="1484511122224" expanded="true" signature="3513:3564" ph="DELETE FROM " />
+                <marker date="1484511122224" expanded="true" signature="3891:4005" ph="UPDATE stock... " />
+                <marker date="1484511122224" expanded="true" signature="4321:4349" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="4514:4561" ph="SELECT * fro... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="4703:4736" ph="SELECT * FRO... albaran" />
+                <marker date="1484511122224" expanded="true" signature="4878:4916" ph="SELECT * FRO... material" />
+                <marker date="1484511122224" expanded="true" signature="5057:5095" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="5238:5293" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="5511:5566" ph="SELECT * FRO... material" />
+                <marker date="1484511122224" expanded="true" signature="5814:5842" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="5883:5930" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="6152:6180" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="6222:6307" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="6454:6510" ph="SELECT * FRO... stock_material" />
+                <marker date="1484511122224" expanded="true" signature="6723:6751" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="6792:6847" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="7069:7097" ph="SELECT * FRO... stock_material" />
+                <marker date="1484511122224" expanded="true" signature="7139:7208" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="7355:7411" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="7624:7652" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="7692:7749" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="7971:8065" ph="SELECT * FRO... producto" />
+                <marker date="1484511122224" expanded="true" signature="8106:8235" ph="SELECT * fro... producto" />
+                <marker date="1484511122224" expanded="true" signature="8431:8459" ph="SELECT * FRO... stock_producto" />
+                <marker date="1484511122224" expanded="true" signature="8500:8557" ph="SELECT * FRO... stock_producto" />
               </folding>
             </state>
           </provider>
@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -126,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sql.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD/sql.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4683">
@@ -432,13 +432,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449828000" />
+    <option name="totallyTimeSpent" value="449850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18844643" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18844643" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12460568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -635,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="60" column="76" lean-forward="false" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,14 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controladores/STOCK_PRODUCTO_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -952,53 +942,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <marker date="1484510745679" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
-            <marker date="1484510745679" expanded="true" signature="1300:1396" ph="SELECT * FRO... linea_elaboracion" />
-            <marker date="1484510745679" expanded="true" signature="1741:1829" ph="SELECT * FRO... stock_material" />
-            <marker date="1484510745679" expanded="true" signature="2257:2339" ph="UPDATE stock... " />
-            <marker date="1484510745679" expanded="true" signature="2257:2362" ph="UPDATE stock... " />
-            <marker date="1484510745679" expanded="true" signature="2726:2884" ph="INSERT INTO stock_producto... " />
-            <marker date="1484510745679" expanded="true" signature="3171:3248" ph="UPDATE sotck... " />
-            <marker date="1484510745679" expanded="true" signature="3513:3564" ph="DELETE FROM " />
-            <marker date="1484510745679" expanded="true" signature="3891:4005" ph="UPDATE stock... " />
-            <marker date="1484510745679" expanded="true" signature="4321:4349" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="4514:4561" ph="SELECT * fro... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="4703:4736" ph="SELECT * FRO... albaran" />
-            <marker date="1484510745679" expanded="true" signature="4878:4916" ph="SELECT * FRO... material" />
-            <marker date="1484510745679" expanded="true" signature="5057:5095" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="5238:5293" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="5511:5566" ph="SELECT * FRO... material" />
-            <marker date="1484510745679" expanded="true" signature="5814:5842" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="5883:5930" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="6152:6180" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="6222:6307" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="6454:6510" ph="SELECT * FRO... stock_material" />
-            <marker date="1484510745679" expanded="true" signature="6723:6751" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="6792:6847" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="7069:7097" ph="SELECT * FRO... stock_material" />
-            <marker date="1484510745679" expanded="true" signature="7139:7208" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="7355:7411" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="7624:7652" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="7692:7749" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="7971:8065" ph="SELECT * FRO... producto" />
-            <marker date="1484510745679" expanded="true" signature="8106:8235" ph="SELECT * fro... producto" />
-            <marker date="1484510745679" expanded="true" signature="8431:8459" ph="SELECT * FRO... stock_producto" />
-            <marker date="1484510745679" expanded="true" signature="8500:8557" ph="SELECT * FRO... stock_producto" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD/sql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4683">
           <caret line="613" column="82" lean-forward="false" selection-start-line="613" selection-start-column="82" selection-end-line="613" selection-end-column="82" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <marker date="1484511122224" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
+            <marker date="1484511122224" expanded="true" signature="1300:1396" ph="SELECT * FRO... linea_elaboracion" />
+            <marker date="1484511122224" expanded="true" signature="1741:1829" ph="SELECT * FRO... stock_material" />
+            <marker date="1484511122224" expanded="true" signature="2257:2339" ph="UPDATE stock... " />
+            <marker date="1484511122224" expanded="true" signature="2257:2362" ph="UPDATE stock... " />
+            <marker date="1484511122224" expanded="true" signature="2726:2884" ph="INSERT INTO stock_producto... " />
+            <marker date="1484511122224" expanded="true" signature="3171:3248" ph="UPDATE sotck... " />
+            <marker date="1484511122224" expanded="true" signature="3513:3564" ph="DELETE FROM " />
+            <marker date="1484511122224" expanded="true" signature="3891:4005" ph="UPDATE stock... " />
+            <marker date="1484511122224" expanded="true" signature="4321:4349" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="4514:4561" ph="SELECT * fro... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="4703:4736" ph="SELECT * FRO... albaran" />
+            <marker date="1484511122224" expanded="true" signature="4878:4916" ph="SELECT * FRO... material" />
+            <marker date="1484511122224" expanded="true" signature="5057:5095" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="5238:5293" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="5511:5566" ph="SELECT * FRO... material" />
+            <marker date="1484511122224" expanded="true" signature="5814:5842" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="5883:5930" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="6152:6180" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="6222:6307" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="6454:6510" ph="SELECT * FRO... stock_material" />
+            <marker date="1484511122224" expanded="true" signature="6723:6751" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="6792:6847" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="7069:7097" ph="SELECT * FRO... stock_material" />
+            <marker date="1484511122224" expanded="true" signature="7139:7208" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="7355:7411" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="7624:7652" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="7692:7749" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="7971:8065" ph="SELECT * FRO... producto" />
+            <marker date="1484511122224" expanded="true" signature="8106:8235" ph="SELECT * fro... producto" />
+            <marker date="1484511122224" expanded="true" signature="8431:8459" ph="SELECT * FRO... stock_producto" />
+            <marker date="1484511122224" expanded="true" signature="8500:8557" ph="SELECT * FRO... stock_producto" />
+          </folding>
         </state>
       </provider>
     </entry>

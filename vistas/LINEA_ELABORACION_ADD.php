@@ -47,7 +47,7 @@ class Linea_Elaboracion_add{
                     </div>
 
                     <div class="form-group">
-                        <label for="cantidad"><?php echo$literales['precio'] ?></label>
+                        <label for="cantidad"><?php echo$literales['coste'] ?></label>
                         <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" required
                                placeholder="Introduce la cantidad de material que necesitas">
                     </div>

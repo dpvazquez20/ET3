@@ -435,11 +435,11 @@ INSERT INTO `stock_material` (`id`, `id_material`, `id_albaran`, `id_producto`) 
 INSERT INTO `stock_material` (`id`, `id_material`, `id_albaran`) VALUES
   ('00000000002', '00000000006', '00000000001');
 INSERT INTO `producto` (`id_producto`, `nombre`, `descripcion`) VALUES
-  (1, 'Casa', '30x30'),
-  (5, 'portatil', 'es un portatil chulo'),
-  (10, 'jaja', 'que troll'),
-  (15, 'que tal?', 'pepe1'),
-  (16, 'jaja', 'pepe'),
+  (1, 'Mesa', '30x30'),
+  (5, 'Silla', 'Silla con reposabrazos'),
+  (10, 'Silla', 'Silla sin reposabrazos'),
+  (15, 'Taburete', 'Taburete con 3 patas'),
+  (16, 'Taburete', 'Taburete con 4 patas'),
   (17, 'Armario basic roble', 'Armario modular de roble'),
   (18, 'Armario basic nogal', 'Armario modular de nogal'),
   (19, 'Columna Basic nogal', 'Medidas 50 x 210 x 52'),
@@ -580,12 +580,12 @@ ALTER TABLE producto
 ALTER TABLE stock_material
   ADD PRIMARY KEY (`id`), ADD KEY `stockmat_mat_idx` (`id_material`), ADD KEY `stockmat_albaran_idx` (`id_albaran`), ADD KEY `stockmat_producto_idx` (`id_producto`),
   MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT,
-  ADD CONSTRAINT `stockmat_mat` FOREIGN KEY (`id_material`) REFERENCES `material`(`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `stockmat_albaran` FOREIGN KEY (`id_albaran`) REFERENCES `albaran`(`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `stockmat_mat` FOREIGN KEY (`id_material`) REFERENCES `material`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `stockmat_albaran` FOREIGN KEY (`id_albaran`) REFERENCES `albaran`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 ALTER TABLE stock_producto
   ADD PRIMARY KEY (`id`), ADD KEY `stockprod_producto_idx` (`id_producto`), MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT,
-  ADD CONSTRAINT `stockprod_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto`(`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `stockprod_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto`(`id_producto`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 ALTER TABLE linea_albaran
   ADD PRIMARY KEY (`id`), ADD KEY `lineaalbaran_albaran_idx` (`id_albaran`), ADD KEY `lineaalbaran_tipomat_idx` (`id_material`),

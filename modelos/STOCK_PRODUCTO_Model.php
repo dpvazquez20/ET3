@@ -29,13 +29,11 @@ class Stock_producto_modelo{
         $sqlProducto = "SELECT * FROM producto WHERE id_producto='" . $producto->getIdProducto() . "';";
         $resulProducto = $this->mysql->query($sqlProducto);
         $rowProducto = mysqli_fetch_assoc($resulProducto);
-        echo $rowProducto['nombre'] . "</br>";
 
 
         $sqlElaboracion = "SELECT * FROM elaboracion WHERE nombre_elaboracion='" . $rowProducto['nombre'] . "';";
         $sqlElaboracionResul = $this->mysql->query($sqlElaboracion);
         $rowElaboracion = mysqli_fetch_assoc($sqlElaboracionResul);
-        echo $rowElaboracion['nombre_elaboracion'] . "</br>";
 
 
         $sqlLineasElaboracion = "SELECT * FROM linea_elaboracion WHERE id_elaboracion='" . $rowElaboracion['id_elaboracion'] . "';";
@@ -45,20 +43,14 @@ class Stock_producto_modelo{
         $continuar = true;
         while (($rowLineaElaboracion = mysqli_fetch_assoc($resulLineasElaboracion))&& $continuar==true) {
             $cantidad = $rowLineaElaboracion['cantidad'];
-            echo $cantidad . "</br>";
             $sqlMateriales = "SELECT * FROM stock_material WHERE id_material='".$rowLineaElaboracion['id_material']."';";
-            echo $sqlMateriales."</br>";
             $resulMaterial = $this->mysql->query($sqlMateriales);
-            echo "//////////////////////"."</br>";
             while ($rowMaterial = mysqli_fetch_assoc($resulMaterial)) {
                 if ($rowMaterial['id_material'] == $rowLineaElaboracion['id_material']) {
                     if($rowMaterial['id_producto']==null && $cantidad!=0){
-                        echo "eoeoeoeoeooee". $rowMaterial['id_producto']."</br>";
-                        $sqlUpdateStock = "UPDATE stock_material SET id_producto='".$rowProducto['id_producto']."' WHERE id='".$rowMaterial['id']."';";
-                        echo $sqlUpdateStock;
-                        $this->mysql->query($sqlUpdateStock);
-                        echo "el valor de cantidad es ".$cantidad ."</br>";
                         array_push($materialesNecesarios,$rowMaterial['id']);
+                        $sqlUpdateStock = "UPDATE stock_material SET id_producto='".$rowProducto['id_producto']."' WHERE id='".$rowMaterial['id']."';";
+                        $this->mysql->query($sqlUpdateStock);
                         $cantidad=$cantidad-1;
                     }
                 }
@@ -70,22 +62,23 @@ class Stock_producto_modelo{
             }
         }
         if($continuar==true){
-            echo "se puedeeeeee";
+            $insertar = "INSERT INTO stock_producto (id_producto,coste,fecha) VALUES('". $producto->getIdProducto() . "','" . $producto->getCoste() . "','". $producto->getFecha() ."');";
+            $this->mysql->query($insertar);
+            return "Se creo correctamente el producto";
         }else{
-            $sqlBorrar="SELECT * FROM stock_material";
-            echo $sqlBorrar;
-            $sqlResulBorrar= $this->mysql->query($sqlBorrar);
-            while($rowBorrar= mysqli_fetch_assoc($sqlResulBorrar)){
-                if(in_array($rowBorrar['id'],$materialesNecesarios)){
-                    array_pop($rowBorrar['id'], $materialesNecesarios);
-                    $sqlCambiarProductoNoAsig="UPDATE sotck_material SET id_producto=NULL WHERE id='".$rowBorrar['id']."'";
-                    $this->mysql->query($sqlCambiarProductoNoAsig);
-                }
+
+            while(sizeof($materialesNecesarios)!=0){
+                $ultimoMaterialAsig= array_pop($materialesNecesarios);
+                $sqlCambiarProductoNoAsig="UPDATE stock_material SET id_producto=NULL WHERE id='".$ultimoMaterialAsig."';";
+                $this->mysql->query($sqlCambiarProductoNoAsig);
             }
+            return"Lo sentimos, no hay suficientes materiales";
         }
     }
 
     function deleteStock_producto($idBorrar){
+
+
 
         $this->mysql = conectarBD();
         $sql = "DELETE FROM stock_producto WHERE id='".$idBorrar."';";

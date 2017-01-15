@@ -40,14 +40,14 @@ class Material_edit{
                     <input type="hidden" id="nombreAModificar" name="nombreAModificar" value="<?php echo utf8_decode($row['nombre'])?>">
                     <div class="form-group">
                         <label for="nombreM"><?php echo $literales['materialNombre'] ?></label>
-                        <input  type="text" class="form-control" id="nombreM" name="nombreM"
+                        <input  type="text" class="form-control" id="nombreM" name="nombreM" required
                                 value="<?php  echo utf8_decode($row['nombre'])?>">
                     </div>
                     
                     <input type="hidden" id="descripcionAModificar" name="descripcionAModificar" value="<?php echo utf8_decode($row['descripcion'])?>">
                     <div class="form-group">
                         <label for="descripcionM"><?php echo $literales['materialDescripcion'] ?></label>
-                        <input  type="text" class="form-control" id="nombreM" name="descripcionM"
+                        <input  type="text" class="form-control" id="nombreM" name="descripcionM" required
                                 value="<?php  echo utf8_decode($row['descripcion'])?>">
                     </div>
                     

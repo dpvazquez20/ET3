@@ -38,7 +38,7 @@ class Linea_Elaboracion_edit{
 
                     <div class="form-group">
                         <label for="materialM"><?php echo $literales['nombre']; ?></label>
-                        <select name="materialM" id="materialM" class="form-control">
+                        <select name="materialM" id="materialM" class="form-control" required>
                             <option value="" selected></option>
                             <?php $resul = Material_modelo::listarMateriales();?>
                             <?php while($material = mysqli_fetch_assoc($resul)) { ?>
@@ -56,7 +56,7 @@ class Linea_Elaboracion_edit{
 
                     <div class="form-group">
                         <label for="cantidadM"><?php echo $literales['cantidad']; ?></label>
-                        <input type="text" class="form-control" id="cantidadM" name="cantidadM"
+                        <input type="text" class="form-control" id="cantidadM" name="cantidadM" min="1"
                                value="<?php echo $row2['cantidad']?>">
                     </div>
 

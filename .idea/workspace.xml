@@ -71,11 +71,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MATERIAL_EDIT.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_EDIT.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" column="101" lean-forward="true" selection-start-line="42" selection-start-column="101" selection-end-line="42" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LINEA_ELABORACION_ADD.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LINEA_ELABORACION_EDIT.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_EDIT.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ELABORACION_EDIT.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/ELABORACION_EDIT.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -91,50 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ACCION_SHOWALL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/ACCION_SHOWALL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="72" column="21" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="72" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PERFIL_SHOWALL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vistas/PERFIL_SHOWALL.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="646">
               <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ACCION_Model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modelos/ACCION_Model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
-              <folding>
-                <marker date="1484424817240" expanded="true" signature="334:403" ph="SELECT * FRO... accion" />
-                <marker date="1484424817240" expanded="true" signature="517:589" ph="INSERT INTO accion... " />
-                <marker date="1484424817240" expanded="true" signature="867:912" ph="DELETE FROM " />
-                <marker date="1484424817240" expanded="true" signature="1234:1334" ph="UPDATE accio... " />
-                <marker date="1484424817240" expanded="true" signature="1617:1637" ph="SELECT * FRO... accion" />
-                <marker date="1484424817240" expanded="true" signature="1806:1853" ph="SELECT * fro... accion" />
-                <marker date="1484424817240" expanded="true" signature="2043:2063" ph="SELECT * FRO... accion" />
-                <marker date="1484424817240" expanded="true" signature="2103:2161" ph="SELECT * FRO... accion" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CONTROLADOR_SHOWALL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/CONTROLADOR_SHOWALL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -167,9 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controladores/PEDIDO_Controller.php" />
-        <option value="$PROJECT_DIR$/modelos/PROVEEDOR_Model.php" />
-        <option value="$PROJECT_DIR$/vistas/PROVEEDOR_DELETE.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_EDIT.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_SHOWALL.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_SHOWCURRENT.php" />
@@ -217,6 +205,9 @@
         <option value="$PROJECT_DIR$/vistas/USUARIO_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/ELABORACION_ADD.php" />
         <option value="$PROJECT_DIR$/install.sh" />
+        <option value="$PROJECT_DIR$/vistas/ELABORACION_EDIT.php" />
+        <option value="$PROJECT_DIR$/vistas/MATERIAL_EDIT.php" />
+        <option value="$PROJECT_DIR$/vistas/LINEA_ELABORACION_EDIT.php" />
         <option value="$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php" />
       </list>
     </option>
@@ -429,12 +420,12 @@
       <workItem from="1484143241587" duration="52404000" />
       <workItem from="1484330418369" duration="26234000" />
       <workItem from="1484410447100" duration="2410000" />
-      <workItem from="1484412390286" duration="14899000" />
+      <workItem from="1484412390286" duration="16413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427352000" />
+    <option name="totallyTimeSpent" value="428866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
@@ -499,22 +490,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vistas/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="87" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/cabecera.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -581,14 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="28" column="204" lean-forward="false" selection-start-line="28" selection-start-column="204" selection-end-line="28" selection-end-column="204" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_EDIT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -946,6 +913,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_EDIT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="101" lean-forward="true" selection-start-line="42" selection-start-column="101" selection-end-line="42" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_ADD.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -954,10 +929,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ELABORACION_EDIT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_EDIT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>

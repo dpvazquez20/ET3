@@ -92,21 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PROVEEDOR_ADD.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PROVEEDOR_ADD.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="48" column="121" lean-forward="false" selection-start-line="48" selection-start-column="121" selection-end-line="48" selection-end-column="121" />
+            <state relative-caret-position="602">
+              <caret line="43" column="143" lean-forward="true" selection-start-line="43" selection-start-column="143" selection-end-line="43" selection-end-column="143" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PROVEEDOR_EDIT.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PROVEEDOR_EDIT.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_EDIT.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="122" lean-forward="false" selection-start-line="49" selection-start-column="122" selection-end-line="49" selection-end-column="122" />
+            <state relative-caret-position="748">
+              <caret line="44" column="144" lean-forward="false" selection-start-line="44" selection-start-column="144" selection-end-line="44" selection-end-column="144" />
               <folding />
             </state>
           </provider>
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/vistas/ELABORACION_EDIT.php" />
         <option value="$PROJECT_DIR$/vistas/ACCION_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/ACCION_EDIT.php" />
-        <option value="$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_EDIT.php" />
+        <option value="$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php" />
       </list>
     </option>
   </component>
@@ -429,12 +429,12 @@
       <workItem from="1484143241587" duration="52404000" />
       <workItem from="1484330418369" duration="26234000" />
       <workItem from="1484410447100" duration="2410000" />
-      <workItem from="1484412390286" duration="21584000" />
+      <workItem from="1484412390286" duration="22068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434037000" />
+    <option name="totallyTimeSpent" value="434521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
@@ -958,18 +958,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php">
+    <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_EDIT.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="48" column="121" lean-forward="false" selection-start-line="48" selection-start-column="121" selection-end-line="48" selection-end-column="121" />
+        <state relative-caret-position="748">
+          <caret line="44" column="144" lean-forward="false" selection-start-line="44" selection-start-column="144" selection-end-line="44" selection-end-column="144" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_EDIT.php">
+    <entry file="file://$PROJECT_DIR$/vistas/PROVEEDOR_ADD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="122" lean-forward="false" selection-start-line="49" selection-start-column="122" selection-end-line="49" selection-end-column="122" />
+        <state relative-caret-position="602">
+          <caret line="43" column="143" lean-forward="true" selection-start-line="43" selection-start-column="143" selection-end-line="43" selection-end-column="143" />
           <folding />
         </state>
       </provider>

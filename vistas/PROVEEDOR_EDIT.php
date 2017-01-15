@@ -42,7 +42,7 @@ class Proveedor_edit{
                     </div>
                     <div class="form-group">
                         <label for="correoEM"><?php echo $literales['correo electronico']?></label>
-                        <input type="email" class="form-control" id="correoEM" name="correoEM"
+                        <input type="email" class="form-control" id="correoEM" name="correoEM" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                value="<?php echo $row['correo_electronico']?>">
                     </div>
                     <div  style="align-items: center" class="form-group">

@@ -63,7 +63,7 @@
 
                         <div  style="align-items: center" class="form-group">
                             <label for="precioM"><?php  echo $literales['precio']?></label>
-                            <input  type="number" class="form-control" id="precioM" name="precioM"  required value="<?php echo $row['coste']?>">
+                            <input  type="number" class="form-control" id="precioM" name="precioM" min="1" required value="<?php echo $row['coste']?>">
                         </div>
 
                         <div class="form-group">

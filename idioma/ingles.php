@@ -216,7 +216,7 @@ $literales = array(
     'elaboracionDELETE'=>'¿Estas seguro de que quieres borrar esta elaboración?',
     'seleccion producto ADD'=>'Selecciona un producto para la elaboración',
     'seleccionMaterial'=>'Seleccioname el nuevo material para el producto',
-    'id_elaboracionON'=>'ESTE ES EL NÚMERO DE TU ELABORACIÓN:',
+    'id_elaboracionON'=>'ID Elaboración:',
     'nuevo linea de elaboracion'=>'nuevo linea de elaboracion:',
     'elaboracionADD'=>'Enter the data:',
     'seleccion material'=>'Select the material you want:',
@@ -300,6 +300,8 @@ $literales = array(
     'lineaFacturaDELETE' => 'Do you want to delete this invoice line?',
     'lineaFacturaEDIT' => 'Enter new data for the invoice line',
     'lineaFacturaSHOW' => 'These are the invoice line data',
+    'producto'=>'Product',
+
 
 //    -------------------------------------------------------------------
 //    ------------------FIN ALBARANES Y FACTURAS ------------------------

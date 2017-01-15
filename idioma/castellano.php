@@ -298,7 +298,7 @@ $literales = array(
     'elaboracionDELETE'=>'¿Estas seguro de que quieres borrar esta elaboración?',
     'seleccion producto ADD'=>'Selecciona un producto para la elaboración',
     'seleccionMaterial'=>'Seleccioname el nuevo material para el producto',
-    'id_elaboracionON'=>'ESTE ES EL NÚMERO DE TU ELABORACIÓN:',
+    'id_elaboracionON'=>'ID Elaboración:',
     'nuevo linea de elaboracion'=>'nuevo linea de elaboracion:',
     'elaboracionADD'=>'Introduce los datos:',
     'seleccion material'=>'Seleccioname el material que quieras:',
@@ -320,7 +320,7 @@ $literales = array(
     'materialproducto'=>'Material',
     'fecha'=>'Fecha',
     'precio'=>'Precio',
-
+    'producto'=>'Producto',
 
 //    -----------------FIN STOCK PRODUCTO----------------
 

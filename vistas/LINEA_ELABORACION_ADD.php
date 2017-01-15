@@ -29,17 +29,13 @@ class Linea_Elaboracion_add{
                 <form role="form" action="ELABORACION_Controller.php?id=ADDLINEAELABORACION&ctr=ELABORACION&idElaboracion=<?php echo $_GET['idElaboracion'];?>" method="POST">
 
                     <div class="form-group">
-                        <label for="id_elaboracion"><?php $literales['id_elaboracion'] ?></label>
+                        <label for="id_elaboracion"><?php echo $literales['id_elaboracionON'] ?></label>
                         <input type="number" class="form-control" id="id_elaboracion" name="id_elaboracion" value="<?php echo $_GET['idElaboracion'] ?>" required readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="controlador"><?php  echo $literales['seleccion material']?></label>
-
-
-
                         <div class="form-group">
-                            <label for="material"><?php $literales['material'] ?></label>
+                            <label for="material"><?php echo $literales['material'] ?></label>
                             <select name="material" id="material" class="form-control" required>
                                 <option value="" selected></option>
                                 <?php $resul = Material_modelo::listarMateriales();?>
@@ -51,8 +47,8 @@ class Linea_Elaboracion_add{
                     </div>
 
                     <div class="form-group">
-                        <label for="cantidad"><?php$literales['cantidad'] ?></label>
-                        <input type="number" class="form-control" min="0" id="cantidad" name="cantidad" min="1" required
+                        <label for="cantidad"><?php echo$literales['precio'] ?></label>
+                        <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" required
                                placeholder="Introduce la cantidad de material que necesitas">
                     </div>
 

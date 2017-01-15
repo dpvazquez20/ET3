@@ -21,6 +21,11 @@ class Linea_elaboracion_modelo{
 
     function altaLineaElaboracion($linea_elaboracion)
     {
+
+         $this->mysql= conectarBD();
+        $sql="SELECT * FROM linea_elaboracion WHERE id_material='".$linea_elaboracion->getIdMaterial()."';";
+        $resultado= $this->mysql->query($sql);
+        if($resultado->num_rows==0){
         $this->mysql = conectarBD();
         $insertar = "INSERT INTO linea_elaboracion (id_elaboracion,id_material,cantidad) VALUES('" . $linea_elaboracion->getIdElaboracion() . "','" . $linea_elaboracion->getIdMaterial() . "','" . $linea_elaboracion->getCantidad() . "');";
 
@@ -29,6 +34,9 @@ class Linea_elaboracion_modelo{
 
         } else {
             return "Lo sentimos, no se ha podido crear la linea";
+        }
+        }else{
+            return "Lo sentimos, ese material ya esta agregado";
         }
 
     }

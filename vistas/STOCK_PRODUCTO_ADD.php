@@ -33,7 +33,7 @@ class Stock_producto_add
                 <form role="form" action="STOCK_PRODUCTO_Controller.php?id=ADDSTOCK_PRODUCTO&ctr=STOCK_PRODUCTO" method="POST">
 
                     <div class="form-group">
-                        <label for="material"><?php echo "Material";?></label>
+                        <label for="material"><?php echo $literales['producto'];?></label>
                         <select name="material" id="material" class="form-control" required>
                             <option value="" selected></option>
                             <?php $resul = Producto_modelo::listarProducto();?>
@@ -50,7 +50,7 @@ class Stock_producto_add
 
                     <div  style="align-items: center" class="form-group">
                             <label for="precio"><?php  echo $literales['precio']?></label>
-                            <input  type="number" class="form-control" id="precio" name="precio" required
+                            <input  type="number" class="form-control" id="precio" name="precio" required min="1"
                                     placeholder="Precio">
                     </div>
 

@@ -56,7 +56,7 @@ class Linea_Elaboracion_edit{
 
                     <div class="form-group">
                         <label for="cantidadM"><?php echo $literales['cantidad']; ?></label>
-                        <input type="text" class="form-control" id="cantidadM" name="cantidadM" min="1"
+                        <input type="number" class="form-control" id="cantidadM" name="cantidadM" min="1"
                                value="<?php echo $row2['cantidad']?>">
                     </div>
 

@@ -21,10 +21,7 @@ class Elaboracion_edit{
             <?php include ('menu.php');?>
             <!-- Título de la página -->
             <div class="col-sm-9">
-                <?php
-                    $resul= Elaboracion_modelo::getElaboracion($_GET['nombreControlador']);
-                    $row = mysqli_fetch_assoc($resul);
-                ?>
+
                 <?php
                     $resul= Elaboracion_modelo::getElaboracionID($_GET['idElaboracion']);
                     $row = mysqli_fetch_assoc($resul);

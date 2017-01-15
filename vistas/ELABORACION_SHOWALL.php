@@ -43,8 +43,8 @@ class Elaboracion_showAll{
 
                 <div class="col-sm-4">
                     <form role="form" method="get">
-                        <input type="hidden" name="id" value="BUSCARPRODUCTO"/>
-                        <input type="hidden" name="ctr" value="PRODUCTO"/>
+                        <input type="hidden" name="id" value="BUSCARELABORACION"/>
+                        <input type="hidden" name="ctr" value="ELABORACION"/>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group">

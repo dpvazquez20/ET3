@@ -32,7 +32,7 @@ class Accion_edit{
                     <input type="hidden" id="nombreAModificar" name="nombreAModificar" value="<?php echo $row['nombre']?>">
                     <div class="form-group">
                         <label for="nombreM"><?php$literales['nombre'] ?></label>
-                        <input  type="text" class="form-control" id="nombreM" name="nombreM"
+                        <input  type="text" class="form-control" id="nombreM" name="nombreM" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-_]{2,48}"
                                 value="<?php  echo $row['nombre']?>">
                     </div>
 

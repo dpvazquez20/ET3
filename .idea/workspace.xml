@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="STOCK_PRODUCTO_Model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="STOCK_PRODUCTO_Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="105" selection-end-column="5" />
               <folding>
                 <marker date="1484511122224" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
                 <marker date="1484511122224" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
@@ -66,6 +66,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="paginaPorDefecto.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vistas/paginaPorDefecto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PERMISO_EDIT.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/PERMISO_EDIT.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PERMISO_DENEGADO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/PERMISO_DENEGADO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="STOCK_PRODUCTO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,36 +126,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LINEA_ELABORACION_ADD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="49" column="73" lean-forward="false" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="STOCK_PRODUCTO_ADD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/STOCK_PRODUCTO_ADD.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sql.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD/sql.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -136,25 +136,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/menu.php">
+      <file leaf-file-name="cabecera.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/cabecera.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1483973745592" expanded="true" signature="892:944" ph="SELECT * fro... permisos" />
-                <marker date="1483973745592" expanded="true" signature="1650:1913" ph="..." />
-                <marker date="1483973745592" expanded="true" signature="1814:1908" ph="..." />
-              </folding>
+            <state relative-caret-position="229">
+              <caret line="34" column="87" lean-forward="false" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cabecera.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/cabecera.php">
+      <file leaf-file-name="install.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="68">
+              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -191,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vistas/PERFIL_SHOWCURRENT.php" />
         <option value="$PROJECT_DIR$/bootstrap/css/menu.css" />
         <option value="$PROJECT_DIR$/vistas/USUARIO_SHOWALL.php" />
         <option value="$PROJECT_DIR$/controladores/PRODUCTO_Controller.php" />
@@ -217,7 +212,6 @@
         <option value="$PROJECT_DIR$/modelos/PERFIL_Model.php" />
         <option value="$PROJECT_DIR$/vistas/USUARIO_ADD.php" />
         <option value="$PROJECT_DIR$/vistas/ELABORACION_ADD.php" />
-        <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/vistas/MATERIAL_EDIT.php" />
         <option value="$PROJECT_DIR$/idioma/castellano.php" />
         <option value="$PROJECT_DIR$/idioma/gallego.php" />
@@ -238,10 +232,12 @@
         <option value="$PROJECT_DIR$/modelos/LINEA_ELABORACION_Model.php" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/modelos/STOCK_PRODUCTO.php" />
-        <option value="$PROJECT_DIR$/vistas/cabecera.php" />
         <option value="$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php" />
         <option value="$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php" />
         <option value="$PROJECT_DIR$/BD/sql.sql" />
+        <option value="$PROJECT_DIR$/vistas/cabecera.php" />
+        <option value="$PROJECT_DIR$/install.sh" />
+        <option value="$PROJECT_DIR$/vistas/paginaPorDefecto.php" />
       </list>
     </option>
   </component>
@@ -299,6 +295,34 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vistas" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagenes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controladores" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -330,11 +354,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jezer\Documents\ET3\imagenes" />
       <recent name="C:\Users\Jezer\Documents\ET3" />
       <recent name="C:\Users\Jezer\Documents\ET3\vistas" />
       <recent name="C:\Users\Jezer\Desktop\ET3\modelos" />
       <recent name="C:\Users\Jezer\Desktop\ET3\idioma" />
-      <recent name="C:\Users\Jezer\Desktop\ET3\vistas" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jezer\Documents\ET3" />
@@ -432,13 +456,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449850000" />
+    <option name="totallyTimeSpent" value="451329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18844643" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18844643" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12460568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -497,30 +521,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vistas/LINEA_FACTURA_ADD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="96" lean-forward="false" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/PRODUCTO_SHOWALL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/ALBARAN_SHOWALL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/PERMISO_SHOWALL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-782">
@@ -635,6 +635,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="60" column="76" lean-forward="false" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -899,14 +893,6 @@
             <marker date="1483973745592" expanded="true" signature="1650:1913" ph="..." />
             <marker date="1483973745592" expanded="true" signature="1814:1908" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/cabecera.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modelos/STOCK_PRODUCTO_Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="105" selection-end-column="5" />
           <folding>
             <marker date="1484511122224" expanded="true" signature="812:889" ph="SELECT * FRO... producto" />
             <marker date="1484511122224" expanded="true" signature="1041:1124" ph="SELECT * FRO... elaboracion" />
@@ -997,6 +983,46 @@
             <marker date="1484511122224" expanded="true" signature="8431:8459" ph="SELECT * FRO... stock_producto" />
             <marker date="1484511122224" expanded="true" signature="8500:8557" ph="SELECT * FRO... stock_producto" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/cabecera.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="34" column="87" lean-forward="false" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/PERMISO_EDIT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/PERMISO_DENEGADO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/paginaPorDefecto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -31,6 +31,9 @@ if(isset($_SESSION['lang'])){
 
 <nav  class="navbar navbar-inverse">
     <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../vistas/paginaPorDefecto.php"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
         <ul class="nav navbar-nav">
             <li><a><span class="glyphicon glyphicon-user"></span> WELCOME BACK <?php echo $_SESSION['usuario']?></a></li>
 

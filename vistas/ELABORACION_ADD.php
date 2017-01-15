@@ -28,7 +28,7 @@ class Elaboracion_add
                     <div class="form-group">
                         <label for="controlador"><?php  echo $literales['seleccion producto ADD']?></label>
 
-                        <select id="elaboracion" name="elaboracion"style="width: 200px" class=" form-control">
+                        <select id="elaboracion" name="elaboracion"style="width: 200px" class=" form-control" required>
                             <?php
                             $productos= Producto_modelo::listarProducto();
                             echo"<option selected value=''> </option>";

@@ -22,30 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="USUARIO_SHOWALL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/USUARIO_SHOWALL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="68" column="55" lean-forward="true" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PERFIL_Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelos/PERFIL_Model.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
               <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
               <folding>
-                <marker date="1484424140798" expanded="true" signature="334:403" ph="SELECT * FRO... perfil" />
-                <marker date="1484424140798" expanded="true" signature="517:589" ph="INSERT INTO perfil... " />
-                <marker date="1484424140798" expanded="true" signature="867:912" ph="DELETE FROM " />
-                <marker date="1484424140798" expanded="true" signature="1233:1334" ph="UPDATE perfi... " />
-                <marker date="1484424140798" expanded="true" signature="1616:1636" ph="SELECT * FRO... perfil" />
-                <marker date="1484424140798" expanded="true" signature="2128:2175" ph="SELECT * fro... perfil" />
-                <marker date="1484424140798" expanded="true" signature="2365:2385" ph="SELECT * FRO... perfil" />
-                <marker date="1484424140798" expanded="true" signature="2425:2483" ph="SELECT * FRO... perfil" />
+                <marker date="1484424817259" expanded="true" signature="334:403" ph="SELECT * FRO... perfil" />
+                <marker date="1484424817259" expanded="true" signature="517:589" ph="INSERT INTO perfil... " />
+                <marker date="1484424817259" expanded="true" signature="867:912" ph="DELETE FROM " />
+                <marker date="1484424817259" expanded="true" signature="1233:1334" ph="UPDATE perfi... " />
+                <marker date="1484424817259" expanded="true" signature="1616:1636" ph="SELECT * FRO... perfil" />
+                <marker date="1484424817259" expanded="true" signature="2128:2175" ph="SELECT * fro... perfil" />
+                <marker date="1484424817259" expanded="true" signature="2365:2385" ph="SELECT * FRO... perfil" />
+                <marker date="1484424817259" expanded="true" signature="2425:2483" ph="SELECT * FRO... perfil" />
               </folding>
             </state>
           </provider>
@@ -55,47 +45,47 @@
         <entry file="file://$PROJECT_DIR$/vistas/USUARIO_ADD.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
-              <caret line="60" column="76" lean-forward="true" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+              <caret line="60" column="76" lean-forward="false" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="install.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="40" />
+              <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CONTROLADOR_Model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modelos/CONTROLADOR_Model.php">
+      <file leaf-file-name="MATERIAL_ADD.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_ADD.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="86" selection-end-column="5" />
-              <folding>
-                <marker date="1484422335054" expanded="true" signature="370:448" ph="SELECT * FRO... controlador" />
-                <marker date="1484422335054" expanded="true" signature="562:643" ph="INSERT INTO controlador... " />
-                <marker date="1484422335054" expanded="true" signature="937:987" ph="DELETE FROM " />
-                <marker date="1484422335054" expanded="true" signature="1329:1439" ph="UPDATE contr... " />
-                <marker date="1484422335054" expanded="true" signature="1731:1776" ph="SELECT * FRO... permisos" />
-                <marker date="1484422335054" expanded="true" signature="1954:1979" ph="SELECT * FRO... controlador" />
-                <marker date="1484422335054" expanded="true" signature="2152:2204" ph="SELECT * fro... controlador" />
-                <marker date="1484422335054" expanded="true" signature="2400:2425" ph="SELECT * FRO... controlador" />
-                <marker date="1484422335054" expanded="true" signature="2465:2528" ph="SELECT * FRO... usuario" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PERMISO_SHOWALL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/PERMISO_SHOWALL.php">
+      <file leaf-file-name="LINEA_ELABORACION_ADD.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-782">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="663">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ELABORACION_ADD.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/ELABORACION_ADD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="118" lean-forward="false" selection-start-line="30" selection-start-column="118" selection-end-line="30" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -105,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/vistas/ACCION_SHOWALL.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
-              <caret line="72" column="21" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="72" selection-end-column="21" />
+              <caret line="72" column="21" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="72" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -127,14 +117,14 @@
             <state relative-caret-position="552">
               <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
               <folding>
-                <marker date="1484423124550" expanded="true" signature="334:403" ph="SELECT * FRO... accion" />
-                <marker date="1484423124550" expanded="true" signature="517:589" ph="INSERT INTO accion... " />
-                <marker date="1484423124550" expanded="true" signature="867:912" ph="DELETE FROM " />
-                <marker date="1484423124550" expanded="true" signature="1234:1334" ph="UPDATE accio... " />
-                <marker date="1484423124550" expanded="true" signature="1617:1637" ph="SELECT * FRO... accion" />
-                <marker date="1484423124550" expanded="true" signature="1806:1853" ph="SELECT * fro... accion" />
-                <marker date="1484423124550" expanded="true" signature="2043:2063" ph="SELECT * FRO... accion" />
-                <marker date="1484423124550" expanded="true" signature="2103:2161" ph="SELECT * FRO... accion" />
+                <marker date="1484424817240" expanded="true" signature="334:403" ph="SELECT * FRO... accion" />
+                <marker date="1484424817240" expanded="true" signature="517:589" ph="INSERT INTO accion... " />
+                <marker date="1484424817240" expanded="true" signature="867:912" ph="DELETE FROM " />
+                <marker date="1484424817240" expanded="true" signature="1234:1334" ph="UPDATE accio... " />
+                <marker date="1484424817240" expanded="true" signature="1617:1637" ph="SELECT * FRO... accion" />
+                <marker date="1484424817240" expanded="true" signature="1806:1853" ph="SELECT * fro... accion" />
+                <marker date="1484424817240" expanded="true" signature="2043:2063" ph="SELECT * FRO... accion" />
+                <marker date="1484424817240" expanded="true" signature="2103:2161" ph="SELECT * FRO... accion" />
               </folding>
             </state>
           </provider>
@@ -177,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vistas/PEDIDO_SHOWCURRENT.php" />
-        <option value="$PROJECT_DIR$/vistas/PEDIDO_SHOWALL.php" />
         <option value="$PROJECT_DIR$/controladores/PEDIDO_Controller.php" />
         <option value="$PROJECT_DIR$/modelos/PROVEEDOR_Model.php" />
         <option value="$PROJECT_DIR$/vistas/PROVEEDOR_DELETE.php" />
@@ -220,7 +208,6 @@
         <option value="$PROJECT_DIR$/vistas/STOCK_PRODUCTO_EDIT.php" />
         <option value="$PROJECT_DIR$/controladores/FACTURA_Controller.php" />
         <option value="$PROJECT_DIR$/controladores/ALBARAN_Controller.php" />
-        <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/modelos/CONTROLADOR_Model.php" />
         <option value="$PROJECT_DIR$/modelos/ACCION_Model.php" />
         <option value="$PROJECT_DIR$/vistas/CONTROLADOR_SHOWALL.php" />
@@ -228,6 +215,9 @@
         <option value="$PROJECT_DIR$/vistas/PERFIL_SHOWALL.php" />
         <option value="$PROJECT_DIR$/modelos/PERFIL_Model.php" />
         <option value="$PROJECT_DIR$/vistas/USUARIO_ADD.php" />
+        <option value="$PROJECT_DIR$/vistas/ELABORACION_ADD.php" />
+        <option value="$PROJECT_DIR$/install.sh" />
+        <option value="$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php" />
       </list>
     </option>
   </component>
@@ -300,6 +290,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modelos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ET3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,12 +429,12 @@
       <workItem from="1484143241587" duration="52404000" />
       <workItem from="1484330418369" duration="26234000" />
       <workItem from="1484410447100" duration="2410000" />
-      <workItem from="1484412390286" duration="9159000" />
+      <workItem from="1484412390286" duration="14899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421612000" />
+    <option name="totallyTimeSpent" value="427352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
@@ -495,30 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vistas/PERFIL_ADD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/PERFIL_DELETE.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="78" lean-forward="false" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/PERFIL_EDIT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -871,15 +851,15 @@
         <state relative-caret-position="603">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="86" selection-end-column="5" />
           <folding>
-            <marker date="1484422335054" expanded="true" signature="370:448" ph="SELECT * FRO... controlador" />
-            <marker date="1484422335054" expanded="true" signature="562:643" ph="INSERT INTO controlador... " />
-            <marker date="1484422335054" expanded="true" signature="937:987" ph="DELETE FROM " />
-            <marker date="1484422335054" expanded="true" signature="1329:1439" ph="UPDATE contr... " />
-            <marker date="1484422335054" expanded="true" signature="1731:1776" ph="SELECT * FRO... permisos" />
-            <marker date="1484422335054" expanded="true" signature="1954:1979" ph="SELECT * FRO... controlador" />
-            <marker date="1484422335054" expanded="true" signature="2152:2204" ph="SELECT * fro... controlador" />
-            <marker date="1484422335054" expanded="true" signature="2400:2425" ph="SELECT * FRO... controlador" />
-            <marker date="1484422335054" expanded="true" signature="2465:2528" ph="SELECT * FRO... usuario" />
+            <marker date="1484424817257" expanded="true" signature="370:448" ph="SELECT * FRO... controlador" />
+            <marker date="1484424817257" expanded="true" signature="562:643" ph="INSERT INTO controlador... " />
+            <marker date="1484424817257" expanded="true" signature="937:987" ph="DELETE FROM " />
+            <marker date="1484424817257" expanded="true" signature="1329:1439" ph="UPDATE contr... " />
+            <marker date="1484424817257" expanded="true" signature="1731:1776" ph="SELECT * FRO... permisos" />
+            <marker date="1484424817257" expanded="true" signature="1954:1979" ph="SELECT * FRO... controlador" />
+            <marker date="1484424817257" expanded="true" signature="2152:2204" ph="SELECT * fro... controlador" />
+            <marker date="1484424817257" expanded="true" signature="2400:2425" ph="SELECT * FRO... controlador" />
+            <marker date="1484424817257" expanded="true" signature="2465:2528" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -897,14 +877,14 @@
         <state relative-caret-position="552">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
           <folding>
-            <marker date="1484423124550" expanded="true" signature="334:403" ph="SELECT * FRO... accion" />
-            <marker date="1484423124550" expanded="true" signature="517:589" ph="INSERT INTO accion... " />
-            <marker date="1484423124550" expanded="true" signature="867:912" ph="DELETE FROM " />
-            <marker date="1484423124550" expanded="true" signature="1234:1334" ph="UPDATE accio... " />
-            <marker date="1484423124550" expanded="true" signature="1617:1637" ph="SELECT * FRO... accion" />
-            <marker date="1484423124550" expanded="true" signature="1806:1853" ph="SELECT * fro... accion" />
-            <marker date="1484423124550" expanded="true" signature="2043:2063" ph="SELECT * FRO... accion" />
-            <marker date="1484423124550" expanded="true" signature="2103:2161" ph="SELECT * FRO... accion" />
+            <marker date="1484424817240" expanded="true" signature="334:403" ph="SELECT * FRO... accion" />
+            <marker date="1484424817240" expanded="true" signature="517:589" ph="INSERT INTO accion... " />
+            <marker date="1484424817240" expanded="true" signature="867:912" ph="DELETE FROM " />
+            <marker date="1484424817240" expanded="true" signature="1234:1334" ph="UPDATE accio... " />
+            <marker date="1484424817240" expanded="true" signature="1617:1637" ph="SELECT * FRO... accion" />
+            <marker date="1484424817240" expanded="true" signature="1806:1853" ph="SELECT * fro... accion" />
+            <marker date="1484424817240" expanded="true" signature="2043:2063" ph="SELECT * FRO... accion" />
+            <marker date="1484424817240" expanded="true" signature="2103:2161" ph="SELECT * FRO... accion" />
           </folding>
         </state>
       </provider>
@@ -912,7 +892,7 @@
     <entry file="file://$PROJECT_DIR$/vistas/ACCION_SHOWALL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
-          <caret line="72" column="21" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="72" selection-end-column="21" />
+          <caret line="72" column="21" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="72" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -930,14 +910,14 @@
         <state relative-caret-position="705">
           <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
           <folding>
-            <marker date="1484424140798" expanded="true" signature="334:403" ph="SELECT * FRO... perfil" />
-            <marker date="1484424140798" expanded="true" signature="517:589" ph="INSERT INTO perfil... " />
-            <marker date="1484424140798" expanded="true" signature="867:912" ph="DELETE FROM " />
-            <marker date="1484424140798" expanded="true" signature="1233:1334" ph="UPDATE perfi... " />
-            <marker date="1484424140798" expanded="true" signature="1616:1636" ph="SELECT * FRO... perfil" />
-            <marker date="1484424140798" expanded="true" signature="2128:2175" ph="SELECT * fro... perfil" />
-            <marker date="1484424140798" expanded="true" signature="2365:2385" ph="SELECT * FRO... perfil" />
-            <marker date="1484424140798" expanded="true" signature="2425:2483" ph="SELECT * FRO... perfil" />
+            <marker date="1484424817259" expanded="true" signature="334:403" ph="SELECT * FRO... perfil" />
+            <marker date="1484424817259" expanded="true" signature="517:589" ph="INSERT INTO perfil... " />
+            <marker date="1484424817259" expanded="true" signature="867:912" ph="DELETE FROM " />
+            <marker date="1484424817259" expanded="true" signature="1233:1334" ph="UPDATE perfi... " />
+            <marker date="1484424817259" expanded="true" signature="1616:1636" ph="SELECT * FRO... perfil" />
+            <marker date="1484424817259" expanded="true" signature="2128:2175" ph="SELECT * fro... perfil" />
+            <marker date="1484424817259" expanded="true" signature="2365:2385" ph="SELECT * FRO... perfil" />
+            <marker date="1484424817259" expanded="true" signature="2425:2483" ph="SELECT * FRO... perfil" />
           </folding>
         </state>
       </provider>
@@ -945,7 +925,15 @@
     <entry file="file://$PROJECT_DIR$/vistas/USUARIO_ADD.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
-          <caret line="60" column="76" lean-forward="true" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+          <caret line="60" column="76" lean-forward="false" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ELABORACION_ADD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="118" lean-forward="false" selection-start-line="30" selection-start-column="118" selection-end-line="30" selection-end-column="118" />
           <folding />
         </state>
       </provider>
@@ -953,7 +941,23 @@
     <entry file="file://$PROJECT_DIR$/install.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="40" />
+          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/MATERIAL_ADD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/LINEA_ELABORACION_ADD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>

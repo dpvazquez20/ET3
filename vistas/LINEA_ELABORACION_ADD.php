@@ -40,7 +40,7 @@ class Linea_Elaboracion_add{
 
                         <div class="form-group">
                             <label for="material"><?php $literales['material'] ?></label>
-                            <select name="material" id="material" class="form-control">
+                            <select name="material" id="material" class="form-control" required>
                                 <option value="" selected></option>
                                 <?php $resul = Material_modelo::listarMateriales();?>
                                 <?php while($rowM = mysqli_fetch_assoc($resul)){?>
